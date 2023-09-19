@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-black bg-white;
+  }
+
+  section {
+    @apply w-full py-[30px] md:py-10 xl:py-20;
+  }
+}
+
+@layer components {
+}
