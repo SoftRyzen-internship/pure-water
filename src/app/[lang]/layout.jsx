@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 
-import { Header } from '@/layout';
+import { Header } from '@/layout/Header';
 
 import { getMetaByLang } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
@@ -24,12 +24,12 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const localeData = await getDictionary(lang);
+  const staticPageData = await getDictionary(lang);
 
   return (
     <html lang={lang}>
       <body className={inter.className}>
-        <Header data={localeData.title} />
+        <Header data={staticPageData.title} />
 
         <main className="flex flex-col items-center">{children}</main>
       </body>
