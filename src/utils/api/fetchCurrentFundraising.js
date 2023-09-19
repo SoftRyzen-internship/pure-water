@@ -3,11 +3,9 @@ import { getCurrentFundraising } from '../queries/getCurrentFundraising';
 
 export const fetchCurrentFundraising = async variables => {
   try {
-    const data = await datoCmsRequest({ getCurrentFundraising, variables });
-    console.log('data:', data);
+    const data = await datoCmsRequest(getCurrentFundraising, variables);
 
-    // const result = data.prices.data;
-    return data;
+    return data.fundraising;
   } catch (error) {
     return {};
   }

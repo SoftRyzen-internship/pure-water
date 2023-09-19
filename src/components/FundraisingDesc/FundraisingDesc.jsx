@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
 
-import { datoCmsRequest } from '@/utils/datoCmsRequest';
-import { getCurrentFundraising } from '@/utils/queries/getCurrentFundraising';
+import { fetchCurrentFundraising } from '@/utils/api/fetchCurrentFundraising';
 
 export const FundraisingDesc = async ({ lang }) => {
-  const fundraisingData = await datoCmsRequest(getCurrentFundraising, {
+  const fundraising = await fetchCurrentFundraising({
     locale: lang,
   });
-
-  const { fundraising } = fundraisingData;
 
   return (
     <>
