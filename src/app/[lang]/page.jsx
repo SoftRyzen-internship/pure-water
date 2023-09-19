@@ -1,12 +1,15 @@
+import { CurrentFundraising } from '@/sections/CurrentFundraising';
 import { getDictionary } from '@/utils/getDictionary';
 
-export default async function Home({ params }) {
-  const lang = await getDictionary(params.lang);
+export default async function Home({ params: { lang } }) {
+  const staticPageData = await getDictionary(lang);
 
   return (
     <>
-      {lang && (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+      {staticPageData && (
+        <main className="flex min-h-screen flex-col items-center justify-between p-24">
+          <CurrentFundraising lang={lang} />
+        </main>
       )}
     </>
   );
