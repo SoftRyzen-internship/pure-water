@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply text-black bg-white;
+    @apply text-mainText text-[14px] md:text-[16px] font-normal leading-5 bg-white;
   }
 
   section {
@@ -13,4 +13,16 @@
 }
 
 @layer components {
+  .boxGradient {
+    background: linear-gradient(180deg, #1fb0e2 0%, #0e5497 100%);
+  }
+  .formGradient {
+    background: linear-gradient(180deg, #1f9fd5 0%, #1875b3 100%);
+  }
+  .textGradient {
+    background: linear-gradient(180deg, #20b1e2 0%, #105699 100%);
+  }
+  .iconGradient {
+    background: linear-gradient(180deg, #1d9ed3 0%, #1673b1 100%);
+  }
 }

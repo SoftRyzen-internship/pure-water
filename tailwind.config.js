@@ -22,8 +22,17 @@ module.exports = {
       },
 
       colors: {
+        accent: '#1F9FD5',
+        accent2: '#1D9ED3',
+        secondary: '#1FB0E2',
+        mainText: '#274B77',
+        lighterBlue: '#20B1E2',
+        lightBlue: '#1875B3',
+        blue: '#1674B1',
+        darkBlue: '#105699',
+        darkerBlue: '#0E5497',
         white: '#FFFFFF',
-        red: '#FF5757',
+        pink: '#FF7777',
       },
 
       fontFamily: {
