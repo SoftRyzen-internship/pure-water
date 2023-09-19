@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import { Container } from '@/components';
+import { Container } from '@/components/Container';
 
 export const Header = ({ data }) => {
   return (
