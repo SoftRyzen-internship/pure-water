@@ -64,7 +64,6 @@ export default async function RootLayout({ children, params: { lang } }) {
     <html lang={lang}>
       <body className={axiforma.variable}>
         <Header data={staticPageData.title} />
-
         <main className="flex flex-col items-center">{children}</main>
       </body>
     </html>
