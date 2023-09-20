@@ -1,185 +1,197 @@
 {
-  "title": "Це хедер",
-  "logo": ["ЧИСТА", "ВОДА", "ВСІМ"],
   "lang": ["UA", "EN"],
   "nav": [
     {
       "label": "Головна",
-      "url": "/"
+      "id": "main"
     },
     {
       "label": "Про фонд",
-      "url": "/about"
+      "id": "about"
     },
     {
       "label": "Актуальний збір",
-      "url": "/current"
+      "id": "current"
     },
     {
       "label": "Зробити внесок",
-      "url": "/donate"
+      "id": "donate"
     },
     {
       "label": "Проєкти",
-      "url": "/projects"
+      "id": "projects"
     },
     {
       "label": "Напишіть нам",
-      "url": "/write"
+      "id": "write"
     }
   ],
   "hero": {
     "titleFoundation": "БЛАГОДІЙНИЙ ФОНД",
-    "titleMainPart": "ЧИСТА ВОДА",
-    "titleLastPart": "ВСІМ",
+    "titleMain": "ЧИСТА ВОДА ВСІМ",
     "tagline": "Забезпечення чистою питною водою"
   },
-  "heroBtn": {
+  "makeDonate": {
     "title": "Зробити внесок",
-    "url": "/donate"
+    "id": "donate"
   },
-  "aboutTitle": "Про фонд",
-  "feature": [
-    {
-      "title": "Мета",
-      "paragraph": [
-        "Благодійний фонд \"Чиста вода всім\" був заснований 26 листопада 2020 року з метою забезпечення доступу до чистої та безпечної питної води для всіх, незалежно від місця проживання та соціального статусу.",
-        "Цей фонд є відгуком на глобальний виклик, який полягає у тому, щоб забезпечити всіх людей чистою водою, яка є основним правом кожної особи та ключовим елементом для забезпечення гідного життя."
-      ],
-      "iconLabel": "Goal"
-    },
-    {
-      "title": "Прiоритети",
-      "paragraph": [
-        "Будівництво та обслуговування водопровідних систем в регіонах, де немає доступу до чистої питної води.",
-        "Освіта місцевих громад про важливість збереження та раціонального використання водних ресурсів.",
-        "Співпраця з місцевими органами влади для ефективного забезпечення чистою питною водою.",
-        "Проведення досліджень та розробка нових технологій для очищення та збереження води."
-      ],
-      "iconLabel": "Priorities"
-    },
-    {
-      "title": "Команда",
-      "paragraph": [
-        "Команда фонду складається з висококваліфікованих фахівців з різних галузей: інженерів, екологів, соціальних працівників та інших спеціалістів, які об'єднали свої зусилля для того, щоб реалізувати місію фонду.",
-        "Крім того, фонд активно співпрацює з волонтерами, які допомагають у реалізації різних проектів на місцевому рівні."
-      ],
-      "iconLabel": "Team"
-    },
-    {
-      "title": "Досягнення",
-      "paragraph": [
-        "Фонд \"Чиста вода всім\" вже досяг певних успіхів у реалізації своєї місії, але перед нами ще багато роботи. Ми вдячні всім, хто долучається до нашої ініціативи та допомагає нам зробити світ кращим."
-      ],
-      "iconLabel": "Achievement"
-    }
-  ],
-  "donateTitle": "Зробити внесок",
-  "payLink": ["Privat 24", "Mono", "Swift", "PayPal"],
-  "privat": {
-    "card": {
-      "label": "Картка:",
-      "description": "4246 0010 0188 5684"
-    },
-    "link": "Посилання на онлайн-переказ",
-    "accountTitle": "Рахунок - ₴ ГРН",
-    "paymentDetails": [
+  "about": {
+    "title": "Про фонд",
+    "benefits": [
       {
-        "label": "Отримувач:",
-        "description": "БО \"БФ ЧИСТА ВОДА ВСIМ\""
+        "title": "Мета",
+        "paragraph": [
+          "Благодійний фонд \"Чиста вода всім\" був заснований 26 листопада 2020 року з метою забезпечення доступу до чистої та безпечної питної води для всіх, незалежно від місця проживання та соціального статусу.",
+          "Цей фонд є відгуком на глобальний виклик, який полягає у тому, щоб забезпечити всіх людей чистою водою, яка є основним правом кожної особи та ключовим елементом для забезпечення гідного життя."
+        ]
       },
       {
-        "label": "Код одержувача:",
-        "description": "44015985"
+        "title": "Прiоритети",
+        "paragraph": [
+          "Будівництво та обслуговування водопровідних систем в регіонах, де немає доступу до чистої питної води.",
+          "Освіта місцевих громад про важливість збереження та раціонального використання водних ресурсів.",
+          "Співпраця з місцевими органами влади для ефективного забезпечення чистою питною водою.",
+          "Проведення досліджень та розробка нових технологій для очищення та збереження води."
+        ]
       },
       {
-        "label": "IBAN:",
-        "description": "UA273052990000026006025107576"
+        "title": "Команда",
+        "paragraph": [
+          "Команда фонду складається з висококваліфікованих фахівців з різних галузей: інженерів, екологів, соціальних працівників та інших спеціалістів, які об'єднали свої зусилля для того, щоб реалізувати місію фонду.",
+          "Крім того, фонд активно співпрацює з волонтерами, які допомагають у реалізації різних проектів на місцевому рівні."
+        ]
       },
       {
-        "label": "Назва банку:",
-        "description": "АТ КБ «ПриватБанк»"
+        "title": "Досягнення",
+        "paragraph": [
+          "Фонд \"Чиста вода всім\" вже досяг певних успіхів у реалізації своєї місії, але перед нами ще багато роботи. Ми вдячні всім, хто долучається до нашої ініціативи та допомагає нам зробити світ кращим."
+        ]
       }
     ]
   },
-  "monoLink": "Посилання на онлайн-переказ",
-  "swift": {
-    "accountTitle": "$ USD",
-    "paymentDetails": [
+  "donate": {
+    "title": "Зробити внесок",
+    "tabs": [
       {
-        "title": "Company name:",
-        "description": "БЛАГОДІЙНА ОРГАНІЗАЦІЯ БЛАГОДІЙНИЙ ФОНД ЧИСТА ВОДА ВСІМ"
+        "label": "Privat 24",
+        "info": {
+          "card": {
+            "label": "Картка:",
+            "description": "4246 0010 0188 5684"
+          },
+          "link": "Посилання на онлайн-переказ",
+          "accountTitle": "Рахунок - ₴ ГРН",
+          "paymentDetails": [
+            {
+              "label": "Отримувач:",
+              "description": "БО \"БФ ЧИСТА ВОДА ВСIМ\""
+            },
+            {
+              "label": "Код одержувача:",
+              "description": "44015985"
+            },
+            {
+              "label": "IBAN:",
+              "description": "UA273052990000026006025107576"
+            },
+            {
+              "label": "Назва банку:",
+              "description": "АТ КБ «ПриватБанк»"
+            }
+          ]
+        }
       },
       {
-        "title": "Bank name:",
-        "description": "JSC CB \"PRIVATBANK\""
+        "label": "Mono",
+        "info": "Посилання на онлайн-переказ"
       },
       {
-        "title": "IBAN:",
-        "description": "UA663052990000026007025107810"
+        "label": "Swift",
+        "info": {
+          "accountTitle": "$ USD",
+          "paymentDetails": [
+            {
+              "title": "Company name:",
+              "description": "БЛАГОДІЙНА ОРГАНІЗАЦІЯ БЛАГОДІЙНИЙ ФОНД ЧИСТА ВОДА ВСІМ"
+            },
+            {
+              "title": "Bank name:",
+              "description": "JSC CB \"PRIVATBANK\""
+            },
+            {
+              "title": "IBAN:",
+              "description": "UA663052990000026007025107810"
+            },
+            {
+              "title": "Bank SWIFT:",
+              "description": "PBANUA2X"
+            },
+            {
+              "title": "Company address:",
+              "description": "25009, УКРАЇНА, ОБЛ. КІРОВОГРАДСЬКА, М. КРОПИВНИЦЬКИЙ, ВУЛ. САДОВА, 88"
+            }
+          ],
+          "bankDetails": [
+            {
+              "bankTitle": "Correspondent bank 1:",
+              "bankDescription": "JP Morgan Chase Bank, New York ,USA",
+              "accountTitle": "Account in the correspondent bank:",
+              "accountDescription": "001-1-000080",
+              "correspondentTitle": "Correspondent SWIFT:",
+              "correspondentDescription": "001-1-000080"
+            },
+            {
+              "bankTitle": "Correspondent bank 2:",
+              "bankDescription": "The Bank of New York Mellon, New York, USA",
+              "accountTitle": "Account in the correspondent bank:",
+              "accountDescription": "890-0085-754",
+              "correspondentTitle": "Correspondent SWIFT:",
+              "correspondentDescription": "IRVT US 3N"
+            },
+            {
+              "bankTitle": "Correspondent bank 3:",
+              "bankDescription": "The Bank of New York Mellon, New York, USA",
+              "accountTitle": "Account in the correspondent bank:",
+              "accountDescription": "890-0085-754",
+              "correspondentTitle": "Correspondent SWIFT:",
+              "correspondentDescription": "IRVT US 3N"
+            }
+          ]
+        }
       },
       {
-        "title": "Bank SWIFT:",
-        "description": "PBANUA2X"
-      },
-      {
-        "title": "Company address:",
-        "description": "5009, УКРАЇНА, ОБЛ. КІРОВОГРАДСЬКА, М. КРОПИВНИЦЬКИЙ, ВУЛ. САДОВА, 88"
-      }
-    ],
-    "bankDetails": [
-      {
-        "bankTitle": "Correspondent bank 1:",
-        "bankDescription": "JP Morgan Chase Bank, New York ,USA",
-        "accountTitle": "Account in the correspondent bank:",
-        "accountDescription": "001-1-000080",
-        "correspondentTitle": "Correspondent SWIFT:",
-        "correspondentDescription": "001-1-000080"
-      },
-      {
-        "bankTitle": "Correspondent bank 2:",
-        "bankDescription": "The Bank of New York Mellon, New York, USA",
-        "accountTitle": "Account in the correspondent bank:",
-        "accountDescription": "890-0085-754",
-        "correspondentTitle": "Correspondent SWIFT:",
-        "correspondentDescription": "IRVT US 3N"
-      },
-      {
-        "bankTitle": "Correspondent bank 3:",
-        "bankDescription": "The Bank of New York Mellon, New York, USA",
-        "accountTitle": "Account in the correspondent bank:",
-        "accountDescription": "890-0085-754",
-        "correspondentTitle": "Correspondent SWIFT:",
-        "correspondentDescription": "IRVT US 3N"
+        "label": "PayPal",
+        "info": {
+          "box": "Скринька:",
+          "email": "charity_cleanwater@ukr.net"
+        }
       }
     ]
   },
-  "payPal": {
-    "box": "Скринька:",
-    "email": "charity_cleanwater@ukr.net"
-  },
-  "writeTitle": "НАПИШIТЬ НАМ",
-  "form": {
-    "name": {
-      "label": "Ваше імʼя",
-      "placeholder": "Андрій Кіндрат",
-      "error": "Неправильне імʼя"
+  "write": {
+    "title": "НАПИШIТЬ НАМ",
+    "form": {
+      "name": {
+        "label": "Ваше імʼя",
+        "placeholder": "Андрій Кіндрат",
+        "error": "Неправильне імʼя"
+      },
+      "phone": {
+        "label": "Ваш телефон",
+        "placeholder": "+380981234567",
+        "error": "Неправилний телефон"
+      },
+      "message": {
+        "label": "Ваше повідомлення",
+        "placeholder": "Ваше повідомлення...",
+        "error": ""
+      }
     },
-    "phone": {
-      "label": "Ваш телефон",
-      "placeholder": "+380981234567",
-      "error": "Неправилний телефон"
-    },
-    "message": {
-      "label": "Ваше повідомлення",
-      "placeholder": "Ваше повідомлення...",
-      "error": ""
+    "formBtn": {
+      "regular": "Відправити",
+      "success": "Успішно відправлено",
+      "error": "Виникла помилка"
     }
-  },
-  "formBtn": {
-    "regular": "Відправити",
-    "success": "Успішно відправлено",
-    "error": "Виникла помилка"
   },
   "contact": [
     {
@@ -191,23 +203,25 @@
       "contact": "+38(097)-60-14-217"
     }
   ],
-  "socialTitle": "Соціальні мережі",
-  "socials": [
-    {
-      "label": "Instagram",
-      "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
-      "aria-label": "Посилання на Instagram"
-    },
-    {
-      "label": "Facebook",
-      "url": "https://www.facebook.com/zdorovavoda.krop",
-      "aria-label": "Посилання на Facebook"
-    }
-  ],
+  "socials": {
+    "title": "Соціальні мережі",
+    "links": [
+      {
+        "label": "Instagram",
+        "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
+        "aria-label": "Посилання на Instagram"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/zdorovavoda.krop",
+        "aria-label": "Посилання на Facebook"
+      }
+    ]
+  },
   "menuLabel": "Меню",
-  "created": {
+  "createdBy": {
     "label": "Created by",
     "link": "SoftRyzen",
-    "url": ""
+    "url": "https://softryzen.com"
   }
 }
