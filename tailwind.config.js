@@ -47,6 +47,10 @@ module.exports = {
       content: {
         // crossIcon: 'url("/icons/error-cross.svg")',
       },
+      borderRadius: {
+        10: ['10px'],
+        20: ['20px'],
+      },
     },
   },
   plugins: [require('prettier-plugin-tailwindcss')],
