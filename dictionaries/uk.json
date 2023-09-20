@@ -1,4 +1,5 @@
 {
+  "title": "Це хедер",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -173,18 +174,15 @@
     "form": {
       "name": {
         "label": "Ваше імʼя",
-        "placeholder": "Андрій",
-        "error": "Неправильне імʼя"
+        "placeholder": "Андрій"
       },
       "phone": {
         "label": "Ваш телефон",
-        "placeholder": "+380981234567",
-        "error": "Неправилний телефон"
+        "placeholder": "+380981234567"
       },
       "message": {
         "label": "Ваше повідомлення",
-        "placeholder": "Ваше повідомлення...",
-        "error": ""
+        "placeholder": "Ваше повідомлення..."
       }
     },
     "formBtn": {

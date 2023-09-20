@@ -1,4 +1,5 @@
 {
+  "title": "It is header",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -173,18 +174,15 @@
     "form": {
       "name": {
         "label": "Your name",
-        "placeholder": "Andrew",
-        "error": "Incorrect name"
+        "placeholder": "Andrew"
       },
       "phone": {
         "label": "Your phone",
-        "placeholder": "+380981234567",
-        "error": "Wrong phone number"
+        "placeholder": "+380981234567"
       },
       "message": {
         "label": "Your message",
-        "placeholder": "Your message...",
-        "error": ""
+        "placeholder": "Your message..."
       }
     },
     "formBtn": {
