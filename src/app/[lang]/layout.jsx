@@ -1,14 +1,10 @@
-import { Inter } from 'next/font/google';
-
 import { Header } from '@/layout/Header';
+import { axiforma } from '../fonts';
 
 import { getMetaByLang } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
-
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
@@ -28,10 +24,11 @@ export default async function RootLayout({ children, params: { lang } }) {
 
   return (
     <html lang={lang}>
-      <body className={inter.className}>
+      <body className={axiforma.variable}>
         <Header data={staticPageData.title} />
-
-        <main className="flex flex-col items-center">{children}</main>
+        <main className="flex min-h-screen flex-col items-center justify-between">
+          {children}
+        </main>
       </body>
     </html>
   );

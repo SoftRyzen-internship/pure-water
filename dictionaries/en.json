@@ -1,3 +1,225 @@
 {
-  "title": "It is header"
+  "title": "It is header",
+  "lang": ["UA", "EN"],
+  "nav": [
+    {
+      "label": "Main",
+      "id": "main"
+    },
+    {
+      "label": "About the fund",
+      "id": "about"
+    },
+    {
+      "label": "Current fundraising",
+      "id": "current"
+    },
+    {
+      "label": "Donate",
+      "id": "donate"
+    },
+    {
+      "label": "Projects",
+      "id": "projects"
+    },
+    {
+      "label": "Write to us",
+      "id": "write"
+    }
+  ],
+  "hero": {
+    "titleFoundation": "CHARITY FUND",
+    "titleMain": "CLEAN WATER FOR EVERYONE",
+    "tagline": "Provision of clean drinking water"
+  },
+  "makeDonate": {
+    "title": "Donate",
+    "id": "donate"
+  },
+  "about": {
+    "title": "About the fund",
+    "benefits": [
+      {
+        "title": "Goal",
+        "paragraph": [
+          "The Clean Water for All Charitable Foundation was founded on November 26, 2020, to ensure access to clean and safe drinking water for everyone, regardless of their place of residence or social status.",
+          "This foundation is a response to the global challenge to provide all people with clean water, which is a basic right of every person and a key element for ensuring a decent life."
+        ]
+      },
+      {
+        "title": "Priorities",
+        "paragraph": [
+          "Construction and maintenance of water supply systems in regions where there is no access to clean drinking water.",
+          "Educating local communities about the importance of water conservation and rational use.",
+          "Cooperation with local authorities and other organizations to ensure effective provision of clean drinking water.",
+          "Conducting research and developing new technologies for water purification and conservation."
+        ]
+      },
+      {
+        "title": "Team",
+        "paragraph": [
+          "The Foundation's team consists of highly qualified specialists from various fields: engineers, environmentalists, social workers and other professionals who have joined forces to realize the Foundation's mission.",
+          "In addition, the Foundation actively cooperates with volunteers who help implement various projects at the local level."
+        ]
+      },
+      {
+        "title": "Achievement",
+        "paragraph": [
+          "The Clean Water for All Foundation has already achieved some success in realizing its mission, but we still have a lot of work to do. We are grateful to everyone who joins our initiative and helps us make the world a better place."
+        ]
+      }
+    ]
+  },
+  "donate": {
+    "title": "Donate",
+    "tabs": [
+      {
+        "label": "Privat 24",
+        "info": {
+          "card": {
+            "label": "Card:",
+            "description": "4246 0010 0188 5684"
+          },
+          "link": "Link to online transfer",
+          "accountTitle": "Account - UAH ₴",
+          "paymentDetails": [
+            {
+              "label": "Recipient:",
+              "description": "CO \"CF CLEAN WATER FOR EVERYONE\""
+            },
+            {
+              "label": "Recipient code:",
+              "description": "44015985"
+            },
+            {
+              "label": "IBAN:",
+              "description": "UA273052990000026006025107576"
+            },
+            {
+              "label": "Name of bank:",
+              "description": "JSC CB \"PrivatBank\""
+            }
+          ]
+        }
+      },
+      {
+        "label": "Mono",
+        "info": "Link to online transfer"
+      },
+      {
+        "label": "Swift",
+        "info": {
+          "accountTitle": "$ USD",
+          "paymentDetails": [
+            {
+              "title": "Company name:",
+              "description": "CHARITABLE ORGANIZATION CHARITY FUND CLEAN WATER FOR EVERYONE"
+            },
+            {
+              "title": "Bank name:",
+              "description": "JSC CB \"PRIVATBANK\""
+            },
+            {
+              "title": "IBAN:",
+              "description": "UA663052990000026007025107810"
+            },
+            {
+              "title": "Bank SWIFT:",
+              "description": "PBANUA2X"
+            },
+            {
+              "title": "Company address:",
+              "description": "25009, UKRAINA, OBL. KIROVOHRADSKA, M. KROPYVNYTSKYI, VUL. SADOVA, 88"
+            }
+          ],
+          "bankDetails": [
+            {
+              "bankTitle": "Correspondent bank 1:",
+              "bankDescription": "JP Morgan Chase Bank, New York ,USA",
+              "accountTitle": "Account in the correspondent bank:",
+              "accountDescription": "001-1-000080",
+              "correspondentTitle": "Correspondent SWIFT:",
+              "correspondentDescription": "001-1-000080"
+            },
+            {
+              "bankTitle": "Correspondent bank 2:",
+              "bankDescription": "The Bank of New York Mellon, New York, USA",
+              "accountTitle": "Account in the correspondent bank:",
+              "accountDescription": "890-0085-754",
+              "correspondentTitle": "Correspondent SWIFT:",
+              "correspondentDescription": "IRVT US 3N"
+            },
+            {
+              "bankTitle": "Correspondent bank 3:",
+              "bankDescription": "Citibank N.A., NEW YORK, USA",
+              "accountTitle": "Account in the correspondent bank:",
+              "accountDescription": "36445343",
+              "correspondentTitle": "Correspondent SWIFT:",
+              "correspondentDescription": "CITI US 33"
+            }
+          ]
+        }
+      },
+      {
+        "label": "PayPal",
+        "info": {
+          "box": "Box:",
+          "email": "charity_cleanwater@ukr.net"
+        }
+      }
+    ]
+  },
+  "write": {
+    "title": "WRITE TO US",
+    "form": {
+      "name": {
+        "label": "Your name",
+        "placeholder": "Andrew"
+      },
+      "phone": {
+        "label": "Your phone",
+        "placeholder": "+380981234567"
+      },
+      "message": {
+        "label": "Your message",
+        "placeholder": "Your message..."
+      }
+    },
+    "formBtn": {
+      "regular": "Send",
+      "success": "Sent successfully",
+      "error": "Error"
+    }
+  },
+  "contact": [
+    {
+      "label": "E-mail",
+      "contact": "charity_cleanwater@ukr.net"
+    },
+    {
+      "label": "Phone number",
+      "contact": "+38(097)-60-14-217"
+    }
+  ],
+  "socials": {
+    "title": "Social networks",
+    "links": [
+      {
+        "label": "Instagram",
+        "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
+        "aria-label": "Link to Instagram"
+      },
+      {
+        "label": "Facebook",
+        "url": "https://www.facebook.com/zdorovavoda.krop",
+        "aria-label": "Link to Facebook"
+      }
+    ]
+  },
+  "menuLabel": "Menu",
+  "createdBy": {
+    "label": "Created by",
+    "link": "SoftRyzen",
+    "url": "https://softryzen.com"
+  }
 }
