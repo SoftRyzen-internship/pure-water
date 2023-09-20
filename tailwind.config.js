@@ -22,10 +22,10 @@ module.exports = {
       },
 
       colors: {
-        accent: '#1F9FD5',
-        accent2: '#1D9ED3',
+        accent: '#274B77',
+        primary: '#1F9FD5',
         secondary: '#1FB0E2',
-        mainText: '#274B77',
+        tertiary: '#1D9ED3',
         lighterBlue: '#20B1E2',
         lightBlue: '#1875B3',
         blue: '#1674B1',
@@ -37,11 +37,6 @@ module.exports = {
 
       fontFamily: {
         axiforma: ['var(--font-axiforma)', ...fontFamily.serif],
-      },
-
-      fontSize: {
-        // little: ['12px', '24px'], // class="text-little"
-        // small: ['18px', '24px'], // class="text-small"
       },
 
       content: {
