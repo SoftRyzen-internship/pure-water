@@ -150,11 +150,11 @@
             },
             {
               "bankTitle": "Correspondent bank 3:",
-              "bankDescription": "The Bank of New York Mellon, New York, USA",
+              "bankDescription": "Citibank N.A., NEW YORK, USA",
               "accountTitle": "Account in the correspondent bank:",
-              "accountDescription": "890-0085-754",
+              "accountDescription": "36445343",
               "correspondentTitle": "Correspondent SWIFT:",
-              "correspondentDescription": "IRVT US 3N"
+              "correspondentDescription": "CITI US 33"
             }
           ]
         }
@@ -173,7 +173,7 @@
     "form": {
       "name": {
         "label": "Ваше імʼя",
-        "placeholder": "Андрій Кіндрат",
+        "placeholder": "Андрій",
         "error": "Неправильне імʼя"
       },
       "phone": {
