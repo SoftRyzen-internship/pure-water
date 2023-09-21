@@ -1,7 +1,9 @@
 'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ArrowIcon from 'public/icons/arrow-down.svg';
 
 function LocaleSwitcher() {
   const [isOpenEn, setIsOpenEn] = useState(false);
@@ -20,8 +22,13 @@ function LocaleSwitcher() {
     return segments[1];
   };
 
+  const isUkSet = () => getCurrentLocale() === 'uk';
+
   return (
-    <div className="flex flex-col gap-2 py-2 px-4 w-[65px] text-white rounded-20 switcherGradient hover:switcherGradientActive focus:switcherGradientActive transition backdrop-blur-[1px] cursor-pointer">
+    <div
+      aria-label="language switcher"
+      className="flex flex-col gap-2 py-2 px-4 w-[65px] text-white rounded-20 switcherGradient hover:switcherGradientActive focus:switcherGradientActive transition backdrop-blur-[1px] cursor-pointer"
+    >
       <div
         className="flex gap-1 items-center h-[9px]"
         onClick={() => {
@@ -29,9 +36,9 @@ function LocaleSwitcher() {
         }}
       >
         <p className="text-xs uppercase font-medium ">
-          {getCurrentLocale() === 'uk' ? 'UA' : 'EN'}
+          {isUkSet() ? 'UA' : 'EN'}
         </p>
-        <div className="w-[12px] h-[8px] bg-blue-900"></div>
+        <ArrowIcon width={12} height={8} />
       </div>
 
       <div
@@ -43,10 +50,10 @@ function LocaleSwitcher() {
         }}
       >
         <Link
-          href={redirectedPathName(getCurrentLocale() === 'uk' ? 'en' : 'uk')}
-          className="text-xs uppercase font-light"
+          href={redirectedPathName(isUkSet() ? 'en' : 'uk')}
+          className="w-full text-xs uppercase font-light"
         >
-          {getCurrentLocale() === 'uk' ? 'EN' : 'UA'}
+          {isUkSet() ? 'EN' : 'UA'}
         </Link>
       </div>
     </div>
