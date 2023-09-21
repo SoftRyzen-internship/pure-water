@@ -29,4 +29,18 @@
   .iconGradient {
     background-image: linear-gradient(180deg, #1d9ed3 0%, #1673b1 100%);
   }
+  .switcherGradient {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 2%,
+      rgba(255, 255, 255, 0.05) 102%
+    );
+  }
+  .switcherGradientActive {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 2%,
+      rgba(255, 255, 255, 0.08) 102%
+    );
+  }
 }

@@ -1,24 +1,27 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 function LocaleSwitcher() {
   const [isOpenEn, setIsOpenEn] = useState(false);
-  const [selectedOption, setSelectedOption] = useState('');
-
   const pathName = usePathname();
 
-  useEffect(() => {
-    setSelectedOption(pathName.slice(1));
-  }, [pathName]);
+  const redirectedPathName = locale => {
+    if (!pathName) return '/';
+    const segments = pathName.split('/');
+    segments[1] = locale;
+    return segments.join('/');
+  };
 
-  const toggleLocale = () => {
-    return pathName === '/uk' ? '/en' : '/uk';
+  const getCurrentLocale = () => {
+    if (!pathName) return '/';
+    const segments = pathName.split('/');
+    return segments[1];
   };
 
   return (
-    <div className="rounded-[20px] py-2 px-4 flex flex-col gap-2 w-[65px] text-white">
+    <div className="flex flex-col gap-2 py-2 px-4 w-[65px] text-white rounded-20 switcherGradient hover:switcherGradientActive focus:switcherGradientActive transition backdrop-blur-[1px] cursor-pointer">
       <div
         className="flex gap-1 items-center h-[9px]"
         onClick={() => {
@@ -26,7 +29,7 @@ function LocaleSwitcher() {
         }}
       >
         <p className="text-xs uppercase font-medium ">
-          {selectedOption === 'uk' ? 'UA' : 'EN'}
+          {getCurrentLocale() === 'uk' ? 'UA' : 'EN'}
         </p>
         <div className="w-[12px] h-[8px] bg-blue-900"></div>
       </div>
@@ -39,8 +42,11 @@ function LocaleSwitcher() {
           setIsOpenEn(state => !state);
         }}
       >
-        <Link href={toggleLocale()} className="text-xs uppercase font-light">
-          {selectedOption === 'uk' ? 'EN' : 'UA'}
+        <Link
+          href={redirectedPathName(getCurrentLocale() === 'uk' ? 'en' : 'uk')}
+          className="text-xs uppercase font-light"
+        >
+          {getCurrentLocale() === 'uk' ? 'EN' : 'UA'}
         </Link>
       </div>
     </div>
