@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components/Container';
 import { NavBar } from '@/components/NavBar';
 
-export const Header = ({ data, navArray }) => {
+export const Header = ({ navArray }) => {
   return (
     <header>
       <Container>
-        <p>{data}</p>
         <NavBar navArray={navArray} section="header" />
       </Container>
     </header>
@@ -15,7 +14,6 @@ export const Header = ({ data, navArray }) => {
 };
 
 Header.propTypes = {
-  data: PropTypes.string.isRequired,
   navArray: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
