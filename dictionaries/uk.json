@@ -173,7 +173,7 @@
     "title": "НАПИШIТЬ НАМ",
     "form": {
       "name": {
-        "label": "Ваше імʼя",
+        "label": "Ваше Імʼя",
         "placeholder": "Андрій"
       },
       "phone": {

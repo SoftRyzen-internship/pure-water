@@ -173,7 +173,7 @@
     "title": "WRITE TO US",
     "form": {
       "name": {
-        "label": "Your name",
+        "label": "Your Name",
         "placeholder": "Andrew"
       },
       "phone": {

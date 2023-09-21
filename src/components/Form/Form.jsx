@@ -7,8 +7,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import PropTypes from 'prop-types';
 
 import { InputField } from '../InputField';
-import ErrorIcon from 'public/icons/close.svg';
-import SuccessIcon from 'public/icons/close.svg';
+import ErrorIcon from 'public/icons/error.svg';
+import SuccessIcon from 'public/icons/blue-check.svg';
 import { getFormBtnClass } from '@/utils/getFormBtnClass';
 import { getFormBtnContent } from '@/utils/getFormBtnContent';
 import { formSchema } from '@/utils/yupSchema';
@@ -85,7 +85,7 @@ export const Form = ({ data }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="formGradient w-full md:w-[500px] h-[605px] md:h-[670px] flex flex-col gap-5 md:gap-6 p-3 pt-[48px] md:py-12 md:px-9 rounded-20"
+      className="formGradient w-full md:w-[500px] h-[605px] md:h-[670px] flex flex-col justify-between p-3 pt-[48px] md:py-12 md:px-9 rounded-20"
     >
       <InputField
         label={name.label}
