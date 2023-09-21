@@ -14,7 +14,7 @@ export const getFormBtnClass = (formStatus, loading) => {
   }
 
   classes +=
-    ' flex justify-center items-center gap-2 w-full h-[50px] md:h-[62px] textGradient text-transparent bg-clip-text text-[16px] md:text-[24px] font-medium rounded-10 transition duration-300 ';
+    ' flex justify-center items-center w-full h-[50px] md:h-[62px] mt-1 md:mt-0 text-[16px] md:text-[24px] font-medium leading-normal rounded-10 transition duration-300 ';
 
   return classes;
 };

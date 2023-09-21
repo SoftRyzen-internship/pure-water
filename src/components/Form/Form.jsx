@@ -116,7 +116,9 @@ export const Form = ({ data }) => {
         className={buttonClasses}
         disabled={loading || formStatus === 'error' || formStatus === 'success'}
       >
-        {buttonContent}
+        <span className="textGradient flex items-center gap-2 text-transparent bg-clip-text">
+          {buttonContent}
+        </span>
       </button>
     </form>
   );

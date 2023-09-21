@@ -19,7 +19,7 @@ export const InputField = ({
           placeholder={placeholder}
           className={`${
             errors[name] ? 'border-pink' : 'border-white/25'
-          } border rounded-10 p-2 h-[216px] md:h-[201px] mb-6 text-[16px] md:text-[24px] font-light leading-normal bg-transparent resize-none`}
+          } border rounded-10 p-2 h-[216px] md:h-[201px] text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25 resize-none`}
         />
       ) : (
         <input
@@ -28,7 +28,7 @@ export const InputField = ({
           type={type}
           className={`${
             errors[name] ? 'border-b-pink' : 'border-b-white/25'
-          } border-b pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent`}
+          } border-b pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25`}
           placeholder={placeholder}
           autoComplete="true"
         />
