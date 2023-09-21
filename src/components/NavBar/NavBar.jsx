@@ -1,10 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
 export const NavBar = ({ navArray, section }) => {
+  const [sortedNavArray, setSortedNavArray] = useState([]);
+
   const sectionClasses = {
     header: 'hidden xl:flex flex-row gap-6 items-center justify-center',
     footer: 'hidden xl:flex flex-col gap-2 items-end',
@@ -12,28 +14,28 @@ export const NavBar = ({ navArray, section }) => {
     footerMenu: 'flex xl:hidden flex-col gap-[23px] items-center',
   };
 
-  const getFontWeight = () =>
-    section === 'header' ? 'font-medium' : 'font-light';
-
-  const sortedArray = () => {
+  useEffect(() => {
     if (section === 'header' || section === 'headerMenu') {
-      return navArray.slice(1);
+      setSortedNavArray(navArray.slice(1));
     } else {
-      return navArray;
+      setSortedNavArray(navArray);
     }
-  };
+  }, [navArray, section]);
 
   return (
     <nav>
       <ul className={`text-base ${sectionClasses[section]}`}>
-        {sortedArray().map(({ label, id }) => {
+        {sortedNavArray.map(({ label, id }) => {
           return (
             <li key={id}>
               <Link
+                href="/"
                 to={id}
                 smooth={true}
                 duration={500}
-                className={`${getFontWeight()} text-white/75 py-3 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white`}
+                className={`${
+                  section === 'header' ? 'font-medium' : 'font-light'
+                } text-white/75 py-3 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white`}
               >
                 {label}
               </Link>
