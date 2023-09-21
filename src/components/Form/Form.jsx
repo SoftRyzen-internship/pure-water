@@ -85,7 +85,7 @@ export const Form = ({ data }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="formGradient w-full md:w-[500px] h-[605px] md:h-[670px] flex flex-col justify-between p-3 pt-[48px] md:py-12 md:px-9 rounded-20"
+      className="formGradient w-full md:w-[500px] h-[605px] md:h-[670px] flex flex-col justify-between mx-auto p-3 pt-[48px] md:py-12 md:px-9 rounded-20"
     >
       <InputField
         label={name.label}

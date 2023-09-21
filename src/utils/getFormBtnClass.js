@@ -4,7 +4,8 @@ export const getFormBtnClass = (formStatus, loading) => {
   if (formStatus === 'success' || formStatus === 'error') {
     classes += 'bg-white/100 ';
   } else {
-    classes += 'bg-white/90 hover:bg-white/100 focus:bg-white/100 ';
+    classes +=
+      'bg-white/100 xl:bg-white/90 hover:bg-white/100 focus:bg-white/100 ';
   }
 
   if (loading || formStatus === 'error') {
