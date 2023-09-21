@@ -28,7 +28,7 @@ export const InputField = ({
           type={type}
           className={`${
             errors[name] ? 'border-b-pink' : 'border-b-white/25'
-          } border-b pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25`}
+          } input-field border-b pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25`}
           placeholder={placeholder}
           autoComplete="true"
         />
