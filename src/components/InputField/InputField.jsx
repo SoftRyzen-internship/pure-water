@@ -19,7 +19,7 @@ export const InputField = ({
           placeholder={placeholder}
           className={`${
             errors[name] ? 'border-pink' : 'border-white/25'
-          } border rounded-10 p-2 h-[216px] md:h-[201px] text-[16px] md:text-[24px] font-light leading-normal bg-transparent resize-none`}
+          } border rounded-10 p-2 h-[216px] md:h-[201px] mb-6 text-[16px] md:text-[24px] font-light leading-normal bg-transparent resize-none`}
         />
       ) : (
         <input

@@ -6,6 +6,8 @@ import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 import './globals.css';
 
+import { Form } from '@/components/Form';
+import { Container } from '@/components/Container';
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
 
@@ -28,6 +30,9 @@ export default async function RootLayout({ children, params: { lang } }) {
         <Header data={staticPageData.title} />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
+          <Container>
+            <Form data={staticPageData.write} />
+          </Container>
         </main>
       </body>
     </html>

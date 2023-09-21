@@ -1,8 +1,8 @@
 export const getFormBtnContent = (
   formStatus,
-  sendBtn,
-  sendBtnSuccess,
-  sendBtnError,
+  regular,
+  success,
+  error,
   SuccessIcon,
   ErrorIcon,
 ) => {
@@ -10,7 +10,7 @@ export const getFormBtnContent = (
   if (formStatus === 'success') {
     return (
       <>
-        <SuccessIcon className={classes} /> {sendBtnSuccess}
+        <SuccessIcon className={classes} /> {success}
       </>
     );
   }
@@ -18,10 +18,10 @@ export const getFormBtnContent = (
   if (formStatus === 'error') {
     return (
       <>
-        <ErrorIcon className={classes} /> {sendBtnError}
+        <ErrorIcon className={classes} /> {error}
       </>
     );
   }
 
-  return sendBtn;
+  return regular;
 };
