@@ -25,7 +25,7 @@ export default async function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <body className={axiforma.variable}>
-        <Header data={staticPageData.title} />
+        <Header data={staticPageData.title} navArray={staticPageData.nav} />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
