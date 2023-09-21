@@ -169,6 +169,9 @@
       }
     ]
   },
+  "projects": {
+    "city": "Мiсто"
+  },
   "write": {
     "title": "НАПИШIТЬ НАМ",
     "form": {
