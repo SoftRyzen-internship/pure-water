@@ -33,7 +33,7 @@ export const LocaleSwitcher = ({ switcherAria }) => {
       onChange={handlechange}
       className=" flex flex-col gap-2 py-2 px-4 w-[65px] text-white rounded-20 switcherGradient hover:switcherGradientActive focus:switcherGradientActive transition duration-300 backdrop-blur-[1px] cursor-pointer"
     >
-      <Listbox.Button as="div" className="flex gap-1 items-center">
+      <Listbox.Button className="flex gap-1 items-center">
         <span className="block text-xs/[9px] uppercase font-medium ">
           {titleLocale(selectedLocale)}
         </span>

@@ -7,7 +7,7 @@ export const Header = ({ switcherAria }) => {
   return (
     <header>
       <Container>
-        <LocaleSwitcher switcherData={switcherAria} />
+        <LocaleSwitcher switcherAria={switcherAria} />
       </Container>
     </header>
   );
