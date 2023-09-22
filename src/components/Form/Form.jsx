@@ -125,5 +125,26 @@ export const Form = ({ data }) => {
 };
 
 Form.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    form: PropTypes.shape({
+      name: PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        placeholder: PropTypes.string.isRequired,
+      }).isRequired,
+      phone: PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        placeholder: PropTypes.string.isRequired,
+      }).isRequired,
+      message: PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        placeholder: PropTypes.string.isRequired,
+      }).isRequired,
+    }),
+    formBtn: PropTypes.shape({
+      regular: PropTypes.string.isRequired,
+      success: PropTypes.string.isRequired,
+      error: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
