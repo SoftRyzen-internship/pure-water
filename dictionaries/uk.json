@@ -1,5 +1,4 @@
 {
-  "title": "Це хедер",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -27,6 +26,7 @@
       "id": "write"
     }
   ],
+  "switcherAria": "Перемикач мов",
   "hero": {
     "titleFoundation": "БЛАГОДІЙНИЙ ФОНД",
     "titleMain": "ЧИСТА ВОДА ВСІМ",
