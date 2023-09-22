@@ -48,10 +48,10 @@ export const SocialLinks = ({ socials, section }) => {
 };
 
 SocialLinks.propTypes = {
-  socials: PropTypes.shape({
+  socials: PropTypes.arrayOf(PropTypes.shape({
     label: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
     'aria-label': PropTypes.string.isRequired,
-  }),
+  })),
   section: PropTypes.string.isRequired,
 };
