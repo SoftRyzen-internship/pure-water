@@ -5,18 +5,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { ProjectListItem } from '../ProjectListItem';
 import 'swiper/css';
+import { ProjectSwiperNav } from '../ProjectSwiperNav';
 
 export const ProjectSwiper = ({ projectList, staticData }) => {
-  const [slidesPerView, setSlidesPerView] = useState(1.15);
+  const [spaceBetween, setSpaceBetween] = useState(12);
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1280) {
-        setSlidesPerView(3);
-      } else if (window.innerWidth >= 768) {
-        setSlidesPerView(1.8);
+      if (window.innerWidth >= 768) {
+        setSpaceBetween(24);
       } else {
-        setSlidesPerView(1.15);
+        setSpaceBetween(12);
       }
     };
 
@@ -30,32 +29,28 @@ export const ProjectSwiper = ({ projectList, staticData }) => {
   }, []);
 
   return (
-    <div className="">
+    <div>
       <Swiper
         navigation={{
           prevEl: '.prev',
           nextEl: '.next',
+          disabledClass: 'opacity-75 cursor-not-allowed',
         }}
         grabCursor={true}
-        spaceBetween={12}
-        centeredSlides={true}
+        spaceBetween={spaceBetween}
+        centeredSlides={false}
         modules={[Navigation]}
-        slidesPerView={slidesPerView}
-        className=""
+        slidesPerView={'auto'}
       >
         {projectList.map(project => (
           <SwiperSlide
             key={project.id}
-            className="!w-[280px] px-3 py-6 rounded-10 border-2 border-solid border-tertiary"
+            className="!w-[260px] md:!w-[390px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
           >
             <ProjectListItem project={project} staticData={staticData} />
           </SwiperSlide>
         ))}
-
-        <div className="hidden xl:flex gap-x-12 justify-center items-center">
-          <button type="button" className="prev"></button>
-          <button type="button" className="next"></button>
-        </div>
+        <ProjectSwiperNav />
       </Swiper>
     </div>
   );
