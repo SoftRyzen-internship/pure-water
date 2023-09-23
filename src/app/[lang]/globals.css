@@ -5,6 +5,7 @@
 @layer base {
   body {
     @apply font-axiforma text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
+    @apply bg-black;
   }
 }
 
@@ -43,5 +44,25 @@
     transition:
       background-color 0s 600000s,
       color 0s 600000s;
+  }
+
+  .makeDonateBtn {
+    @apply flex justify-center items-center gap-[14px] before:h-6 xl:before:h-[32px] md:before:h-[28px] rounded-10 text-xl md:text-2xl xl:text-[28px] font-medium w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] cursor-pointer;
+  }
+  .makeDonateBtnWhite {
+    @apply makeDonateBtn before:content-[url('/icons/default-blue-waterdrop.svg')] hover:before:content-[url('/icons/hover-blue-waterdrop.svg')] focus:before:content-[url('/icons/hover-blue-waterdrop.svg')] textGradient text-transparent bg-clip-text;
+  }
+  .makeDonateBtnBlue {
+    @apply makeDonateBtn before:content-[url('/icons/default-waterdrop.svg')] hover:before:content-[url('/icons/hover-waterdrop.svg')] focus:before:content-[url('/icons/hover-waterdrop.svg')] text-white;
+  }
+
+  .donateOverlay {
+    @apply w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] transition duration-300 rounded-10;
+  }
+  .donateBtnWhiteOverlay {
+    @apply donateOverlay bg-white opacity-75 hover:opacity-100 focus-within:opacity-100;
+  }
+  .donateBtnBlueOverlay {
+    @apply donateOverlay bg-gradient-to-b from-sky-500/75 to-sky-700/75 opacity-75 hover:opacity-100 focus-within:opacity-100;
   }
 }
