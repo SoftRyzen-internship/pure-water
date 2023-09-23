@@ -24,7 +24,7 @@ export const SocialLinks = ({ socials, section }) => {
         return (
           <li
             key={social.label}
-            className={`${styledLink[section]} text-white/75 hover:text-white focus:text-white`}
+            className={`${styledLink[section]} text-white/75 hover:text-white focus:text-white transition duration-300`}
           >
             <a
               href={social.url}

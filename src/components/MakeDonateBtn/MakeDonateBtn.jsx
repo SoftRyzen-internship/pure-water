@@ -27,5 +27,5 @@ export const MakeDonateBtn = ({ title, section }) => {
 
 MakeDonateBtn.propTypes = {
   title: PropTypes.string.isRequired,
-  section: PropTypes.oneOf(['hero', 'currentFundraising']).isRequired,
+  section: PropTypes.oneOf(['hero', 'current']).isRequired,
 };
