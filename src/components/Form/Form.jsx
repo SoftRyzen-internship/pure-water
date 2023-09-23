@@ -15,7 +15,7 @@ import { formSchema } from '@/utils/yupSchema';
 import { sendMessageToTelegram } from '@/utils/sendMessageToTelegram';
 
 export const Form = ({ data }) => {
-  const { form, formBtn } = data;
+  const { form, formBtn, errorMsg } = data;
   const { name, phone, message } = form;
   const { regular, success, error } = formBtn;
 
@@ -41,7 +41,7 @@ export const Form = ({ data }) => {
     reset,
   } = useForm({
     mode: 'onChange',
-    resolver: yupResolver(formSchema),
+    resolver: yupResolver(formSchema(errorMsg)),
   });
 
   const STORAGE_KEY = 'feedback_form';
@@ -145,6 +145,12 @@ Form.propTypes = {
       regular: PropTypes.string.isRequired,
       success: PropTypes.string.isRequired,
       error: PropTypes.string.isRequired,
+    }).isRequired,
+    errorMsg: PropTypes.shape({
+      required: PropTypes.string.isRequired,
+      wrongName: PropTypes.string.isRequired,
+      wrongPhone: PropTypes.string.isRequired,
+      wrongMessage: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
 };

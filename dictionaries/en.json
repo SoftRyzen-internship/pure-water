@@ -189,6 +189,12 @@
       "regular": "Send",
       "success": "Sent successfully",
       "error": "Error"
+    },
+    "errorMsg": {
+      "required": "This field is required",
+      "wrongName": "Wrong name",
+      "wrongPhone": "Wrong phone",
+      "wrongMessage": "Type 3 to 500 characters"
     }
   },
   "contact": [

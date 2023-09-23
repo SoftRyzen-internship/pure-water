@@ -39,5 +39,11 @@ WriteUsSection.propTypes = {
       success: PropTypes.string.isRequired,
       error: PropTypes.string.isRequired,
     }).isRequired,
+    errorMsg: PropTypes.shape({
+      required: PropTypes.string.isRequired,
+      wrongName: PropTypes.string.isRequired,
+      wrongPhone: PropTypes.string.isRequired,
+      wrongMessage: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
