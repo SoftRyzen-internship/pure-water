@@ -5,7 +5,7 @@ import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 
 export const Header = ({ switcherAria }) => {
   return (
-    <header>
+    <header className="bg-green-600">
       <Container>
         <LocaleSwitcher switcherAria={switcherAria} />
       </Container>
