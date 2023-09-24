@@ -5,7 +5,12 @@ import Image from 'next/image';
 import TapIcon from 'public/icons/tap.svg';
 import { ProjectOverlay } from '../ProjectOverlay';
 
-export const ProjectListItem = ({ project, staticData }) => {
+export const ProjectListItem = ({
+  project,
+  staticData,
+  setIsModalOpen,
+  setImageList,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const { title, description, location, imageList } = project;
@@ -18,16 +23,25 @@ export const ProjectListItem = ({ project, staticData }) => {
     setIsHovered(false);
   };
 
+  const handleImgClick = images => {
+    setIsModalOpen(true);
+    setImageList(images);
+    document.body.style.overflow = 'hidden';
+  };
+
   return (
     <div
       className="flex flex-col h-[437px] md:h-[658px]"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative rounded-[20px] overflow-hidden mb-3 md:mb-4">
+      <div
+        className="relative rounded-[20px] overflow-hidden mb-3 md:mb-4"
+        onClick={() => handleImgClick(imageList)}
+      >
         <Image
           src={imageList[0].image.url}
-          alt={title}
+          alt={imageList[0].alt}
           layout="fill"
           className="!static !max-h-[183px] md:!max-h-[250px] object-cover"
         />

@@ -11,6 +11,7 @@ export const getProjects = gql`
         imageList {
           id
           image
+          alt
         }
       }
     }
