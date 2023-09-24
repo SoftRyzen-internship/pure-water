@@ -1,5 +1,6 @@
 'use client';
 
+import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { ProjectListItem } from '../ProjectListItem';
@@ -48,4 +49,9 @@ export const ProjectSwiper = ({
       </Swiper>
     </div>
   );
+};
+
+ProjectSwiper.propTypes = {
+  setImageList: PropTypes.func.isRequired,
+  setIsModalOpen: PropTypes.func.isRequired,
 };

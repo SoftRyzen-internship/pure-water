@@ -1,5 +1,6 @@
 'use client';
 
+import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
@@ -124,4 +125,17 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
       <ProjectSwiperNav variant="gallery" />
     </div>
   );
+};
+
+GalleryModal.propTypes = {
+  imageList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        url: PropTypes.string.isRequired,
+      }),
+      alt: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  setIsModalOpen: PropTypes.func.isRequired,
 };

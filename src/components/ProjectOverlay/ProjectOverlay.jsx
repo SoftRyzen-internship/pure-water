@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import TapIcon from 'public/icons/tap.svg';
 
 export const ProjectOverlay = ({ staticData, styles }) => {
@@ -11,4 +12,8 @@ export const ProjectOverlay = ({ staticData, styles }) => {
       </div>
     </div>
   );
+};
+
+ProjectOverlay.propTypes = {
+  styles: PropTypes.string,
 };

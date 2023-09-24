@@ -1,5 +1,6 @@
 'use client';
 
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Image from 'next/image';
 import TapIcon from 'public/icons/tap.svg';
@@ -56,7 +57,7 @@ export const ProjectListItem = ({
       <h3 className="h-[72px] mb-5 xl:mb-6 text-xl/[1.2] md:text-2xl/none font-medium">
         {title}
       </h3>
-      <p className="max-h-[100px] md:max-h-full text-sm/[1.43] md:text-base/tight overflow-auto tracking-[-0.28px] md:tracking-[-0.32px]">
+      <p className="project-description max-h-[100px] md:max-h-full text-sm/[1.43] md:text-base/tight overflow-auto tracking-[-0.28px] md:tracking-[-0.32px]">
         {description}
       </p>
       <p className="flex gap-3 items-center mt-auto text-base/[1.2] md:text-xl/[1.2]">
@@ -65,4 +66,21 @@ export const ProjectListItem = ({
       </p>
     </div>
   );
+};
+
+ProjectListItem.propTypes = {
+  project: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    imageList: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        image: PropTypes.shape({
+          url: PropTypes.string.isRequired,
+        }),
+        alt: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+    location: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+  }),
 };

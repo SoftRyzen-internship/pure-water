@@ -5,7 +5,7 @@
 @layer base {
   body {
     @apply font-axiforma text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
-    /* @apply bg-black; */
+    @apply bg-black;
   }
 }
 
@@ -53,5 +53,14 @@
 
   .stroke-linecap-round {
     stroke-linecap: round;
+  }
+
+  .project-description::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .project-description::-webkit-scrollbar-thumb {
+    background-color: #274b77;
+    border-radius: 30px;
   }
 }
