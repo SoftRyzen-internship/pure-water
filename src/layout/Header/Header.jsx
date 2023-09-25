@@ -1,24 +1,12 @@
-import PropTypes from 'prop-types';
-
 import { Container } from '@/components/Container';
 import { Logo } from '@/components/Logo/Logo';
 
-export const Header = ({ logoText, logoAria, fontVariable }) => {
+export const Header = ({ logoAria }) => {
   return (
-    <header>
+    <header className="bg-green-700">
       <Container>
-        <Logo
-          logoText={logoText}
-          logoAria={logoAria}
-          fontVariable={fontVariable}
-        />
+        <Logo logoAria={logoAria} />
       </Container>
     </header>
   );
-};
-
-Header.propTypes = {
-  logoText: PropTypes.string.isRequired,
-  logoAria: PropTypes.string.isRequired,
-  fontVariable: PropTypes.string.isRequired,
 };

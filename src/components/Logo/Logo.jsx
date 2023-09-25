@@ -1,34 +1,21 @@
 'use client';
 
-import Link from 'next/link';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 import LogoIcon from 'public/icons/logo.svg';
 
-export const Logo = ({ logoText, logoAria, fontVariable }) => {
+export const Logo = ({ logoAria }) => {
   const currentLocale = usePathname().split('/')[1];
 
   return (
-    <Link
-      href={`/${currentLocale}`}
-      aria-label={logoAria}
-      className={`${fontVariable} flex gap-2 items-center`}
-    >
-      <LogoIcon className="w-[30px] h-[48px] xl:w-[32px] xl:h-[52px] " />
-      <p
-        className={`font-montreal uppercase text-base/[16px] text-white/75 font-medium hover:text-white focus:text-white transition-colors duration-300 xl:text-base/[18px] ${
-          currentLocale === 'uk' ? 'w-[52px]' : 'w-[90px]'
-        }`}
-      >
-        {logoText}
-      </p>
+    <Link href={`/${currentLocale}`} aria-label={logoAria}>
+      <LogoIcon className="w-[90px] h-[48px] xl:w-[92px] xl:h-[54px] text-white/75 hover:text-white transition-colors duration-300 fill-current" />
     </Link>
   );
 };
 
 Logo.propTypes = {
-  logoText: PropTypes.string.isRequired,
   logoAria: PropTypes.string.isRequired,
-  fontVariable: PropTypes.string.isRequired,
 };

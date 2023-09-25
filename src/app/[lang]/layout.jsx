@@ -1,5 +1,5 @@
 import { Header } from '@/layout/Header';
-import { axiforma, montreal } from '../fonts';
+import { axiforma } from '../fonts';
 
 import { getMetaByLang } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
@@ -20,16 +20,12 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const { logoText, logoAria } = await getDictionary(lang);
+  const { logoAria } = await getDictionary(lang);
 
   return (
     <html lang={lang}>
       <body className={axiforma.variable}>
-        <Header
-          logoText={logoText}
-          logoAria={logoAria}
-          fontVariable={montreal.variable}
-        />
+        <Header logoAria={logoAria} />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>

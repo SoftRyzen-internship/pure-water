@@ -37,7 +37,6 @@ module.exports = {
 
       fontFamily: {
         axiforma: ['var(--font-axiforma)', ...fontFamily.serif],
-        montreal: ['var(--font-montreal)', ...fontFamily.serif],
       },
 
       content: {
