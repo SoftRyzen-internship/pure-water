@@ -35,3 +35,14 @@ export const axiforma = localFont({
   ],
   variable: '--font-axiforma',
 });
+
+export const montreal = localFont({
+  src: [
+    {
+      path: '../fonts/montreal/PPNeueMontreal-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-montreal',
+});
