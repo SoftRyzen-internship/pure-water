@@ -3,7 +3,7 @@ import { Logo } from '@/components/Logo/Logo';
 
 export const Header = ({ logoAria }) => {
   return (
-    <header className="bg-green-700">
+    <header>
       <Container>
         <Logo logoAria={logoAria} />
       </Container>
