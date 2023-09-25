@@ -74,13 +74,16 @@
     "title": "Donate",
     "tabs": [
       {
-        "label": "Privat 24",
+        "label": "Privat24",
         "info": {
           "card": {
             "label": "Card:",
             "description": "4246 0010 0188 5684"
           },
-          "link": "Link to online transfer",
+          "link": {
+            "title": "Link to online transfer",
+            "url": ""
+          },
           "accountTitle": "Account - UAH ₴",
           "paymentDetails": [
             {
@@ -104,7 +107,12 @@
       },
       {
         "label": "Mono",
-        "info": "Link to online transfer"
+        "info": {
+          "link": {
+            "title": "Посилання на онлайн-переказ",
+            "url": ""
+          }
+        }
       },
       {
         "label": "Swift",

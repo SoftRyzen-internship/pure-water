@@ -50,6 +50,23 @@
   .donateBtnBlueOverlay {
     @apply donateOverlay bg-gradient-to-b from-sky-500/75 to-sky-700/75 opacity-75 hover:opacity-100 focus-within:opacity-100;
   }
+
+  .tabLink {
+    @apply w-full h-full flex justify-center items-center rounded-10;
+  }
+  .defaultTabLink {
+    @apply tabLink border-2 border-sky-500 group-hover/tab:border-0 group-focus-within/tab:border-0  group-hover/tab:bg-gradient-to-b from-sky-500 to-sky-800 group-focus-within/tab:bg-gradient-to-b from-sky-500 to-sky-800 transition-colors duration-300;
+  }
+  .activeTabLink {
+    @apply tabLink border-0 bg-gradient-to-b from-sky-500 to-sky-800;
+  }
+
+  .defaultTabLinkText {
+    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:font-semibold group-focus-within/tab:font-semibold group-hover/tab:text-white group-focus-within/tab:text-white transition-colors duration-300; 
+  }
+  .activeTabLinkText {
+    @apply font-semibold text-white;
+  }
 }
 
 .hero-bg-tab {
