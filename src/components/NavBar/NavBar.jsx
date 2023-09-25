@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
 export const NavBar = ({ navArray, section }) => {
-  const [sortedNavArray, setSortedNavArray] = useState([]);
+  const [sortedNavArray, setSortedNavArray] = useState(null);
 
   const sectionClasses = {
     header: 'hidden xl:flex flex-row gap-6 items-center justify-center',
@@ -25,7 +25,7 @@ export const NavBar = ({ navArray, section }) => {
   return (
     <nav>
       <ul className={`text-base ${sectionClasses[section]}`}>
-        {sortedNavArray.map(({ label, id }) => {
+        {sortedNavArray?.map(({ label, id }) => {
           return (
             <li key={id}>
               <Link
