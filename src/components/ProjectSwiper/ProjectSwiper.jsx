@@ -3,8 +3,10 @@
 import PropTypes from 'prop-types';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import { ProjectListItem } from '../ProjectListItem';
+
 import 'swiper/css';
+
+import { ProjectListItem } from '../ProjectListItem';
 import { ProjectSwiperNav } from '../ProjectSwiperNav';
 
 export const ProjectSwiper = ({
@@ -52,6 +54,28 @@ export const ProjectSwiper = ({
 };
 
 ProjectSwiper.propTypes = {
+  projectList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+      imageList: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          image: PropTypes.shape({
+            url: PropTypes.string.isRequired,
+          }),
+          alt: PropTypes.string.isRequired,
+        }),
+      ),
+    }),
+  ).isRequired,
+  staticData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    overlay: PropTypes.string.isRequired,
+  }),
   setImageList: PropTypes.func.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,
 };

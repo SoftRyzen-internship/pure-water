@@ -1,17 +1,17 @@
 'use client';
 
-import PropTypes from 'prop-types';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-
-import Image from 'next/image';
-import { ProjectSwiperNav } from '../ProjectSwiperNav';
-import CloseIcon from 'public/icons/close.svg';
+import PropTypes from 'prop-types';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/thumbs';
+
+import { ProjectSwiperNav } from '../ProjectSwiperNav';
+import CloseIcon from 'public/icons/close.svg';
 
 export const GalleryModal = ({ imageList, setIsModalOpen }) => {
   const thumbsSwiper = useRef(null);
@@ -87,7 +87,9 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
                 <Image
                   src={image.url}
                   alt={alt}
-                  layout="fill"
+                  width={280}
+                  height={210}
+                  quality={100}
                   className="!static !max-h-[210px] md:!max-h-[520px] xl:!max-h-[630px] object-cover"
                 />
               </SwiperSlide>
@@ -114,7 +116,9 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
                 <Image
                   src={image.url}
                   alt={alt}
-                  layout="fill"
+                  width={61}
+                  height={48}
+                  quality={100}
                   className="!static !max-h-[48px] md:!max-h-[80px] xl:!max-h-[88px] object-cover"
                 />
               </SwiperSlide>

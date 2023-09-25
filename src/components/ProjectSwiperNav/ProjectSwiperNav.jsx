@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import PrevIcon from 'public/icons/arrow-left.svg';
 import NextIcon from 'public/icons/arrow-right.svg';
 import GalleryPrevIcon from 'public/icons/line-left.svg';

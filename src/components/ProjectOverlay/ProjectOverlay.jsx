@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import TapIcon from 'public/icons/tap.svg';
 
 export const ProjectOverlay = ({ staticData, styles }) => {
@@ -8,12 +9,17 @@ export const ProjectOverlay = ({ staticData, styles }) => {
     >
       <div className="flex flex-col justify-center items-center">
         <TapIcon className="w-[23px] h-[30px] fill-white" />
-        <p className="text-xs text-white">{staticData.projects.overlay}</p>
+        <p className="text-xs text-white">{staticData.overlay}</p>
       </div>
     </div>
   );
 };
 
 ProjectOverlay.propTypes = {
+  staticData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    overlay: PropTypes.string.isRequired,
+  }),
   styles: PropTypes.string,
 };

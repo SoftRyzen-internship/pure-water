@@ -1,8 +1,9 @@
 'use client';
 
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
+
 import TapIcon from 'public/icons/tap.svg';
 import { ProjectOverlay } from '../ProjectOverlay';
 
@@ -37,14 +38,16 @@ export const ProjectListItem = ({
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className="relative rounded-[20px] overflow-hidden mb-3 md:mb-4"
+        className="relative rounded-20 overflow-hidden mb-3 md:mb-4"
         onClick={() => handleImgClick(imageList)}
       >
         <Image
           src={imageList[0].image.url}
           alt={imageList[0].alt}
-          layout="fill"
-          className="!static !max-h-[183px] md:!max-h-[250px] object-cover"
+          width={256}
+          height={187}
+          quality={100}
+          className="!static !w-[256px] !max-h-[187px] md:!max-h-[250px] object-cover"
         />
         <span className="xl:hidden absolute bottom-[5px] right-[5px] flex items-center justify-center w-8 h-8 bg-gradient-to-b from-lighterBlue to-[#0F5598] opacity-75 rounded-full">
           <TapIcon className="w-[18px] h-6 fill-white" />
@@ -61,7 +64,7 @@ export const ProjectListItem = ({
         {description}
       </p>
       <p className="flex gap-3 items-center mt-auto text-base/[1.2] md:text-xl/[1.2]">
-        <span className="font-light">{`${staticData.projects.city}:`}</span>
+        <span className="font-light">{`${staticData.city}:`}</span>
         <span>{location}</span>
       </p>
     </div>
@@ -70,7 +73,10 @@ export const ProjectListItem = ({
 
 ProjectListItem.propTypes = {
   project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
     imageList: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.string.isRequired,
@@ -79,8 +85,13 @@ ProjectListItem.propTypes = {
         }),
         alt: PropTypes.string.isRequired,
       }),
-    ).isRequired,
-    location: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    ),
   }),
+  staticData: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    overlay: PropTypes.string.isRequired,
+  }),
+  setImageList: PropTypes.func.isRequired,
+  setIsModalOpen: PropTypes.func.isRequired,
 };
