@@ -46,7 +46,7 @@ export const LocaleSwitcher = ({ switcherAria }) => {
             as="div"
             key={locale}
             value={locale}
-            className="w-full h-full  pb-2 px-4 text-xs/[9px] uppercase font-light pt-[2px] mt-[-2px]"
+            className="w-full h-full pt-[2px] mt-[-2px] pb-2 px-4 text-xs/[9px] uppercase font-light "
           >
             {titleLocale(locale)}
           </Listbox.Option>
