@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components/Container';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 
-export const Header = ({ switcherAria }) => {
+export const Header = ({ switcherAria, lang }) => {
   return (
     <header>
       <Container>
-        <LocaleSwitcher switcherAria={switcherAria} />
+        <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
       </Container>
     </header>
   );
@@ -15,4 +15,5 @@ export const Header = ({ switcherAria }) => {
 
 Header.propTypes = {
   switcherAria: PropTypes.string.isRequired,
+  lang: PropTypes.string.isRequired,
 };

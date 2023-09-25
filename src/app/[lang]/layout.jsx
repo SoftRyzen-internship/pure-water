@@ -25,7 +25,7 @@ export default async function RootLayout({ children, params: { lang } }) {
   return (
     <html lang={lang}>
       <body className={axiforma.variable}>
-        <Header switcherAria={switcherAria} />
+        <Header switcherAria={switcherAria} lang={lang} />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
