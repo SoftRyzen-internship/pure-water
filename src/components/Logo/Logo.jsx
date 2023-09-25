@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { usePathname } from 'next/navigation';
+
 import LogoIcon from 'public/icons/logo.svg';
 
 export const Logo = ({ logoText, logoAria, fontVariable }) => {
