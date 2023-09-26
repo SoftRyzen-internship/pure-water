@@ -1,9 +1,8 @@
 {
-  "title": "Це хедер",
   "lang": ["UA", "EN"],
   "nav": [
     {
-      "label": "Головна",
+      "label": "Нагору",
       "id": "main"
     },
     {
@@ -27,6 +26,7 @@
       "id": "write"
     }
   ],
+  "switcherAria": "Перемикач мов",
   "hero": {
     "titleFoundation": "Благодійний фонд",
     "titleMain": "ЧИСТА ВОДА ВСIМ",
