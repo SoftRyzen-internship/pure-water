@@ -45,7 +45,7 @@
     @apply w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] transition duration-300 rounded-10;
   }
   .donateBtnWhiteOverlay {
-    @apply donateOverlay bg-white opacity-75 hover:opacity-100 focus-within:opacity-100;
+    @apply donateOverlay bg-white opacity-90 hover:opacity-100 focus-within:opacity-100;
   }
   .donateBtnBlueOverlay {
     @apply donateOverlay bg-gradient-to-b from-sky-500/75 to-sky-700/75 opacity-75 hover:opacity-100 focus-within:opacity-100;
