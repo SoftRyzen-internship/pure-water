@@ -24,14 +24,14 @@ export const SocialLinks = ({ socials, section }) => {
         return (
           <li
             key={social.label}
-            className={`${styledLink[section]} text-white/75 hover:text-white focus:text-white transition duration-300`}
+            className={styledLink[section]}
           >
             <a
               href={social.url}
               target="_blank"
               rel="noreferrer noopener nofollow"
               aria-label={social['aria-label']}
-              className="flex justify-center items-center gap-3"
+              className="w-full h-full text-white/75 hover:text-white focus:text-white transition duration-300 flex justify-center items-center gap-3"
             >
               {React.createElement(icons[social.label], {
                 className: 'w-6 h-6 fill-current',
