@@ -8,7 +8,7 @@ export const Hero = ({ heroData, titleBtn, socials }) => {
   const { titleFoundation, titleMain, tagline } = heroData;
 
   return (
-    <section className="w-screen hero-bg-tab xl:hero-bg-desk pt-[134px] pb-[121px] md:pt-28 md:pb-[78px] xl:pt-[126px] xl:pb-[140px] text-white">
+    <section className="hero section pt-[134px] pb-[121px] md:pt-28 md:pb-[78px] xl:pt-[126px] xl:pb-[140px] text-white">
       <Container>
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col items-center gap-1 md:flex-row-reverse md:gap-6 mb-1 md:mb-6 xl:mb-[28px]">
