@@ -212,7 +212,7 @@
       {
         "label": "Facebook",
         "url": "https://www.facebook.com/zdorovavoda.krop",
-        "aria-label": "Link to Facebook"
+        "ariaLabel": "Link to Facebook"
       }
     ]
   },
