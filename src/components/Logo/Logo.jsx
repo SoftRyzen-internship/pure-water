@@ -2,18 +2,15 @@
 
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 import LogoIcon from 'public/icons/logo.svg';
 
-export const Logo = ({ logoAria }) => {
-  const currentLocale = usePathname().split('/')[1];
-
+export const Logo = ({ logoAria, lang }) => {
   return (
     <Link
-      href={`/${currentLocale}`}
+      href={`/${lang}`}
       aria-label={logoAria}
-      className="block w-[90px] h-[48px] xl:w-[92px] xl:h-[54px] text-white/75 hover:text-white transition-colors duration-300 "
+      className="block w-[90px] h-[48px] xl:w-[92px] xl:h-[54px] text-white/75 hover:text-white focus:text-white transition-colors duration-300 "
     >
       <LogoIcon className="w-full h-full fill-current" />
     </Link>
@@ -22,4 +19,5 @@ export const Logo = ({ logoAria }) => {
 
 Logo.propTypes = {
   logoAria: PropTypes.string.isRequired,
+  lang: PropTypes.string.isRequired,
 };

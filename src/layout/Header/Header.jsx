@@ -9,7 +9,7 @@ export const Header = ({ logoAria, navArray, switcherAria, lang }) => {
   return (
     <header>
       <Container>
-        <Logo logoAria={logoAria} />
+        <Logo logoAria={logoAria} lang={lang} />
         <NavBar navArray={navArray} section="header" />
         <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
       </Container>
