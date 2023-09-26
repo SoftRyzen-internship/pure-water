@@ -10,8 +10,12 @@ export const Logo = ({ logoAria }) => {
   const currentLocale = usePathname().split('/')[1];
 
   return (
-    <Link href={`/${currentLocale}`} aria-label={logoAria}>
-      <LogoIcon className="w-[90px] h-[48px] xl:w-[92px] xl:h-[54px] text-white/75 hover:text-white transition-colors duration-300 fill-current" />
+    <Link
+      href={`/${currentLocale}`}
+      aria-label={logoAria}
+      className="block w-[90px] h-[48px] xl:w-[92px] xl:h-[54px] text-white/75 hover:text-white transition-colors duration-300 "
+    >
+      <LogoIcon className="w-full h-full fill-current" />
     </Link>
   );
 };
