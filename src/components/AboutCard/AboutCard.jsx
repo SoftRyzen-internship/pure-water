@@ -15,7 +15,11 @@ export const AboutCard = ({ data, index, Icon }) => {
       <h3 className="textGradient text-transparent bg-clip-text text-[24px] font-medium leading-normal pt-4 pb-2">
         {title}
       </h3>
-      <p>{paragraph}</p>
+      {paragraph.map((text, index) => (
+        <p key={index} className="tracking-[-0.32px] mb-3 last:mb-0">
+          {text}
+        </p>
+      ))}
     </li>
   );
 };

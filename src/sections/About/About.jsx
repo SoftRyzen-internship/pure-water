@@ -13,8 +13,8 @@ export const About = ({ data }) => {
   const icons = [Aim, Priorities, Team, Achievements];
 
   return (
-    <section className="section" id="about">
-      <Container>
+    <section className="section xl:aboutBg" id="about">
+      <Container className="hidden xl:block">
         <SectionTitle title={title} />
         <ul className="flex gap-6">
           {benefits.map((benefit, index) => (
