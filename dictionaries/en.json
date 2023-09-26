@@ -104,7 +104,12 @@
       },
       {
         "label": "Mono",
-        "info": "Link to online transfer"
+        "info": {
+          "link": {
+            "title": "Link to online transfer",
+            "url": "#"
+          }
+        }
       },
       {
         "label": "Swift",
