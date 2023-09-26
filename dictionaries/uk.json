@@ -29,8 +29,8 @@
   ],
   "switcherAria": "Перемикач мов",
   "hero": {
-    "titleFoundation": "БЛАГОДІЙНИЙ ФОНД",
-    "titleMain": "ЧИСТА ВОДА ВСІМ",
+    "titleFoundation": "Благодійний фонд",
+    "titleMain": "ЧИСТА ВОДА ВСIМ",
     "tagline": "Забезпечення чистою питною водою"
   },
   "makeDonate": {
@@ -208,12 +208,12 @@
       {
         "label": "Instagram",
         "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
-        "aria-label": "Посилання на Instagram"
+        "ariaLabel": "Посилання на Instagram"
       },
       {
         "label": "Facebook",
         "url": "https://www.facebook.com/zdorovavoda.krop",
-        "aria-label": "Посилання на Facebook"
+        "ariaLabel": "Посилання на Facebook"
       }
     ]
   },

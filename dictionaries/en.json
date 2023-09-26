@@ -29,7 +29,7 @@
   ],
   "switcherAria": "Language switcher",
   "hero": {
-    "titleFoundation": "CHARITY FUND",
+    "titleFoundation": "Charity fund",
     "titleMain": "CLEAN WATER FOR EVERYONE",
     "tagline": "Provision of clean drinking water"
   },
@@ -208,12 +208,12 @@
       {
         "label": "Instagram",
         "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
-        "aria-label": "Link to Instagram"
+        "ariaLabel": "Link to Instagram"
       },
       {
         "label": "Facebook",
         "url": "https://www.facebook.com/zdorovavoda.krop",
-        "aria-label": "Link to Facebook"
+        "ariaLabel": "Link to Facebook"
       }
     ]
   },
