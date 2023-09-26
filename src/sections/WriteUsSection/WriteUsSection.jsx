@@ -10,7 +10,7 @@ export const WriteUsSection = ({ data }) => {
   return (
     <section className="section" id="write">
       <Container>
-        <SectionTitle title={title} className="mb" />
+        <SectionTitle title={title} />
         <Form data={data} />
       </Container>
     </section>
