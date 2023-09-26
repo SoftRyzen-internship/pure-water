@@ -3,30 +3,23 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { AboutCard } from '@/components/AboutCard';
-import Aim from 'public/icons/aim.svg';
-import Priorities from 'public/icons/priorities.svg';
-import Team from 'public/icons/team.svg';
-import Achievements from 'public/icons/achievements.svg';
+import { AboutSwiper } from '@/components/AboutSwiper';
 
 export const About = ({ data }) => {
   const { title, benefits } = data;
-  const icons = [Aim, Priorities, Team, Achievements];
 
   return (
     <section className="section xl:aboutBg" id="about">
+      <SectionTitle title={title} />
       <Container className="hidden xl:block">
-        <SectionTitle title={title} />
         <ul className="flex gap-6">
           {benefits.map((benefit, index) => (
-            <AboutCard
-              key={index}
-              data={benefit}
-              Icon={icons[index]}
-              index={index}
-            />
+            <AboutCard key={index} data={benefit} index={index} />
           ))}
         </ul>
       </Container>
+
+      <AboutSwiper benefits={benefits} />
     </section>
   );
 };
