@@ -5,7 +5,6 @@
 @layer base {
   body {
     @apply font-axiforma text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
-    @apply bg-black;
   }
 }
 

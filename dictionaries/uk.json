@@ -207,7 +207,7 @@
       {
         "label": "Instagram",
         "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
-        "aria-label": "Посилання на Instagram"
+        "ariaLabel": "Посилання на Instagram"
       },
       {
         "label": "Facebook",

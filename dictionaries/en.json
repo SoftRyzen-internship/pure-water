@@ -207,7 +207,7 @@
       {
         "label": "Instagram",
         "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
-        "aria-label": "Link to Instagram"
+        "ariaLabel": "Link to Instagram"
       },
       {
         "label": "Facebook",
