@@ -30,5 +30,5 @@ AboutCard.propTypes = {
     paragraph: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
-  icon: PropTypes.func.isRequired,
+  Icon: PropTypes.func.isRequired,
 };
