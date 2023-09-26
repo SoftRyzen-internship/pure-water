@@ -38,7 +38,7 @@ export const ProjectListItem = ({
       onMouseLeave={handleMouseLeave}
     >
       <div
-        className="relative rounded-20 overflow-hidden mb-3 md:mb-4"
+        className="relative rounded-20 md:!w-[342px] overflow-hidden mb-3 md:mb-4"
         onClick={() => handleImgClick(imageList)}
       >
         <Image
@@ -47,7 +47,7 @@ export const ProjectListItem = ({
           width={256}
           height={187}
           quality={100}
-          className="!static !w-[256px] !max-h-[187px] md:!max-h-[250px] object-cover"
+          className="!static !w-[256px] md:!w-[342px] !h-[187px] md:!h-[250px] object-cover"
         />
         <span className="xl:hidden absolute bottom-[5px] right-[5px] flex items-center justify-center w-8 h-8 bg-gradient-to-b from-lighterBlue to-[#0F5598] opacity-75 rounded-full">
           <TapIcon className="w-[18px] h-6 fill-white" />

@@ -90,7 +90,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
                   width={280}
                   height={210}
                   quality={100}
-                  className="!static !max-h-[210px] md:!max-h-[520px] xl:!max-h-[630px] object-cover"
+                  className="!static !w-[280px] !h-[210px] md:!w-[696px] md:!h-[520px] xl:!w-[842px] xl:!h-[630px] object-cover"
                 />
               </SwiperSlide>
             ))}
@@ -119,7 +119,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
                   width={61}
                   height={48}
                   quality={100}
-                  className="!static !max-h-[48px] md:!max-h-[80px] xl:!max-h-[88px] object-cover"
+                  className="!static !w-[61px] h-[48px] md:!w-[106px] xl:!w-[130px] md:h-[80px] xl:h-[88px] object-cover"
                 />
               </SwiperSlide>
             ))}

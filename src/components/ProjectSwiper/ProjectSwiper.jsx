@@ -16,7 +16,7 @@ export const ProjectSwiper = ({
   setImageList,
 }) => {
   return (
-    <div>
+    <div className="mt-6 xl:mt-8">
       <Swiper
         navigation={{
           prevEl: '.prev',
@@ -37,7 +37,7 @@ export const ProjectSwiper = ({
         {projectList?.map(project => (
           <SwiperSlide
             key={project.id}
-            className="!w-[260px] md:!w-[390px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
+            className="!w-[280px] md:!w-[390px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
           >
             <ProjectListItem
               project={project}
