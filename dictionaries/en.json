@@ -1,9 +1,8 @@
 {
-  "title": "It is header",
   "lang": ["UA", "EN"],
   "nav": [
     {
-      "label": "Main",
+      "label": "Up",
       "id": "main"
     },
     {
