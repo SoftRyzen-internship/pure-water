@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Fragment } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
@@ -26,21 +26,6 @@ export const NavBar = ({ navArray, section }) => {
     <nav>
       <ul className={`text-base ${sectionClasses[section]}`}>
         {sortedNavArray?.map(({ label, id }) => {
-          const replacedLabel = label.includes('є') ? (
-            <>
-              {label.split('є').map((part, index) => (
-                <Fragment key={index}>
-                  {index > 0 && (
-                    <span className="text-sm lowercase leading-4">є</span>
-                  )}
-                  {part}
-                </Fragment>
-              ))}
-            </>
-          ) : (
-            label
-          );
-
           return (
             <li key={id}>
               <Link
@@ -52,7 +37,7 @@ export const NavBar = ({ navArray, section }) => {
                   section === 'header' ? 'font-medium' : 'font-light'
                 } text-white/75 py-3 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white `}
               >
-                {replacedLabel}
+                {label}
               </Link>
             </li>
           );
