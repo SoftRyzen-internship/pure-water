@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import { Container } from '@/components/Container';
 import { NavBar } from '@/components/NavBar';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { Logo } from '@/components/Logo';
 
-export const Header = ({ navArray, switcherAria, lang }) => {
+export const Header = ({ logoAria, navArray, switcherAria, lang }) => {
   return (
     <header>
       <Container>
+        <Logo logoAria={logoAria} lang={lang} />
         <NavBar navArray={navArray} section="header" />
         <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
       </Container>
@@ -16,6 +18,7 @@ export const Header = ({ navArray, switcherAria, lang }) => {
 };
 
 Header.propTypes = {
+  logoAria: PropTypes.string.isRequired,
   navArray: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
