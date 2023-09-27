@@ -33,6 +33,7 @@ module.exports = {
         darkerBlue: '#0E5497',
         white: '#FFFFFF',
         pink: '#FF7777',
+        tabBorderColor: '#1E9FD4',
       },
 
       fontFamily: {

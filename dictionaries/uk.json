@@ -74,13 +74,16 @@
     "title": "Зробити внесок",
     "tabs": [
       {
-        "label": "Privat 24",
+        "label": "Privat24",
         "info": {
           "card": {
             "label": "Картка:",
             "description": "4246 0010 0188 5684"
           },
-          "link": "Посилання на онлайн-переказ",
+          "link": {
+            "title": "Посилання на онлайн-переказ",
+            "url": "https://www.privat24.ua/send/0q9dw"
+          },
           "accountTitle": "Рахунок - ₴ ГРН",
           "paymentDetails": [
             {
