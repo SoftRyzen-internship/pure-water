@@ -9,7 +9,7 @@ export const About = ({ data }) => {
   const { title, benefits } = data;
 
   return (
-    <section className="section xl:aboutBg" id="about">
+    <section className="section xl:aboutBg pt-0 xl:pb-[156px]" id="about">
       <SectionTitle title={title} />
       <Container className="hidden xl:block">
         <ul className="flex gap-6">
