@@ -1,5 +1,4 @@
 {
-  "logoAria": "Logo",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -27,7 +26,12 @@
       "id": "write"
     }
   ],
-  "switcherAria": "Language switcher",
+  "aria": {
+    "logo": "Logo",
+    "switcher": "Language switcher",
+    "closeMenu": "Close mobile menu",
+    "openMenu": "Open mobile menu"
+  },
   "hero": {
     "titleFoundation": "Charity fund",
     "titleMain": "CLEAN WATER FOR EVERYONE",

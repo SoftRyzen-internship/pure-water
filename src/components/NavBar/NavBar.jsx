@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
-export const NavBar = ({ navArray, section }) => {
+export const NavBar = ({ navArray, section, menuToggle }) => {
   const [sortedNavArray, setSortedNavArray] = useState(null);
 
   const sectionClasses = {
@@ -31,11 +31,12 @@ export const NavBar = ({ navArray, section }) => {
               <Link
                 href="/"
                 to={id}
+                onClick={menuToggle}
                 smooth={true}
                 duration={500}
                 className={`${
                   section === 'header' ? 'font-medium' : 'font-light'
-                } text-white/75 py-3 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white `}
+                } text-white/75 py-3 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white`}
               >
                 {label}
               </Link>
@@ -56,4 +57,5 @@ NavBar.propTypes = {
   ).isRequired,
   section: PropTypes.oneOf(['header', 'footer', 'headerMenu', 'footerMenu'])
     .isRequired,
+  menuToggle: PropTypes.func.isRequired,
 };
