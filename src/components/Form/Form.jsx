@@ -24,16 +24,6 @@ export const Form = ({ data }) => {
   const [loading, setLoading] = useState(false);
   const [formStatus, setFormStatus] = useState(null);
 
-  const buttonClasses = getFormBtnClass(formStatus, loading);
-  const buttonContent = getFormBtnContent(
-    formStatus,
-    regular,
-    success,
-    error,
-    SuccessIcon,
-    ErrorIcon,
-  );
-
   const {
     register,
     handleSubmit,
@@ -112,12 +102,20 @@ export const Form = ({ data }) => {
         errors={errors}
         placeholder={message.placeholder}
       />
+
       <button
         type="submit"
-        className={buttonClasses}
+        className={getFormBtnClass(formStatus, loading)}
         disabled={formStatus === 'success'}
       >
-        {buttonContent}
+        {getFormBtnContent(
+          formStatus,
+          regular,
+          success,
+          error,
+          SuccessIcon,
+          ErrorIcon,
+        )}
       </button>
     </form>
   );
