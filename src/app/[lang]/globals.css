@@ -1,3 +1,120 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-axiforma text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
+  }
+}
+
+@layer components {
+  .section {
+    @apply w-full py-[30px] md:py-10 xl:py-20;
+  }
+
+  .subTitle {
+    @apply text-[20px] md:text-[24px] font-medium leading-6 md:leading-normal;
+  }
+
+  .boxGradient {
+    background-image: linear-gradient(180deg, #1fb0e2 0%, #0e5497 100%);
+  }
+  .formGradient {
+    background-image: linear-gradient(180deg, #1f9fd5 0%, #1875b3 100%);
+  }
+  .textGradient {
+    background-image: linear-gradient(180deg, #20b1e2 0%, #105699 100%);
+  }
+  .iconGradient {
+    background-image: linear-gradient(180deg, #1d9ed3 0%, #1673b1 100%);
+  }
+
+  .makeDonateBtn {
+    @apply flex justify-center items-center gap-[14px] before:h-6 xl:before:h-[32px] md:before:h-[28px] rounded-10 text-xl md:text-2xl xl:text-[28px] font-medium w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] cursor-pointer;
+  }
+  .makeDonateBtnWhite {
+    @apply makeDonateBtn before:content-[url('/icons/default-blue-waterdrop.svg')] hover:before:content-[url('/icons/hover-blue-waterdrop.svg')] focus:before:content-[url('/icons/hover-blue-waterdrop.svg')] textGradient text-transparent bg-clip-text;
+  }
+  .makeDonateBtnBlue {
+    @apply makeDonateBtn before:content-[url('/icons/default-waterdrop.svg')] hover:before:content-[url('/icons/hover-waterdrop.svg')] focus:before:content-[url('/icons/hover-waterdrop.svg')] text-white;
+  }
+
+  .donateOverlay {
+    @apply w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] transition duration-300 rounded-10;
+  }
+  .donateBtnWhiteOverlay {
+    @apply donateOverlay bg-white opacity-90 hover:opacity-100 focus-within:opacity-100;
+  }
+  .donateBtnBlueOverlay {
+    @apply donateOverlay bg-gradient-to-b from-sky-500/75 to-sky-700/75 opacity-75 hover:opacity-100 focus-within:opacity-100;
+  }
+
+  .switcherGradient {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 2%,
+      rgba(255, 255, 255, 0.05) 102%
+    );
+  }
+  .switcherGradientActive {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 2%,
+      rgba(255, 255, 255, 0.08) 102%
+    );
+  }
+}
+
+.hero {
+  background-image: url('/images/hero/hero_tab@1x.jpg');
+  background-image: -webkit-image-set(
+    url('/images/hero/hero_tab@1x.webp') type('image/webp') 1x
+  );
+  background-image: image-set(
+    url('/images/hero/hero_tab@1x.webp') type('image/webp') 1x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: url('/images/hero/hero_tab@2x.jpg');
+    background-image: -webkit-image-set(
+      url('/images/hero/hero_tab@2x.webp') type('image/webp') 2x
+    );
+    background-image: image-set(
+      url('/images/hero/hero_tab@2x.webp') type('image/webp') 2x
+    );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-image: url('/images/hero/hero_desk@1x.jpg');
+    background-image: -webkit-image-set(
+      url('/images/hero/hero_desk@1x.webp') type('image/webp') 1x
+    );
+    background-image: image-set(
+      url('/images/hero/hero_desk@1x.webp') type('image/webp') 1x
+    );
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: url('/images/hero/hero_desk@2x.jpg');
+      background-image: -webkit-image-set(
+        url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
+      );
+      background-image: image-set(
+        url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
+      );
+    }
+  }
+}

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -15,27 +16,35 @@ module.exports = {
         padding: {
           DEFAULT: '1.25rem',
           sm: '1.25rem',
-          md: '2rem',
-          xl: '1.437rem',
+          md: '2.25rem',
+          xl: '1.875rem',
         },
       },
 
       colors: {
+        accent: '#274B77',
+        primary: '#1F9FD5',
+        secondary: '#1FB0E2',
+        tertiary: '#1D9ED3',
+        lighterBlue: '#20B1E2',
+        lightBlue: '#1875B3',
+        blue: '#1674B1',
+        darkBlue: '#105699',
+        darkerBlue: '#0E5497',
         white: '#FFFFFF',
-        red: '#FF5757',
+        pink: '#FF7777',
       },
 
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-      },
-
-      fontSize: {
-        // little: ['12px', '24px'], // class="text-little"
-        // small: ['18px', '24px'], // class="text-small"
+        axiforma: ['var(--font-axiforma)', ...fontFamily.serif],
       },
 
       content: {
         // crossIcon: 'url("/icons/error-cross.svg")',
+      },
+      borderRadius: {
+        10: ['10px'],
+        20: ['20px'],
       },
     },
   },
