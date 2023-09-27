@@ -1,11 +1,12 @@
 import { Hero } from '@/sections/Hero';
 import { CurrentFundraising } from '@/sections/CurrentFundraising';
 import { About } from '@/sections/About';
+import { WriteUsSection } from '@/sections/WriteUsSection';
 import { getDictionary } from '@/utils/getDictionary';
 
 export default async function Home({ params: { lang } }) {
   const staticPageData = await getDictionary(lang);
-  const { hero, makeDonate, socials, about } = staticPageData;
+  const { hero, makeDonate, socials, about, write } = staticPageData;
 
   return (
     <>
@@ -15,7 +16,8 @@ export default async function Home({ params: { lang } }) {
         socials={socials.links}
       />
       <About data={about} />
-      <>{staticPageData && <CurrentFundraising lang={lang} />}</>
+      <CurrentFundraising lang={lang} />
+      <WriteUsSection data={write} />
     </>
   );
 }

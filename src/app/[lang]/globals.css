@@ -136,4 +136,20 @@
       );
     }
   }
+
+  /* Form */
+  .input-field:-webkit-autofill,
+  .input-field:-webkit-autofill:hover,
+  .input-field:-webkit-autofill:focus {
+    transition:
+      background-color 0s 600000s,
+      color 0s 600000s;
+  }
+  .input-field:-moz-autofill,
+  .input-field:-moz-autofill:hover,
+  .input-field:-moz-autofill:focus {
+    transition:
+      background-color 0s 600000s,
+      color 0s 600000s;
+  }
 }
