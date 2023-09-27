@@ -14,14 +14,21 @@ export const AboutSwiper = ({ benefits }) => {
         spaceBetween={12}
         centeredSlides={false}
         slidesPerView={'auto'}
+        slidesOffsetBefore={20}
+        slidesOffsetAfter={20}
         breakpoints={{
           768: {
             spaceBetween: 24,
+            slidesOffsetBefore: 36,
+            slidesOffsetAfter: 36,
           },
         }}
       >
         {benefits.map((benefit, index) => (
-          <SwiperSlide key={index} className="w-[279px] px-3">
+          <SwiperSlide
+            key={index}
+            className="!w-[279px] !h-[510px] md:!w-[287px] md:!h-[590px] border-2 border-tertiary rounded-10"
+          >
             <AboutCard data={benefit} index={index} />
           </SwiperSlide>
         ))}

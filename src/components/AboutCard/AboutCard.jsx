@@ -14,7 +14,7 @@ export const AboutCard = ({ data, index }) => {
     <li
       className={`${
         index === 3 ? 'xl:h-[393px]' : 'xl:h-[629px]'
-      } w-[279px] h-[486px] md:w-[287px] md:h-[590px] px-5 py-6 border-2 border-tertiary rounded-10`}
+      } w-full h-full px-5 md:px-6 py-6 xl:border-2 xl:border-tertiary rounded-10`}
     >
       <div className="w-[64px] h-[64px] md:w-[88px] md:h-[88px] xl:w-[123px] xl:h-[123px] mx-auto">
         {createElement(icons[index])}
