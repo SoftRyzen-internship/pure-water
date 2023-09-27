@@ -1,5 +1,8 @@
+import PropTypes from 'prop-types';
+
 export const getFormBtnClass = (formStatus, loading) => {
-  let classes = '';
+  let classes =
+    ' flex justify-center items-center w-full h-[50px] md:h-[62px] mt-1 md:mt-0 text-[16px] md:text-[24px] font-medium leading-normal rounded-10 transition duration-300 ';
 
   if (formStatus === 'success' || formStatus === 'error') {
     classes += 'bg-white/100 ';
@@ -14,8 +17,10 @@ export const getFormBtnClass = (formStatus, loading) => {
     classes += 'cursor-pointer ';
   }
 
-  classes +=
-    ' flex justify-center items-center w-full h-[50px] md:h-[62px] mt-1 md:mt-0 text-[16px] md:text-[24px] font-medium leading-normal rounded-10 transition duration-300 ';
-
   return classes;
+};
+
+getFormBtnClass.propTypes = {
+  formStatus: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
 };

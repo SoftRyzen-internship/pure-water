@@ -192,6 +192,8 @@
     },
     "errorMsg": {
       "required": "This field is required",
+      "nameShort": "Type at least 3 characters",
+      "nameLong": "Type less than 70 characters",
       "wrongName": "Wrong name",
       "wrongPhone": "Wrong phone",
       "wrongMessage": "Type 3 to 500 characters"

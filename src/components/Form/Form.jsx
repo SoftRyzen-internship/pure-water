@@ -7,17 +7,19 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import PropTypes from 'prop-types';
 
 import { InputField } from '../InputField';
-import ErrorIcon from 'public/icons/error.svg';
-import SuccessIcon from 'public/icons/blue-check.svg';
 import { getFormBtnClass } from '@/utils/getFormBtnClass';
 import { getFormBtnContent } from '@/utils/getFormBtnContent';
 import { formSchema } from '@/utils/yupSchema';
 import { sendMessageToTelegram } from '@/utils/sendMessageToTelegram';
+import ErrorIcon from 'public/icons/error.svg';
+import SuccessIcon from 'public/icons/blue-check.svg';
 
 export const Form = ({ data }) => {
-  const { form, formBtn, errorMsg } = data;
-  const { name, phone, message } = form;
-  const { regular, success, error } = formBtn;
+  const {
+    form: { name, phone, message },
+    formBtn: { regular, success, error },
+    errorMsg,
+  } = data;
 
   const [loading, setLoading] = useState(false);
   const [formStatus, setFormStatus] = useState(null);
@@ -74,7 +76,6 @@ export const Form = ({ data }) => {
 
   useEffect(() => {
     if (Object.keys(errors).length > 0) {
-      setFormStatus('error');
       const timer = setTimeout(() => {
         setFormStatus(null);
       }, 3000);
@@ -114,11 +115,9 @@ export const Form = ({ data }) => {
       <button
         type="submit"
         className={buttonClasses}
-        disabled={loading || formStatus === 'error' || formStatus === 'success'}
+        disabled={formStatus === 'success'}
       >
-        <span className="textGradient flex items-center gap-2 text-transparent bg-clip-text">
-          {buttonContent}
-        </span>
+        {buttonContent}
       </button>
     </form>
   );
@@ -148,6 +147,8 @@ Form.propTypes = {
     }).isRequired,
     errorMsg: PropTypes.shape({
       required: PropTypes.string.isRequired,
+      nameShort: PropTypes.string.isRequired,
+      nameLong: PropTypes.string.isRequired,
       wrongName: PropTypes.string.isRequired,
       wrongPhone: PropTypes.string.isRequired,
       wrongMessage: PropTypes.string.isRequired,

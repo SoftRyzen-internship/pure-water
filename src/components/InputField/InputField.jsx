@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export const InputField = ({
   label,
   type,
@@ -12,7 +14,7 @@ export const InputField = ({
         {label} *
       </label>
 
-      {type === 'textarea' ? (
+      {type === 'textarea' && (
         <textarea
           id={name}
           {...register(name)}
@@ -21,14 +23,16 @@ export const InputField = ({
             errors[name] ? 'border-pink' : 'border-white/25'
           } border outline-white rounded-10 p-2 h-[216px] md:h-[201px] text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25 resize-none`}
         />
-      ) : (
+      )}
+
+      {type !== 'textarea' && (
         <input
           id={name}
           {...register(name)}
           type={type}
           className={`${
             errors[name] ? 'border-b-pink' : 'border-b-white/25'
-          } input-field border-b outline-white pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25`}
+          } input-field border-b outline-white pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25 focus:pl-2 transition-all duration-300`}
           placeholder={placeholder}
           autoComplete="true"
         />
@@ -41,4 +45,13 @@ export const InputField = ({
       )}
     </div>
   );
+};
+
+InputField.propTypes = {
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  register: PropTypes.func.isRequired,
+  errors: PropTypes.object,
+  placeholder: PropTypes.string.isRequired,
 };

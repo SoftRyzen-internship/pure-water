@@ -5,12 +5,10 @@ import { SectionTitle } from '@/components/SectionTitle';
 import { Form } from '@/components/Form';
 
 export const WriteUsSection = ({ data }) => {
-  const { title } = data;
-
   return (
     <section className="section" id="write">
       <Container>
-        <SectionTitle title={title} />
+        <SectionTitle title={data.title} />
         <Form data={data} />
       </Container>
     </section>
@@ -41,6 +39,8 @@ WriteUsSection.propTypes = {
     }).isRequired,
     errorMsg: PropTypes.shape({
       required: PropTypes.string.isRequired,
+      nameShort: PropTypes.string.isRequired,
+      nameLong: PropTypes.string.isRequired,
       wrongName: PropTypes.string.isRequired,
       wrongPhone: PropTypes.string.isRequired,
       wrongMessage: PropTypes.string.isRequired,

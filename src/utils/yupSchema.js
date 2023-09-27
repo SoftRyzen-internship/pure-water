@@ -5,8 +5,8 @@ export const formSchema = errors =>
     name: Yup.string()
       .trim()
       .required(errors.required)
-      .min(3, errors.wrongName)
-      .max(70, errors.wrongName)
+      .min(3, errors.nameShort)
+      .max(70, errors.nameLong)
       .matches(
         /^(?!.*(\s-|-\s)|.*--|.*——|.*––|.*–\s|.*\s–|.*—\s|.*\s—)[а-яА-Яa-zA-Z\s'’\-–—ЇїІіЄєҐґ]*$/,
         errors.wrongName,
