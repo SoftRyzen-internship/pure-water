@@ -20,12 +20,17 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const { nav, switcherAria } = await getDictionary(lang);
+  const { nav, switcherAria, logoAria } = await getDictionary(lang);
 
   return (
     <html lang={lang}>
       <body className={axiforma.variable}>
-        <Header navArray={nav} switcherAria={switcherAria} lang={lang} />
+        <Header
+          logoAria={logoAria}
+          navArray={nav}
+          switcherAria={switcherAria}
+          lang={lang}
+        />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
