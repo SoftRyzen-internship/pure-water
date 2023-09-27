@@ -8,39 +8,37 @@ import { MakeDonateBtn } from '@/components/MakeDonateBtn';
 
 import FundraisingImg from 'public/images/fundraising/yellow-blue-heart.jpg';
 
-export const CurrentFundraising = ({ lang, fundraising, btnData }) => {
+export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
   return (
-    <Container>
-      <section className="section flex flex-col justify-center items-center">
+    <section className="section">
+      <Container>
         <SectionTitle title={fundraising?.title} />
         <div className="my-6 xl:mt-8 xl:mb-0 xl:flex xl:gap-x-6 md:px-[79.5px] xl:px-0">
           <div className="xl:flex xl:flex-col xl:gap-6 xl:items-center">
             <Image
               src={FundraisingImg}
-              alt="Yellow and blue heart"
+              alt={fundraising?.imageAlt}
               width={280}
               height={221}
               quality={100}
               className="mx-auto md:mb-6 xl:mb-0 md:w-[317px] xl:w-[659px] md:h-[290px] xl:h-[603px] object-cover"
             />
             <div className="hidden xl:block">
-              <MakeDonateBtn title={btnData?.title} />
+              <MakeDonateBtn title={btnTitle} />
             </div>
           </div>
           <FundraisingDesc lang={lang} />
         </div>
-        <div className="block xl:hidden">
-          <MakeDonateBtn title={btnData?.title} />
+        <div className="flex justify-center items-center xl:hidden">
+          <MakeDonateBtn title={btnTitle} />
         </div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 };
 
 CurrentFundraising.propTypes = {
-  btnData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-  }),
+  btnTitle: PropTypes.string.isRequired,
   fundraising: PropTypes.shape({
     title: PropTypes.string.isRequired,
   }),

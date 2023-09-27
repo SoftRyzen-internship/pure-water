@@ -223,6 +223,7 @@
     "url": "https://softryzen.com"
   },
   "fundraising": {
-    "title": "CURRENT FUNDRAISING"
+    "title": "CURRENT FUNDRAISING",
+    "imageAlt": "Yellow and blue heart"
   }
 }
