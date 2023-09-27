@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 
-export const SectionTitle = ({ title }) => {
+export const SectionTitle = ({ title, className = '' }) => {
   return (
-    <h2 className="textGradient text-transparent bg-clip-text text-[28px] md:text-[36px] xl:text-[48px] text-center leading-normal uppercase">
+    <h2
+      className={`textGradient text-transparent bg-clip-text text-[28px] md:text-[36px] xl:text-[48px] text-center leading-normal uppercase mb-6 xl:mb-8 ${className}`}
+    >
       {title}
     </h2>
   );
@@ -10,4 +12,5 @@ export const SectionTitle = ({ title }) => {
 
 SectionTitle.propTypes = {
   title: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
