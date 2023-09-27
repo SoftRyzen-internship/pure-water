@@ -63,6 +63,11 @@
     border-radius: 30px;
   }
 
+  .project-slide:hover .project-overlay,
+  .project-slide:focus .project-overlay {
+    opacity: 1;
+  }
+
   .switcherGradient {
     background-image: linear-gradient(
       180deg,

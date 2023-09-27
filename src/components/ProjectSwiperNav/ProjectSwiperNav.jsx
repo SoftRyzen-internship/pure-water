@@ -10,18 +10,22 @@ export const ProjectSwiperNav = ({ variant }) => {
     <div
       className={`hidden xl:flex gap-x-12 justify-center items-center mt-8 ${
         variant === 'gallery'
-          ? 'absolute top-[37%] left-2/4 translate-x-[-50%] gap-x-[906px] z-10 text-[#ffffffbf] hover:text-white transition-colors'
+          ? 'absolute top-[37%] left-2/4 translate-x-[-50%] gap-x-[906px] z-10 text-[#ffffffbf] hover:text-white focus:text-white transition-colors'
           : ''
       }`}
     >
       <button type="button" className="prev" aria-label="previous button">
-        {variant === 'cards' && <PrevIcon className="w-8 h-8" />}
+        {variant === 'cards' && (
+          <PrevIcon className="w-8 h-8 opacity-75 hover:opacity-100 focus:opacity-100 transition-opacity" />
+        )}
         {variant === 'gallery' && (
           <GalleryPrevIcon className="w-12 h-12 fill-[currentColor]" />
         )}
       </button>
       <button type="button" className="next" aria-label="next button">
-        {variant === 'cards' && <NextIcon className="w-8 h-8" />}
+        {variant === 'cards' && (
+          <NextIcon className="w-8 h-8 opacity-75 hover:opacity-100 focus:opacity-100 transition-opacity" />
+        )}
         {variant === 'gallery' && (
           <GalleryNextIcon className="w-12 h-12 fill-[currentColor]" />
         )}
@@ -31,5 +35,5 @@ export const ProjectSwiperNav = ({ variant }) => {
 };
 
 ProjectSwiperNav.propTypes = {
-  variant: PropTypes.string,
+  variant: PropTypes.oneOf(['cards', 'gallery']),
 };

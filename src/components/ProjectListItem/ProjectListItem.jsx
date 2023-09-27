@@ -1,11 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
-import TapIcon from 'public/icons/tap.svg';
 import { ProjectOverlay } from '../ProjectOverlay';
+import TapIcon from 'public/icons/tap.svg';
 
 export const ProjectListItem = ({
   project,
@@ -13,17 +12,7 @@ export const ProjectListItem = ({
   setIsModalOpen,
   setImageList,
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   const { title, description, location, imageList } = project;
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   const handleImgClick = images => {
     setIsModalOpen(true);
@@ -32,17 +21,13 @@ export const ProjectListItem = ({
   };
 
   return (
-    <div
-      className="flex flex-col h-[437px] md:h-[658px]"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <>
       <div
         className="relative rounded-20 md:!w-[342px] overflow-hidden mb-3 md:mb-4"
         onClick={() => handleImgClick(imageList)}
       >
         <Image
-          src={imageList[0].image.url}
+          src={imageList[0].image.secure_url}
           alt={imageList[0].alt}
           width={256}
           height={187}
@@ -52,10 +37,7 @@ export const ProjectListItem = ({
         <span className="xl:hidden absolute bottom-[5px] right-[5px] flex items-center justify-center w-8 h-8 bg-gradient-to-b from-lighterBlue to-[#0F5598] opacity-75 rounded-full">
           <TapIcon className="w-[18px] h-6 fill-white" />
         </span>
-        <ProjectOverlay
-          staticData={staticData}
-          styles={isHovered ? 'opacity-100' : 'opacity-0'}
-        />
+        <ProjectOverlay title={staticData?.overlay} />
       </div>
       <h3 className="h-[72px] mb-5 xl:mb-6 text-xl/[1.2] md:text-2xl/none font-medium">
         {title}
@@ -67,7 +49,7 @@ export const ProjectListItem = ({
         <span className="font-light">{`${staticData.city}:`}</span>
         <span>{location}</span>
       </p>
-    </div>
+    </>
   );
 };
 

@@ -6,12 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import PropTypes from 'prop-types';
 
+import { ProjectSwiperNav } from '../ProjectSwiperNav';
+import CloseIcon from 'public/icons/close.svg';
+
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/thumbs';
-
-import { ProjectSwiperNav } from '../ProjectSwiperNav';
-import CloseIcon from 'public/icons/close.svg';
 
 export const GalleryModal = ({ imageList, setIsModalOpen }) => {
   const thumbsSwiper = useRef(null);
@@ -85,7 +85,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             "
               >
                 <Image
-                  src={image.url}
+                  src={image.secure_url}
                   alt={alt}
                   width={280}
                   height={210}
@@ -114,7 +114,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             {imageList.map(({ id, image, alt }) => (
               <SwiperSlide key={id} className="cursor-pointer">
                 <Image
-                  src={image.url}
+                  src={image.secure_url}
                   alt={alt}
                   width={61}
                   height={48}
