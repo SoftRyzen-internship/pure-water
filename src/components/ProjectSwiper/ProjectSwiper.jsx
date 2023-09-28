@@ -16,7 +16,7 @@ export const ProjectSwiper = ({
   setImageList,
 }) => {
   return (
-    <div className="mt-6 xl:mt-8 xl:max-w-[1220px] xl:mx-auto">
+    <div className="xl:max-w-[1220px] xl:mx-auto">
       <Swiper
         navigation={{
           prevEl: '.prev',
