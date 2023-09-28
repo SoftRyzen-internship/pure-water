@@ -38,15 +38,17 @@ export const Header = ({ aria, navArray, lang }) => {
           </div>
         </div>
 
-        <MobileMenu
-          navArray={navArray}
-          switcherAria={switcher}
-          lang={lang}
-          menuToggle={menuToggle}
-          isMenuOpen={isMenuOpen}
-          closeMenuAria={closeMenu}
-          section="headerMenu"
-        />
+        {isMenuOpen && (
+          <MobileMenu
+            navArray={navArray}
+            switcherAria={switcher}
+            lang={lang}
+            menuToggle={menuToggle}
+            isMenuOpen={isMenuOpen}
+            closeMenuAria={closeMenu}
+            section="headerMenu"
+          />
+        )}
       </Container>
     </header>
   );

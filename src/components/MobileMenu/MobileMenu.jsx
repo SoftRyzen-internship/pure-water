@@ -1,12 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
-import { Transition } from '@headlessui/react';
+import { Transition, Dialog } from '@headlessui/react';
 
-import { NavBar } from '../NavBar';
-import { LocaleSwitcher } from '../LocaleSwitcher';
+import { NavBar } from '@/components/NavBar';
+import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import CloseIcon from 'public/icons/close.svg';
 
 export const MobileMenu = ({
@@ -18,56 +16,44 @@ export const MobileMenu = ({
   closeMenuAria,
   section,
 }) => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.classList.add('overflow-hidden');
-    } else {
-      document.body.classList.remove('overflow-hidden');
-    }
-  }, [isMenuOpen]);
-
-  return mounted
-    ? createPortal(
-        <Transition
-          show={isMenuOpen}
-          enter="transition-opacity duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="transition-opacity duration-300"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div
-            className={`fixed top-0 bottom-0 left-0 right-0 menu flex justify-center`}
-          >
+  return (
+    <Transition
+      show={isMenuOpen}
+      enter="transition-opacity duration-300"
+      enterFrom="opacity-0"
+      enterTo="opacity-100"
+      leave="transition-opacity duration-3000"
+      leaveFrom="opacity-100"
+      leaveTo="opacity-0"
+    >
+      <Dialog
+        open={isMenuOpen}
+        onClose={menuToggle}
+        className={`fixed top-0 bottom-0 left-0 right-0 menu z-[999] inset-0 overflow-y-auto xl:hidden`}
+      >
+        <Dialog.Panel className="py-9 flex flex-col items-center gap-9">
+          <div className="container flex justify-end mb-2">
             <button
               onClick={menuToggle}
-              className="absolute top-9 right-9 w-6 h-6"
+              className="w-12 h-12 py-3 px-3 "
               aria-label={closeMenuAria}
             >
               <CloseIcon className="stroke-white stroke-2 w-full h-full" />
             </button>
-
-            <div className="pt-32 w-auto inline-flex flex-col items-center gap-9">
-              <NavBar
-                navArray={navArray}
-                section={section}
-                menuToggle={menuToggle}
-              />
-              <div className="relative w-[65px] h-[28px]">
-                <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
-              </div>
-            </div>
           </div>
-        </Transition>,
 
-        document.body,
-      )
-    : null;
+          <NavBar
+            navArray={navArray}
+            section={section}
+            menuToggle={menuToggle}
+          />
+          <div className="relative w-[65px] h-[28px]">
+            <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
+          </div>
+        </Dialog.Panel>
+      </Dialog>
+    </Transition>
+  );
 };
 
 MobileMenu.propTypes = {
