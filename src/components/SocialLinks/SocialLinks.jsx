@@ -28,7 +28,7 @@ export const SocialLinks = ({ socials, section }) => {
               target="_blank"
               rel="noreferrer noopener nofollow"
               aria-label={ariaLabel}
-              className="w-full h-full text-white/75 hover:text-white focus:text-white transition duration-300 flex justify-center items-center gap-3"
+              className="w-full h-full text-white/75 hover:text-white focus:text-white transition duration-300 flex justify-center xl:justify-start items-center gap-3"
             >
               {React.createElement(icons[label], {
                 className: 'w-6 h-6 fill-current',

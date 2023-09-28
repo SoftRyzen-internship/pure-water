@@ -1,4 +1,5 @@
 import { Header } from '@/layout/Header';
+import { Footer } from '@/layout/Footer';
 import { axiforma } from '../fonts';
 
 import { getMetaByLang } from '@/utils/getMetaData';
@@ -20,7 +21,15 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const { nav, switcherAria, logoAria } = await getDictionary(lang);
+  const {
+    nav,
+    switcherAria,
+    logoAria,
+    contacts,
+    createdBy,
+    socials,
+    menuLabel,
+  } = await getDictionary(lang);
 
   return (
     <html lang={lang}>
@@ -34,6 +43,16 @@ export default async function RootLayout({ children, params: { lang } }) {
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
+        <Footer
+          contacts={contacts}
+          createdBy={createdBy}
+          logoAria={logoAria}
+          lang={lang}
+          socials={socials.links}
+          socialsTitle={socials.title}
+          menuLabel={menuLabel}
+          navArray={nav}
+        />
       </body>
     </html>
   );

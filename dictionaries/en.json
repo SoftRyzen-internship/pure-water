@@ -200,7 +200,7 @@
       "wrongMessage": "Type 3 to 500 characters"
     }
   },
-  "contact": [
+  "contacts": [
     {
       "label": "E-mail",
       "contact": "charity_cleanwater@ukr.net"
