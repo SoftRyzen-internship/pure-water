@@ -3,12 +3,14 @@
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
-export const MakeDonateBtn = ({ title, section }) => {
+export const MakeDonateBtn = ({ title, section, currentFundClassName }) => {
   return (
     <div
-      className={`
-        ${section === 'hero' ? 'donateBtnWhiteOverlay' : 'donateBtnBlueOverlay'}
-        ${section === 'currentFundraising' ? 'mx-auto xl:hidden' : ''}`}
+      className={
+        section === 'hero'
+          ? 'donateBtnWhiteOverlay'
+          : `donateBtnBlueOverlay ${currentFundClassName}`
+      }
     >
       <Link
         to="donate"
@@ -28,4 +30,5 @@ export const MakeDonateBtn = ({ title, section }) => {
 MakeDonateBtn.propTypes = {
   title: PropTypes.string.isRequired,
   section: PropTypes.oneOf(['hero', 'currentFundraising']).isRequired,
+  currentFundClassName: PropTypes.string,
 };

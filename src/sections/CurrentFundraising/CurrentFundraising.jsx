@@ -23,13 +23,19 @@ export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
               quality={100}
               className="mx-auto md:mb-6 xl:mb-0 md:w-[317px] xl:w-[659px] md:h-[290px] xl:h-[603px] object-cover"
             />
-            <div className="hidden xl:block">
-              <MakeDonateBtn title={btnTitle} />
-            </div>
+            <MakeDonateBtn
+              title={btnTitle}
+              section="currentFundraising"
+              currentFundClassName="hidden xl:block"
+            />
           </div>
           <FundraisingDesc lang={lang} />
         </div>
-        <MakeDonateBtn title={btnTitle} section="currentFundraising" />
+        <MakeDonateBtn
+          title={btnTitle}
+          section="currentFundraising"
+          currentFundClassName="mx-auto xl:hidden"
+        />
       </Container>
     </section>
   );
