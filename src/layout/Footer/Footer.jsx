@@ -18,7 +18,7 @@ export const Footer = ({
   navArray,
 }) => {
   return (
-    <section className="section bg-gradient-to-b from-sky-500 to-sky-700 text-white">
+    <section className="w-full h-[426px] md:h-[670px] xl:h-[1200px] pt-[170px] md:pt-[246px] xl:pt-[533px] pb-[30px] md:pb-10 xl:pb-20 footer text-white flex items-center">
       <Container>
         <div className="flex justify-between">
           <div className="hidden xl:block w-[130px]">
