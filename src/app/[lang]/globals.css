@@ -29,19 +29,6 @@
   .iconGradient {
     background-image: linear-gradient(180deg, #1d9ed3 0%, #1673b1 100%);
   }
-  .donateBtnBlueGradient {
-    background-image: linear-gradient(
-      180deg,
-      rgba(29, 159, 212, 0.75) 0%,
-      rgba(22, 116, 177, 0.75) 100%
-    );
-  }
-  .donateBtnBlueHoverGradient {
-    background-image: linear-gradient(180deg, #1d9fd4 0%, #1674b1 100%);
-  }
-  .tabLinkGradient {
-    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
-  }
 
   .makeDonateBtn {
     @apply flex justify-center items-center gap-[14px] before:h-6 xl:before:h-[32px] md:before:h-[28px] rounded-10 text-xl md:text-2xl xl:text-[28px] font-medium w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] cursor-pointer;
@@ -60,7 +47,7 @@
     @apply donateOverlay bg-white opacity-90 hover:opacity-100 focus-within:opacity-100;
   }
   .donateBtnBlueOverlay {
-    @apply donateOverlay donateBtnBlueGradient hover:donateBtnBlueHoverGradient focus-within:donateBtnBlueHoverGradient;
+    @apply donateOverlay bg-gradient-to-b from-sky-500/75 to-sky-700/75 opacity-75 hover:opacity-100 focus-within:opacity-100;
   }
 
   .switcherGradient {
@@ -78,20 +65,29 @@
     );
   }
   .tabLink {
-    @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer;
+    @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300;
   }
   .defaultTabLink {
-    @apply tabLink border-2 border-tabBorderColor group-hover/tab:border-0 group-focus-within/tab:border-0  group-hover/tab:tabLinkGradient group-focus-within/tab:tabLinkGradient transition-colors duration-300;
+    @apply tabLink border-2 border-primary group-hover/tab:border-0 group-focus-within/tab:border-0  group-hover/tab:boxGradient group-focus-within/tab:boxGradient transition-all duration-300;
   }
   .activeTabLink {
-    @apply tabLink border-0 tabLinkGradient;
+    @apply tabLink border-0 boxGradient;
   }
 
   .defaultTabLinkText {
-    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:font-semibold group-focus-within/tab:font-semibold group-hover/tab:text-white group-focus-within/tab:text-white transition-colors duration-300;
+    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:font-semibold group-focus-within/tab:font-semibold group-hover/tab:text-white group-focus-within/tab:text-white transition-all duration-300;
   }
   .activeTabLinkText {
     @apply font-semibold text-white;
+  }
+  .tabItem {
+    @apply w-full md:w-[696px]  xl:w-[1220px] py-9 px-3 md:px-6 xl:py-12 xl:px-12 rounded-10 boxGradient text-white;
+  }
+  .tabItemVisible {
+    @apply tabItem block;
+  }
+  .tabItemHidden {
+    @apply tabItem hidden;
   }
 }
 

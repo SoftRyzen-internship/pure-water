@@ -8,7 +8,7 @@ export const Mono = ({ info }) => {
 
   return (
     <div className="flex flex-col gap-10 justify-center items-center md:flex-row xl:flex-row-reverse xl:gap-0 md:justify-between">
-      <div className="w-[161px] h-[161px] fill-current">
+      <div className="w-[161px] h-[161px] fill-current" title={link.title} aria-label={link.title}>
         <QrCode />
       </div>
       <div className="flex justify-center items-center">
@@ -18,11 +18,11 @@ export const Mono = ({ info }) => {
   );
 };
 
-QrCode.propTypes = {
+Mono.propTypes = {
   info: PropTypes.shape({
     link: PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-    }),
-  }),
+    }).isRequired,
+  }).isRequired,
 };

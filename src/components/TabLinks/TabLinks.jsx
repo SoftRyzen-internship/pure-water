@@ -1,43 +1,31 @@
-'use client';
-
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
 
-export const TabLinks = ({ tabs }) => {
-  const [id, setId] = useState(`#${tabs[0].label.toLowerCase()}`);
-
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push(id);
-  }, []);
-
+export const TabLinks = ({ tabs, activeIndex, setIndex }) => {
   return (
     <ul className="flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap gap-2 md:gap-6">
-      {tabs.map(({ label }) => {
-        const href = `#${label.toLowerCase()}`;
-
+      {tabs.map(({ label }, index) => {
         return (
           <li
             key={label}
-            className="w-[280px] md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl group/tab"
-            onClick={() => {
-              setId(href);
-            }}
+            className="w-full md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl group/tab"
           >
-            <a
-              href={href}
-              className={id === href ? 'activeTabLink' : 'defaultTabLink'}
+            <button
+              type="button"
+              className={
+                index === activeIndex ? 'activeTabLink' : 'defaultTabLink'
+              }
+              onClick={() => setIndex(index)}
             >
               <span
                 className={
-                  id === href ? 'activeTabLinkText' : 'defaultTabLinkText'
+                  index === activeIndex
+                    ? 'activeTabLinkText'
+                    : 'defaultTabLinkText'
                 }
               >
                 {label}
               </span>
-            </a>
+            </button>
           </li>
         );
       })}
@@ -50,6 +38,8 @@ TabLinks.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       info: PropTypes.object.isRequired,
-    }),
-  ),
+    }).isRequired,
+  ).isRequired,
+  activeIndex: PropTypes.number.isRequired,
+  setIndex: PropTypes.func.isRequired,
 };

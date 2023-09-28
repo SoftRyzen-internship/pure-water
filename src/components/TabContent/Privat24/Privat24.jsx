@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { PaymentDetail } from '@/components/PaymentDetail';
 import { PaymentLink } from '@/components/PaymentLink';
 
-export const Private24 = ({ info }) => {
+export const Private24 = ({ info, paymentIcons }) => {
   const { accountTitle, paymentDetails, card, link } = info;
 
   return (
@@ -16,14 +16,22 @@ export const Private24 = ({ info }) => {
           {paymentDetails.map(({ label, description }) => {
             return (
               <li key={label}>
-                <PaymentDetail title={label} description={description} />
+                <PaymentDetail
+                  title={label}
+                  description={description}
+                  paymentIcons={paymentIcons}
+                />
               </li>
             );
           })}
         </ul>
       </div>
       <div className="flex flex-col gap-2 md:gap-3 xl:gap-6 xl:justify-center">
-        <PaymentDetail title={card.label} description={card.description} />
+        <PaymentDetail
+          title={card.label}
+          description={card.description}
+          paymentIcons={paymentIcons}
+        />
         <PaymentLink title={link.title} url={link.url} />
       </div>
     </div>
@@ -35,17 +43,21 @@ Private24.propTypes = {
     card: PropTypes.shape({
       label: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     link: PropTypes.shape({
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     accountTitle: PropTypes.string.isRequired,
     paymentDetails: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
-      }),
-    ),
-  }),
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
+  paymentIcons: PropTypes.shape({
+    copyIcon: PropTypes.string.isRequired,
+    checkIcon: PropTypes.string.isRequired,
+  }).isRequired,
 };

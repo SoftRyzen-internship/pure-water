@@ -72,6 +72,10 @@
   },
   "donate": {
     "title": "Зробити внесок",
+    "paymentIcons": {
+      "copyIcon": "Копіювати",
+      "checkIcon": "Скопійовано"
+    },
     "tabs": [
       {
         "label": "Privat24",

@@ -72,6 +72,10 @@
   },
   "donate": {
     "title": "Donate",
+    "paymentIcons": {
+      "copyIcon": "Copy",
+      "checkIcon": "Copied"
+    },
     "tabs": [
       {
         "label": "Privat24",

@@ -2,22 +2,16 @@ import PropTypes from 'prop-types';
 
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
-import { TabLinks } from '@/components/TabLinks';
 import { Tabs } from '@/components/Tabs';
 
 export const Donate = ({ donate }) => {
-  const { title, tabs } = donate;
+  const { title, tabs, paymentIcons } = donate;
 
   return (
     <section id="donate" className="section bg-white">
       <Container>
-        <div className="flex flex-col gap-6 xl:gap-8 justify-center items-center">
-          <SectionTitle title={title} />
-          <div className="flex flex-col gap-6">
-            <TabLinks tabs={tabs} />
-            <Tabs tabs={tabs} />
-          </div>
-        </div>
+        <SectionTitle title={title} />
+        <Tabs tabs={tabs} paymentIcons={paymentIcons} />
       </Container>
     </section>
   );
@@ -30,7 +24,11 @@ Donate.propTypes = {
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         info: PropTypes.object.isRequired,
-      }),
-    ),
-  }),
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
+  paymentIcons: PropTypes.shape({
+    copyIcon: PropTypes.string.isRequired,
+    checkIcon: PropTypes.string.isRequired,
+  }).isRequired,
 };

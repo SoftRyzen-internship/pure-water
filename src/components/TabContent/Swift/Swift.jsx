@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { PaymentDetail } from '@/components/PaymentDetail';
 
-export const Swift = ({ info }) => {
+export const Swift = ({ info, paymentIcons }) => {
   const { accountTitle, paymentDetails, bankDetails } = info;
 
   return (
@@ -19,6 +19,7 @@ export const Swift = ({ info }) => {
                   title={title}
                   description={description}
                   isSwift
+                  paymentIcons={paymentIcons}
                 />
               </li>
             );
@@ -44,16 +45,19 @@ export const Swift = ({ info }) => {
                   title={bankTitle}
                   description={bankDescription}
                   isSwift
+                  paymentIcons={paymentIcons}
                 />
                 <PaymentDetail
                   title={accountTitle}
                   description={accountDescription}
                   isSwift
+                  paymentIcons={paymentIcons}
                 />
                 <PaymentDetail
                   title={correspondentTitle}
                   description={correspondentDescription}
                   isSwift
+                  paymentIcons={paymentIcons}
                 />
               </li>
             );
@@ -71,8 +75,8 @@ Swift.propTypes = {
       PropTypes.shape({
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
-      }),
-    ),
+      }).isRequired,
+    ).isRequired,
     bankDetails: PropTypes.arrayOf(
       PropTypes.shape({
         bankTitle: PropTypes.string.isRequired,
@@ -81,7 +85,11 @@ Swift.propTypes = {
         accountDescription: PropTypes.string.isRequired,
         correspondentTitle: PropTypes.string.isRequired,
         correspondentDescription: PropTypes.string.isRequired,
-      }),
-    ),
-  }),
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
+  paymentIcons: PropTypes.shape({
+    copyIcon: PropTypes.string.isRequired,
+    checkIcon: PropTypes.string.isRequired,
+  }).isRequired,
 };
