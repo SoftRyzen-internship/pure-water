@@ -29,14 +29,15 @@ export const MobileMenu = ({
         document.body.classList.remove('overflow-hidden');
       }
     };
-    window.addEventListener('keydown', onKeyDown);
-    document.body.classList.add('overflow-hidden');
 
-    return () => {
-      window.removeEventListener('keydown', onKeyDown);
+    if (isMenuOpen) {
+      document.body.classList.add('overflow-hidden');
+      window.addEventListener('keydown', onKeyDown);
+    } else {
       document.body.classList.remove('overflow-hidden');
-    };
-  }, [menuToggle]);
+      window.removeEventListener('keydown', onKeyDown);
+    }
+  }, [isMenuOpen, menuToggle]);
 
   const handleOverlayClick = ({ currentTarget, target }) => {
     if (currentTarget !== target) return;

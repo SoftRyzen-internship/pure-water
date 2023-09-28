@@ -57,5 +57,5 @@ NavBar.propTypes = {
   ).isRequired,
   section: PropTypes.oneOf(['header', 'footer', 'headerMenu', 'footerMenu'])
     .isRequired,
-  menuToggle: PropTypes.func.isRequired,
+  menuToggle: PropTypes.func,
 };

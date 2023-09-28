@@ -16,7 +16,6 @@ export const Header = ({ aria, navArray, lang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuToggle = () => setIsMenuOpen(state => !state);
-
   return (
     <header className="absolute w-full pt-9 xl:pt-12">
       <Container>
