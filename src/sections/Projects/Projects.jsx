@@ -20,4 +20,9 @@ export const Projects = async ({ lang, projects }) => {
 
 Projects.propTypes = {
   lang: PropTypes.string.isRequired,
+  projects: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    city: PropTypes.string.isRequired,
+    overlay: PropTypes.string.isRequired,
+  }).isRequired,
 };

@@ -51,7 +51,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
         <button
           onClick={handleCloseBtnClick}
           type="button"
-          className="xl:absolute xl:top-0 xl:right-[-10%] p-[11px] pr-0 self-end text-[#ffffffbf] hover:text-white transition-colors"
+          className="xl:absolute xl:top-0 xl:right-[-10%] p-[11px] pr-0 self-end text-[#ffffffbf] hover:text-white transition-colors duration-300"
         >
           <CloseIcon className="w-[26px] h-[26px] stroke-[currentColor] stroke-[3] stroke-linecap-round" />
         </button>

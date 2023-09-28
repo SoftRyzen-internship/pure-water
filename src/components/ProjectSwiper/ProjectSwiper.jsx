@@ -21,7 +21,7 @@ export const ProjectSwiper = ({
         navigation={{
           prevEl: '.prev',
           nextEl: '.next',
-          disabledClass: 'opacity-30 cursor-not-allowed',
+          disabledClass: 'opacity-30',
         }}
         grabCursor={true}
         spaceBetween={12}
@@ -46,7 +46,7 @@ export const ProjectSwiper = ({
         {projectList?.map(project => (
           <SwiperSlide
             key={project.id}
-            className="project-slide !flex flex-col !w-[280px] md:!w-[390px] !h-[485px] md:!h-[658px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
+            className="project-slide !flex flex-col !w-[280px] md:!w-[390px] !h-[606px] md:!h-[658px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
           >
             <ProjectListItem
               project={project}
@@ -84,7 +84,7 @@ ProjectSwiper.propTypes = {
     title: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     overlay: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
   setImageList: PropTypes.func.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,
 };
