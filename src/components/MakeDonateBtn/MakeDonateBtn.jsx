@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 export const MakeDonateBtn = ({ title, section }) => {
   return (
     <div
-      className={
-        section === 'hero' ? 'donateBtnWhiteOverlay' : 'donateBtnBlueOverlay'
-      }
+      className={`
+        ${section === 'hero' ? 'donateBtnWhiteOverlay' : 'donateBtnBlueOverlay'}
+        ${section === 'currentFundraising' ? 'mx-auto xl:hidden' : ''}`}
     >
       <Link
         to="donate"

@@ -13,7 +13,7 @@ export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
     <section className="section">
       <Container>
         <SectionTitle title={fundraising?.title} />
-        <div className="my-6 xl:mt-8 xl:mb-0 xl:flex xl:gap-x-6 md:px-[79.5px] xl:px-0">
+        <div className="mb-6 xl:mb-0 xl:flex xl:gap-x-6 md:px-[79.5px] xl:px-0">
           <div className="xl:flex xl:flex-col xl:gap-6 xl:items-center">
             <Image
               src={FundraisingImg}
@@ -29,9 +29,7 @@ export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
           </div>
           <FundraisingDesc lang={lang} />
         </div>
-        <div className="flex justify-center items-center xl:hidden">
-          <MakeDonateBtn title={btnTitle} />
-        </div>
+        <MakeDonateBtn title={btnTitle} section="currentFundraising" />
       </Container>
     </section>
   );
