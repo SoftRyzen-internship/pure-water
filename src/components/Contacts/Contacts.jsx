@@ -7,7 +7,7 @@ export const Contacts = ({ contacts }) => {
         const href =
           index === 0
             ? `mailto:${contact}`
-            : `tel:${contact.replace(/[^\+0-9]/g, '')}`;
+            : `tel:${contact.replace(/[^+0-9]/g, '')}`;
         return (
           <li key={label}>
             <h3 className="text-base md:text-xl font-medium md:mb-2">
