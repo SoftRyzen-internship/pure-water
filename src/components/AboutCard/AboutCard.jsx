@@ -5,6 +5,7 @@ import aim from 'public/images/about/aim.png';
 import priorities from 'public/images/about/priorities.png';
 import team from 'public/images/about/team.png';
 import achievements from 'public/images/about/achievements.png';
+
 export const AboutCard = ({ data, index }) => {
   const { title, paragraph } = data;
   const images = [aim, priorities, team, achievements];

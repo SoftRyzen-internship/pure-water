@@ -19,7 +19,9 @@ export const About = ({ data }) => {
         </ul>
       </Container>
 
-      <AboutSwiper benefits={benefits} />
+      <div className="xl:hidden">
+        <AboutSwiper benefits={benefits} />
+      </div>
     </section>
   );
 };
