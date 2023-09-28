@@ -36,7 +36,7 @@ export const NavBar = ({ navArray, section, menuToggle }) => {
                 duration={500}
                 className={`${
                   section === 'header' ? 'font-medium' : 'font-light'
-                } text-white/75 py-3 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white`}
+                } text-white/75 transition-colors  duration-300 cursor-pointer hover:text-white focus:text-white`}
               >
                 {label}
               </Link>

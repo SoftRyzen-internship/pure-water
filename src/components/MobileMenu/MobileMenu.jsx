@@ -23,26 +23,12 @@ export const MobileMenu = ({
   useEffect(() => setMounted(true), []);
 
   useEffect(() => {
-    const onKeyDown = e => {
-      if (e.code === 'Escape') {
-        menuToggle();
-        document.body.classList.remove('overflow-hidden');
-      }
-    };
-
     if (isMenuOpen) {
       document.body.classList.add('overflow-hidden');
-      window.addEventListener('keydown', onKeyDown);
     } else {
       document.body.classList.remove('overflow-hidden');
-      window.removeEventListener('keydown', onKeyDown);
     }
-  }, [isMenuOpen, menuToggle]);
-
-  const handleOverlayClick = ({ currentTarget, target }) => {
-    if (currentTarget !== target) return;
-    menuToggle();
-  };
+  }, [isMenuOpen]);
 
   return mounted
     ? createPortal(
@@ -57,12 +43,10 @@ export const MobileMenu = ({
         >
           <div
             className={`fixed top-0 bottom-0 left-0 right-0 menu flex justify-center`}
-            onClick={handleOverlayClick}
           >
             <button
               onClick={menuToggle}
               className="absolute top-9 right-9 w-6 h-6"
-              aria-expanded={isMenuOpen}
               aria-label={closeMenuAria}
             >
               <CloseIcon className="stroke-white stroke-2 w-full h-full" />
@@ -91,7 +75,7 @@ MobileMenu.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
   switcherAria: PropTypes.string.isRequired,
   lang: PropTypes.string.isRequired,

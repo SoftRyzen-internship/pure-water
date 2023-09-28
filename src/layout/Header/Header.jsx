@@ -16,6 +16,7 @@ export const Header = ({ aria, navArray, lang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuToggle = () => setIsMenuOpen(state => !state);
+
   return (
     <header className="absolute w-full pt-9 xl:pt-12">
       <Container>
@@ -26,7 +27,6 @@ export const Header = ({ aria, navArray, lang }) => {
 
           <button
             aria-label={openMenu}
-            aria-expanded={isMenuOpen}
             onClick={menuToggle}
             className="block xl:hidden"
           >
@@ -57,13 +57,13 @@ Header.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       id: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
   lang: PropTypes.string.isRequired,
   aria: PropTypes.shape({
-    logo: PropTypes.string,
-    switcher: PropTypes.string,
-    closeMenu: PropTypes.string,
-    openMenu: PropTypes.string,
+    logo: PropTypes.string.isRequired,
+    switcher: PropTypes.string.isRequired,
+    closeMenu: PropTypes.string.isRequired,
+    openMenu: PropTypes.string.isRequired,
   }).isRequired,
 };
