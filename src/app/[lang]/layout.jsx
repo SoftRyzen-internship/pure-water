@@ -1,4 +1,4 @@
-import { Montserrat } from 'next/font/google';
+import { Comfortaa } from 'next/font/google';
 
 import { Header } from '@/layout/Header';
 import { getMetaByLang } from '@/utils/getMetaData';
@@ -6,7 +6,7 @@ import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 import './globals.css';
 
-const comfortaa = Montserrat({ subsets: ['latin'] });
+const comfortaa = Comfortaa({ subsets: ['latin'] });
 
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
