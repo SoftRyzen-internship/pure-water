@@ -3,7 +3,11 @@
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
-export const MakeDonateBtn = ({ title, section, currentFundClassName }) => {
+export const MakeDonateBtn = ({
+  title,
+  section,
+  currentFundClassName = '',
+}) => {
   return (
     <div
       className={
