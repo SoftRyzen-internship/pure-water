@@ -30,6 +30,7 @@ export const ProjectSwiper = ({
         slidesPerView={'auto'}
         slidesOffsetBefore={20}
         slidesOffsetAfter={20}
+        lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 1 }}
         breakpoints={{
           768: {
             spaceBetween: 24,
