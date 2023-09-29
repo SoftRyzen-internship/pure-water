@@ -20,15 +20,15 @@ export const Donate = ({ donate }) => {
 Donate.propTypes = {
   donate: PropTypes.shape({
     title: PropTypes.string.isRequired,
+    paymentIcons: PropTypes.shape({
+      copyIcon: PropTypes.string.isRequired,
+      checkIcon: PropTypes.string.isRequired,
+    }).isRequired,
     tabs: PropTypes.arrayOf(
       PropTypes.shape({
         label: PropTypes.string.isRequired,
         info: PropTypes.object.isRequired,
       }).isRequired,
     ).isRequired,
-  }).isRequired,
-  paymentIcons: PropTypes.shape({
-    copyIcon: PropTypes.string.isRequired,
-    checkIcon: PropTypes.string.isRequired,
   }).isRequired,
 };

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import copy from 'copy-to-clipboard';
 
@@ -14,6 +14,13 @@ export const PaymentDetail = ({
   paymentIcons,
 }) => {
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, [copied]);
 
   const handleCopy = () => {
     copy(description);

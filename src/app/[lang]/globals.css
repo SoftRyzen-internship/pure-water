@@ -68,14 +68,14 @@
     @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300;
   }
   .defaultTabLink {
-    @apply tabLink border-2 border-primary group-hover/tab:border-0 group-focus-within/tab:border-0  group-hover/tab:boxGradient group-focus-within/tab:boxGradient transition-all duration-300;
+    @apply tabLink border-2 border-primary group-hover/tab:border-none group-focus-within/tab:border-none group-hover/tab:boxGradient group-focus-within/tab:boxGradient;
   }
   .activeTabLink {
-    @apply tabLink border-0 boxGradient;
+    @apply tabLink border-0 boxGradient opacity-90 hover:opacity-100 focus-within:opacity-100;
   }
 
   .defaultTabLinkText {
-    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:font-semibold group-focus-within/tab:font-semibold group-hover/tab:text-white group-focus-within/tab:text-white transition-all duration-300;
+    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:text-white group-focus-within/tab:text-white transition duration-300;
   }
   .activeTabLinkText {
     @apply font-semibold text-white;
