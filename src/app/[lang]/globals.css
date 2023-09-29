@@ -65,7 +65,7 @@
     );
   }
   .tabLink {
-    @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300;
+    @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300 focus:outline-white;
   }
   .defaultTabLink {
     @apply tabLink border-2 border-primary group-hover/tab:border-none group-focus-within/tab:border-none group-hover/tab:boxGradient group-focus-within/tab:boxGradient;

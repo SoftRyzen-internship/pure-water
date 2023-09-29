@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import copy from 'copy-to-clipboard';
 
@@ -48,21 +48,17 @@ export const PaymentDetail = ({
               title={checkIcon}
               aria-label={checkIcon}
             >
-              {React.createElement(Check, {
-                className: 'w-6 h-6 fill-white',
-              })}
+              <Check className="w-6 h-6 fill-white" />
             </div>
           ) : (
             <button
               type="button"
-              className="flex justify-center items-center w-full h-full opacity-75 hover:opacity-100 transition duration-300 cursor-pointer"
+              className="flex justify-center items-center w-full h-full focus:outline-white opacity-75 hover:opacity-100 focus:opacity-100 transition duration-300 cursor-pointer"
               onClick={handleCopy}
               title={copyIcon}
               aria-label={copyIcon}
             >
-              {React.createElement(Copy, {
-                className: 'w-6 h-6 fill-none stroke-current',
-              })}
+              <Copy className="w-6 h-6 fill-none stroke-current" />
             </button>
           )}
         </div>
