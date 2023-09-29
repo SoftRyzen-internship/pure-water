@@ -13,7 +13,7 @@ export const AboutCard = ({ data, index }) => {
   return (
     <li
       className={`${
-        index === 3 ? 'xl:h-[393px]' : 'xl:h-[629px]'
+        index === 3 ? 'xl:h-[382px]' : 'xl:h-[618px]'
       } w-full h-full xl:w-[287px] px-5 md:px-6 py-6 xl:border-2 xl:border-tertiary rounded-10`}
     >
       <Image
