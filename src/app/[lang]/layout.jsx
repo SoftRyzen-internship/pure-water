@@ -6,7 +6,7 @@ import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 import './globals.css';
 
-const comfortaa = Comfortaa({ subsets: ['latin'] });
+const comfortaa = Comfortaa({ subsets: ['cyrillic-ext'] });
 
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
