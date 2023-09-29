@@ -235,5 +235,9 @@
     "label": "Created by",
     "link": "SoftRyzen",
     "url": "https://softryzen.com"
+  },
+  "fundraising": {
+    "title": "CURRENT FUNDRAISING",
+    "imageAlt": "Blue and yellow heart"
   }
 }
