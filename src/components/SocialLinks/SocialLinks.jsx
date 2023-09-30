@@ -11,7 +11,7 @@ export const SocialLinks = ({ socials, section }) => {
   };
   const styled = {
     hero: 'flex xl:gap-4',
-    footer: 'hidden xl:flex xl:flex-col xl:gap-2',
+    footer: 'hidden xl:flex xl:flex-col xl:gap-2 xl:w-[116px]',
   };
   const styledLink = {
     hero: 'flex justify-center items-center w-12 h-12 xl:w-6 xl:h-6',
@@ -28,7 +28,7 @@ export const SocialLinks = ({ socials, section }) => {
               target="_blank"
               rel="noreferrer noopener nofollow"
               aria-label={ariaLabel}
-              className="w-full h-full text-white/75 hover:text-white focus:text-white transition duration-300 flex justify-center xl:justify-start items-center gap-3"
+              className="w-full h-full text-white/75 hover:text-white focus:text-white transition duration-300 flex justify-center items-center gap-3"
             >
               {React.createElement(icons[label], {
                 className: 'w-6 h-6 fill-current',

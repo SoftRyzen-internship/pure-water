@@ -10,12 +10,12 @@ export const Contacts = ({ contacts }) => {
             : `tel:${contact.replace(/[^+0-9]/g, '')}`;
         return (
           <li key={label}>
-            <h3 className="text-base md:text-xl font-medium md:mb-2">
+            <h3 className="h-[26px] md:h-8 text-base md:text-xl font-medium md:mb-2">
               {label}
             </h3>
             <a
               href={href}
-              className="w-full h-full text-xs md:text-base font-light text-white/75 hover:text-white focus:text-white transition duration-300"
+              className="w-full h-[19px] md:h-[25px] text-xs md:text-base font-light text-white/75 hover:text-white focus:text-white transition duration-300"
             >
               {contact}
             </a>
