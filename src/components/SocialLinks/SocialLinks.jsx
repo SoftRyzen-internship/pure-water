@@ -20,24 +20,21 @@ export const SocialLinks = ({ socials, section }) => {
 
   return (
     <ul className={styled[section]}>
-      {socials.map(social => {
+      {socials.map(({ label, url, ariaLabel }) => {
         return (
-          <li
-            key={social.label}
-            className={`${styledLink[section]} text-white/75 hover:text-white focus:text-white transition duration-300`}
-          >
+          <li key={label} className={styledLink[section]}>
             <a
-              href={social.url}
+              href={url}
               target="_blank"
               rel="noreferrer noopener nofollow"
-              aria-label={social['aria-label']}
-              className="flex justify-center items-center gap-3"
+              aria-label={ariaLabel}
+              className="w-full h-full text-white/75 hover:text-white focus:text-white transition duration-300 flex justify-center items-center gap-3"
             >
-              {React.createElement(icons[social.label], {
+              {React.createElement(icons[label], {
                 className: 'w-6 h-6 fill-current',
               })}
               {section === 'footer' && (
-                <span className="text-base font-light">{social.label}</span>
+                <span className="text-base font-light">{label}</span>
               )}
             </a>
           </li>
@@ -52,7 +49,7 @@ SocialLinks.propTypes = {
     PropTypes.shape({
       label: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
-      'aria-label': PropTypes.string.isRequired,
+      ariaLabel: PropTypes.string.isRequired,
     }),
   ),
   section: PropTypes.string.isRequired,

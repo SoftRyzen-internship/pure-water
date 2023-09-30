@@ -1,9 +1,9 @@
 {
-  "title": "It is header",
+  "logoAria": "Logo",
   "lang": ["UA", "EN"],
   "nav": [
     {
-      "label": "Main",
+      "label": "Up",
       "id": "main"
     },
     {
@@ -27,6 +27,7 @@
       "id": "write"
     }
   ],
+  "switcherAria": "Language switcher",
   "hero": {
     "titleFoundation": "Charity fund",
     "titleMain": "CLEAN WATER FOR EVERYONE",
@@ -177,11 +178,16 @@
       }
     ]
   },
+  "projects": {
+    "title": "PROJECTS",
+    "city": "City",
+    "overlay": "More photos"
+  },
   "write": {
     "title": "WRITE TO US",
     "form": {
       "name": {
-        "label": "Your name",
+        "label": "Your Name",
         "placeholder": "Andrew"
       },
       "phone": {
@@ -197,6 +203,14 @@
       "regular": "Send",
       "success": "Sent successfully",
       "error": "Error"
+    },
+    "errorMsg": {
+      "required": "This field is required",
+      "nameShort": "Type at least 3 characters",
+      "nameLong": "Type less than 70 characters",
+      "wrongName": "Wrong name",
+      "wrongPhone": "Wrong phone",
+      "wrongMessage": "Type 3 to 500 characters"
     }
   },
   "contact": [
@@ -215,12 +229,12 @@
       {
         "label": "Instagram",
         "url": "https://instagram.com/zdorova_voda.kr?igshid=MzRlODBiNWFlZA==",
-        "aria-label": "Link to Instagram"
+        "ariaLabel": "Link to Instagram"
       },
       {
         "label": "Facebook",
         "url": "https://www.facebook.com/zdorovavoda.krop",
-        "aria-label": "Link to Facebook"
+        "ariaLabel": "Link to Facebook"
       }
     ]
   },
@@ -229,5 +243,9 @@
     "label": "Created by",
     "link": "SoftRyzen",
     "url": "https://softryzen.com"
+  },
+  "fundraising": {
+    "title": "CURRENT FUNDRAISING",
+    "imageAlt": "Blue and yellow heart"
   }
 }
