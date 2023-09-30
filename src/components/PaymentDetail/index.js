@@ -1,1 +1,1 @@
-export * from './PaymentDetail'
+export * from './PaymentDetail';

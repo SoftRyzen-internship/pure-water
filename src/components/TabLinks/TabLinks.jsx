@@ -28,7 +28,9 @@ export const TabLinks = ({ tabs }) => {
           >
             <a
               href={href}
-              className={id === href ? 'activeTabLink' : 'defaultTabLink'}
+              className={`tabBtn relative z-10 transition-colors duration-300 ${
+                id === href ? 'activeTabLink' : 'defaultTabLink'
+              }`}
             >
               <span
                 className={

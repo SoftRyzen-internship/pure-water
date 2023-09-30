@@ -1,1 +1,1 @@
-export * from './PaymentLink'
+export * from './PaymentLink';

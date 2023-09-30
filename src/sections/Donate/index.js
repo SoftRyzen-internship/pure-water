@@ -1,1 +1,1 @@
-export * from "./Donate"
+export * from './Donate';

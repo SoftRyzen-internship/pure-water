@@ -1,1 +1,1 @@
-export * from './Swift'
+export * from './Swift';

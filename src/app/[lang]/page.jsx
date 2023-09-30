@@ -5,7 +5,7 @@ import { getDictionary } from '@/utils/getDictionary';
 
 export default async function Home({ params: { lang } }) {
   const staticPageData = await getDictionary(lang);
-  const {hero, makeDonate, socials, donate} = staticPageData;
+  const { hero, makeDonate, socials, donate } = staticPageData;
 
   return (
     <>
@@ -15,7 +15,7 @@ export default async function Home({ params: { lang } }) {
         socials={socials.links}
       />
       <>{staticPageData && <CurrentFundraising lang={lang} />}</>
-      <Donate data={donate}/>
+      <Donate data={donate} />
     </>
   );
 }

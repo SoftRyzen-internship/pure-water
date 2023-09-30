@@ -1,1 +1,1 @@
-export * from './Privat24'
+export * from './Privat24';

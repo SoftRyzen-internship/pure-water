@@ -1,1 +1,1 @@
-export * from './Mono'
+export * from './Mono';
