@@ -65,6 +65,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             thumbs={{ swiper: thumbsSwiper.current || '.swiper-thumbs' }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="!mb-6"
+            lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 1 }}
             breakpoints={{
               768: {
                 spaceBetween: 24,
@@ -90,6 +91,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
                   width={280}
                   height={210}
                   quality={100}
+                  loading="lazy"
                   className="!static !w-[280px] !h-[210px] md:!w-[696px] md:!h-[520px] xl:!w-[842px] xl:!h-[630px] object-cover"
                 />
               </SwiperSlide>
@@ -105,9 +107,13 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             wrapperClass="flex justify-center items-center"
             className="swiper-thumbs"
             modules={[FreeMode, Navigation, Thumbs]}
+            lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 4 }}
             breakpoints={{
               768: {
                 slidesPerView: 6,
+                lazy: {
+                  lazyPreloadPrevNext: 6,
+                },
               },
             }}
           >
@@ -119,6 +125,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
                   width={61}
                   height={48}
                   quality={100}
+                  loading="lazy"
                   className="!static !w-[61px] h-[48px] md:!w-[106px] xl:!w-[130px] md:h-[80px] xl:h-[88px] object-cover"
                 />
               </SwiperSlide>
