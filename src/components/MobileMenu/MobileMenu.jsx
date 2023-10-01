@@ -1,5 +1,6 @@
 'use client';
 
+import { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Transition, Dialog } from '@headlessui/react';
 
@@ -17,40 +18,53 @@ export const MobileMenu = ({
   section,
 }) => {
   return (
-    <Transition
-      show={isMenuOpen}
-      enter="transition-opacity duration-300"
-      enterFrom="opacity-0"
-      enterTo="opacity-100"
-      leave="transition-opacity duration-3000"
-      leaveFrom="opacity-100"
-      leaveTo="opacity-0"
-    >
-      <Dialog
-        open={isMenuOpen}
-        onClose={menuToggle}
-        className={`fixed top-0 bottom-0 left-0 right-0 menu z-[999] inset-0 overflow-y-auto xl:hidden`}
-      >
-        <Dialog.Panel className="py-9 flex flex-col items-center gap-9">
-          <div className="container flex justify-end mb-2">
-            <button
-              onClick={menuToggle}
-              className="w-12 h-12 py-3 px-3 "
-              aria-label={closeMenuAria}
-            >
-              <CloseIcon className="stroke-white stroke-2 w-full h-full" />
-            </button>
-          </div>
+    <Transition appear show={isMenuOpen} as={Fragment}>
+      <Dialog as="div" className="relative z-10" onClose={menuToggle}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-300"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 menu" />
+        </Transition.Child>
 
-          <NavBar
-            navArray={navArray}
-            section={section}
-            menuToggle={menuToggle}
-          />
-          <div className="relative w-[65px] h-[28px]">
-            <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="flex min-h-full justify-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-300"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Dialog.Panel className="w-full max-w-[480px] md:max-w-[768px] py-32 flex flex-col items-center gap-9 transform transition-all overflow-hidden">
+                <button
+                  onClick={menuToggle}
+                  className={`absolute w-12 w-12 top-9 right-5 md:right-9 py-3 px-3`}
+                  aria-label={closeMenuAria}
+                >
+                  <CloseIcon className="stroke-white stroke-2 w-full h-full" />
+                </button>
+
+                <NavBar
+                  navArray={navArray}
+                  section={section}
+                  menuToggle={menuToggle}
+                />
+
+                <div className="relative w-[65px] h-[28px]">
+                  <LocaleSwitcher switcherAria={switcherAria} lang={lang} />
+                </div>
+              </Dialog.Panel>
+            </Transition.Child>
           </div>
-        </Dialog.Panel>
+        </div>
       </Dialog>
     </Transition>
   );

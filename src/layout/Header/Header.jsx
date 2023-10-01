@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useMediaQuery } from 'react-responsive';
 
 import { Container } from '@/components/Container';
 import { NavBar } from '@/components/NavBar';
@@ -14,6 +15,10 @@ export const Header = ({ aria, navArray, lang }) => {
   const { logo, switcher, closeMenu, openMenu } = aria;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1280px)',
+  });
 
   const menuToggle = () => setIsMenuOpen(state => !state);
 
@@ -38,7 +43,7 @@ export const Header = ({ aria, navArray, lang }) => {
           </div>
         </div>
 
-        {isMenuOpen && (
+        {!isDesktop && (
           <MobileMenu
             navArray={navArray}
             switcherAria={switcher}
