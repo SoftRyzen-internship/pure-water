@@ -4,6 +4,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 import { ProjectOverlay } from '../ProjectOverlay';
+import { convertImage, toBase64 } from '@/utils/getImageBlur';
 import TapIcon from 'public/icons/tap.svg';
 
 export const ProjectListItem = ({
@@ -34,6 +35,10 @@ export const ProjectListItem = ({
           quality={100}
           loading="lazy"
           className="!static !w-[256px] md:!w-[342px] !h-[187px] md:!h-[250px] object-cover"
+          placeholder="blur"
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(
+            convertImage(256, 187),
+          )}`}
         />
         <span className="xl:hidden absolute bottom-[5px] right-[5px] flex items-center justify-center w-8 h-8 bg-gradient-to-b from-lighterBlue to-[#0F5598] opacity-75 rounded-full">
           <TapIcon className="w-[18px] h-6 fill-white" />
