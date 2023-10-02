@@ -43,7 +43,7 @@ export const MobileMenu = ({
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-[480px] md:max-w-[768px] py-32 flex flex-col items-center gap-9 transform transition-all overflow-hidden">
+              <Dialog.Panel className="container w-full py-32 flex flex-col items-center justify-center gap-9 transform transition-all overflow-hidden">
                 <button
                   onClick={menuToggle}
                   className={`absolute w-12 w-12 top-9 right-5 md:right-9 py-3 px-3`}
