@@ -1,5 +1,4 @@
 {
-  "logoAria": "Логотип",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -27,7 +26,12 @@
       "id": "write"
     }
   ],
-  "switcherAria": "Перемикач мов",
+  "aria": {
+    "logo": "Логотип",
+    "switcher": "Перемикач мов",
+    "closeMenu": "Закрити мобільне меню",
+    "openMenu": "Відкрити мобільне меню"
+  },
   "hero": {
     "titleFoundation": "Благодійний фонд",
     "titleMain": "ЧИСТА ВОДА ВСIМ",
