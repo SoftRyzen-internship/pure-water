@@ -1,11 +1,17 @@
+import { Comfortaa } from 'next/font/google';
+
 import { Header } from '@/layout/Header';
 import { Footer } from '@/layout/Footer';
 import { axiforma } from '../fonts';
+import { Comfortaa } from 'next/font/google';
 
+import { Header } from '@/layout/Header';
 import { getMetaByLang } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 import './globals.css';
+
+const comfortaa = Comfortaa({ subsets: ['cyrillic-ext'] });
 
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
@@ -21,25 +27,12 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const {
-    nav,
-    switcherAria,
-    logoAria,
-    contacts,
-    createdBy,
-    socials,
-    menuLabel,
-  } = await getDictionary(lang);
+  const { nav, aria } = await getDictionary(lang);
 
   return (
     <html lang={lang}>
-      <body className={axiforma.variable}>
-        <Header
-          logoAria={logoAria}
-          navArray={nav}
-          switcherAria={switcherAria}
-          lang={lang}
-        />
+      <body className={comfortaa.className}>
+        <Header aria={aria} navArray={nav} lang={lang} />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>

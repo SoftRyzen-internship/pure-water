@@ -4,13 +4,13 @@
 
 @layer base {
   body {
-    @apply font-axiforma text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
+    @apply font-comfortaa text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
   }
 }
 
 @layer components {
   .section {
-    @apply w-full py-[30px] md:py-10 xl:py-20;
+    @apply w-full pb-[60px] md:pb-20 xl:pb-40;
   }
 
   .subTitle {
@@ -81,6 +81,68 @@
       rgba(255, 255, 255, 0.3) 2%,
       rgba(255, 255, 255, 0.08) 102%
     );
+  }
+
+  .aboutBg {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: calc(50% + 450px) 136%;
+    background-image: url(/images/about/water-drops@1x.jpg);
+    background-image: -webkit-image-set(
+      url(/images/about/water-drops@1x.webp) type('image/webp') 1x,
+      url(/images/about/water-drops@2x.webp) type('image/webp') 2x,
+      url(/images/about/water-drops@1x.jpg) 1x,
+      url(/images/about/water-drops@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/about/water-drops@1x.webp) type('image/webp') 1x,
+      url(/images/about/water-drops@2x.webp) type('image/webp') 2x,
+      url(/images/about/water-drops@1x.jpg) 1x,
+      url(/images/about/water-drops@2x.jpg) 2x
+    );
+  }
+
+  .tabLink {
+    @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300 relative z-10;
+    overflow: hidden;
+  }
+  .tabLink::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .tabLink:hover::before,
+  .tabLink:focus::before {
+    opacity: 1;
+  }
+
+  .defaultTabLink {
+    @apply tabLink border border-primary hover:border-transparent focus:border-transparent;
+  }
+  .activeTabLink {
+    @apply tabLink boxGradient;
+  }
+
+  .defaultTabLinkText {
+    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:text-white group-focus-within/tab:text-white transition duration-300;
+  }
+  .activeTabLinkText {
+    @apply font-semibold text-white;
+  }
+  .tabItem {
+    @apply w-full md:w-[696px]  xl:w-[1220px] py-9 px-3 md:px-6 xl:py-12 xl:px-12 rounded-10 boxGradient text-white;
+  }
+  .tabItemVisible {
+    @apply tabItem block;
+  }
+  .tabItemHidden {
+    @apply tabItem hidden;
   }
 }
 
@@ -176,20 +238,31 @@
       );
     }
   }
+}
 
-  /* Form */
-  .input-field:-webkit-autofill,
-  .input-field:-webkit-autofill:hover,
-  .input-field:-webkit-autofill:focus {
-    transition:
-      background-color 0s 600000s,
-      color 0s 600000s;
-  }
-  .input-field:-moz-autofill,
-  .input-field:-moz-autofill:hover,
-  .input-field:-moz-autofill:focus {
-    transition:
-      background-color 0s 600000s,
-      color 0s 600000s;
+.menu {
+  background-image: url('/images/hero/menu_tab@1x.jpg');
+  background-image: -webkit-image-set(
+    url('/images/menu/menu_tab@1x.webp') type('image/webp') 1x
+  );
+  background-image: image-set(
+    url('/images/menu/menu_tab@1x.webp') type('image/webp') 1x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .menu {
+    background-image: url('/images/menu/menu_tab@2x.jpg');
+    background-image: -webkit-image-set(
+      url('/images/menu/menu_tab@2x.webp') type('image/webp') 2x
+    );
+    background-image: image-set(
+      url('/images/menu/menu_tab@2x.webp') type('image/webp') 2x
+    );
   }
 }

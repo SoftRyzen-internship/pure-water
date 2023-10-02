@@ -1,0 +1,95 @@
+import PropTypes from 'prop-types';
+
+import { PaymentDetail } from '@/components/PaymentDetail';
+
+export const Swift = ({ info, paymentIcons }) => {
+  const { accountTitle, paymentDetails, bankDetails } = info;
+
+  return (
+    <div className="flex flex-col gap-10 xl:flex-row xl:gap-12">
+      <div className="flex flex-col gap-3 xl:gap-8 xl:w-[457px]">
+        <h3 className="text-2xl xl:text-xl font-semibold xl:text-center">
+          {accountTitle}
+        </h3>
+        <ul className="flex flex-col gap-2 xl:gap-8">
+          {paymentDetails.map(({ title, description }) => {
+            return (
+              <li key={title} className="md:w-[486px] xl:w-full">
+                <PaymentDetail
+                  title={title}
+                  description={description}
+                  isSwift
+                  paymentIcons={paymentIcons}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+      <ul className="flex flex-col gap-10 xl:gap-12">
+        {bankDetails.map(
+          ({
+            bankTitle,
+            bankDescription,
+            accountTitle,
+            accountDescription,
+            correspondentTitle,
+            correspondentDescription,
+          }) => {
+            return (
+              <li
+                key={bankTitle}
+                className="flex flex-col gap-3 md:gap-4 xl:gap-3"
+              >
+                <PaymentDetail
+                  title={bankTitle}
+                  description={bankDescription}
+                  isSwift
+                  paymentIcons={paymentIcons}
+                />
+                <PaymentDetail
+                  title={accountTitle}
+                  description={accountDescription}
+                  isSwift
+                  paymentIcons={paymentIcons}
+                />
+                <PaymentDetail
+                  title={correspondentTitle}
+                  description={correspondentDescription}
+                  isSwift
+                  paymentIcons={paymentIcons}
+                />
+              </li>
+            );
+          },
+        )}
+      </ul>
+    </div>
+  );
+};
+
+Swift.propTypes = {
+  info: PropTypes.shape({
+    accountTitle: PropTypes.string.isRequired,
+    paymentDetails: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+      }).isRequired,
+    ).isRequired,
+    bankDetails: PropTypes.arrayOf(
+      PropTypes.shape({
+        bankTitle: PropTypes.string.isRequired,
+        bankDescription: PropTypes.string.isRequired,
+        accountTitle: PropTypes.string.isRequired,
+        accountDescription: PropTypes.string.isRequired,
+        correspondentTitle: PropTypes.string.isRequired,
+        correspondentDescription: PropTypes.string.isRequired,
+      }).isRequired,
+    ).isRequired,
+  }).isRequired,
+  paymentIcons: PropTypes.shape({
+    copyIcon: PropTypes.string.isRequired,
+    checkIcon: PropTypes.string.isRequired,
+  }).isRequired,
+};
