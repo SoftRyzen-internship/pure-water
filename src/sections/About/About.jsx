@@ -18,6 +18,7 @@ export const About = ({ data }) => {
           ))}
         </ul>
       </Container>
+
       <AboutSwiper benefits={benefits} />
     </section>
   );

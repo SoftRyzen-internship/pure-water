@@ -167,6 +167,26 @@
   @apply w-[256px] max-md:mx-auto;
 }
 
+/* Form */
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus {
+  transition:
+    background-color 0s 600000s,
+    color 0s 600000s;
+}
+.input-field:-moz-autofill,
+.input-field:-moz-autofill:hover,
+.input-field:-moz-autofill:focus {
+  transition:
+    background-color 0s 600000s,
+    color 0s 600000s;
+}
+
+.aboutSwiper {
+  @apply xl:!hidden;
+}
+
 @media screen and (min-width: 455px) {
   .paymentLink {
     @apply px-11;
@@ -215,20 +235,4 @@
       );
     }
   }
-}
-
-/* Form */
-.input-field:-webkit-autofill,
-.input-field:-webkit-autofill:hover,
-.input-field:-webkit-autofill:focus {
-  transition:
-    background-color 0s 600000s,
-    color 0s 600000s;
-}
-.input-field:-moz-autofill,
-.input-field:-moz-autofill:hover,
-.input-field:-moz-autofill:focus {
-  transition:
-    background-color 0s 600000s,
-    color 0s 600000s;
 }
