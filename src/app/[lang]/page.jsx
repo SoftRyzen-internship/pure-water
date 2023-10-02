@@ -1,4 +1,5 @@
 import { Hero } from '@/sections/Hero';
+import { About } from '@/sections/About';
 import { CurrentFundraising } from '@/sections/CurrentFundraising';
 import { Donate } from '@/sections/Donate';
 import { Projects } from '@/sections/Projects';
@@ -9,8 +10,16 @@ import { getDictionary } from '@/utils/getDictionary';
 export default async function Home({ params: { lang } }) {
   const staticPageData = await getDictionary(lang);
 
-  const { hero, makeDonate, socials, write, projects, fundraising, donate } =
-    staticPageData;
+  const {
+    hero,
+    makeDonate,
+    socials,
+    about,
+    fundraising,
+    donate,
+    projects,
+    write,
+  } = staticPageData;
 
   return (
     <>
@@ -19,6 +28,7 @@ export default async function Home({ params: { lang } }) {
         titleBtn={makeDonate.title}
         socials={socials.links}
       />
+      <About data={about} />
       <CurrentFundraising
         lang={lang}
         fundraising={fundraising}
