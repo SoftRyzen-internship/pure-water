@@ -67,13 +67,15 @@
 
   .tabLink {
     @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300 relative z-10;
+    overflow: hidden;
   }
   .tabLink::before {
     content: '';
+    width: 100%;
+    height: 100%;
     position: absolute;
     inset: 0;
     background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
-    border-radius: 10px;
     opacity: 0;
     z-index: -1;
     transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -84,7 +86,7 @@
   }
 
   .defaultTabLink {
-    @apply tabLink border-2 border-primary hover:border-0 focus:border-0;
+    @apply tabLink border border-primary hover:border-transparent focus:border-transparent;
   }
   .activeTabLink {
     @apply tabLink boxGradient;
@@ -118,6 +120,24 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.paymentLink {
+  @apply px-11;
+}
+
+.paymentBox {
+  @apply w-[256px] max-md:mx-auto;
+}
+
+@media screen and (min-width: 444px) {
+  .paymentLink {
+    @apply px-11;
+  }
+
+  .paymentBox {
+    @apply w-full;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
