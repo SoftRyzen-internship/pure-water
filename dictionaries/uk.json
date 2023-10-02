@@ -1,4 +1,5 @@
 {
+  "logoAria": "Логотип",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -181,11 +182,16 @@
       }
     ]
   },
+  "projects": {
+    "title": "ПРОЄКТИ",
+    "city": "Мiсто",
+    "overlay": "Більше фото"
+  },
   "write": {
     "title": "НАПИШIТЬ НАМ",
     "form": {
       "name": {
-        "label": "Ваше імʼя",
+        "label": "Ваше Імʼя",
         "placeholder": "Андрій"
       },
       "phone": {
@@ -201,6 +207,14 @@
       "regular": "Відправити",
       "success": "Успішно відправлено",
       "error": "Виникла помилка"
+    },
+    "errorMsg": {
+      "required": "Це поле обовʼязкове",
+      "nameShort": "Введіть хоча б 3 символи",
+      "nameLong": "Введіть не більше 70 символів",
+      "wrongName": "Неправильне імʼя",
+      "wrongPhone": "Неправильний телефон",
+      "wrongMessage": "Введіть від 3 до 500 символів"
     }
   },
   "contact": [
@@ -233,5 +247,9 @@
     "label": "Created by",
     "link": "SoftRyzen",
     "url": "https://softryzen.com"
+  },
+  "fundraising": {
+    "title": "АКТУАЛЬНИЙ ЗБIР",
+    "imageAlt": "Синьо-жовте серце"
   }
 }

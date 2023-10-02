@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-axiforma text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
+    @apply font-comfortaa text-accent text-[14px] md:text-[16px] font-normal leading-5 bg-white;
   }
 }
 
@@ -48,6 +48,24 @@
   }
   .donateBtnBlueOverlay {
     @apply donateOverlay bg-gradient-to-b from-sky-500/75 to-sky-700/75 opacity-75 hover:opacity-100 focus-within:opacity-100;
+  }
+
+  .stroke-linecap-round {
+    stroke-linecap: round;
+  }
+
+  .project-description::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .project-description::-webkit-scrollbar-thumb {
+    background-color: #274b77;
+    border-radius: 30px;
+  }
+
+  .project-slide:hover .project-overlay,
+  .project-slide:focus .project-overlay {
+    opacity: 1;
   }
 
   .switcherGradient {
@@ -130,7 +148,7 @@
   @apply w-[256px] max-md:mx-auto;
 }
 
-@media screen and (min-width: 444px) {
+@media screen and (min-width: 455px) {
   .paymentLink {
     @apply px-11;
   }
@@ -177,5 +195,21 @@
         url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
       );
     }
+  }
+
+  /* Form */
+  .input-field:-webkit-autofill,
+  .input-field:-webkit-autofill:hover,
+  .input-field:-webkit-autofill:focus {
+    transition:
+      background-color 0s 600000s,
+      color 0s 600000s;
+  }
+  .input-field:-moz-autofill,
+  .input-field:-moz-autofill:hover,
+  .input-field:-moz-autofill:focus {
+    transition:
+      background-color 0s 600000s,
+      color 0s 600000s;
   }
 }

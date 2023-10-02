@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export const PaymentLink = ({ title, url }) => {
   return (
-    <div className="paymentBox flex justify-center items-center w-full md:w-[447px] xl:w-[572px] h-16 md:h-20 xl:h-[93px] rounded-10 text-base md:text-xl xl:text-[28px] font-medium leading-none cursor-pointer bg-white/90 hover:bg-white focus:bg-white">
+    <div className="paymentBox flex justify-center items-center w-full md:w-[457px] xl:w-[591px] h-16 md:h-20 xl:h-[93px] rounded-10 text-base md:text-xl xl:text-[28px] font-medium leading-none cursor-pointer bg-white/90 hover:bg-white focus:bg-white">
       <a
         href={url}
         target="_blank"
