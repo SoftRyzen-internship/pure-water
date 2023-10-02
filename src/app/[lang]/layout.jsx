@@ -2,10 +2,6 @@ import { Comfortaa } from 'next/font/google';
 
 import { Header } from '@/layout/Header';
 import { Footer } from '@/layout/Footer';
-import { axiforma } from '../fonts';
-import { Comfortaa } from 'next/font/google';
-
-import { Header } from '@/layout/Header';
 import { getMetaByLang } from '@/utils/getMetaData';
 import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
@@ -27,7 +23,7 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const { nav, aria } = await getDictionary(lang);
+  const { nav, aria, contacts, createdBy, socials, menuLabel } = await getDictionary(lang);
 
   return (
     <html lang={lang}>
@@ -39,10 +35,9 @@ export default async function RootLayout({ children, params: { lang } }) {
         <Footer
           contacts={contacts}
           createdBy={createdBy}
-          logoAria={logoAria}
+          aria={aria}
           lang={lang}
-          socials={socials.links}
-          socialsTitle={socials.title}
+          socials={socials}
           menuLabel={menuLabel}
           navArray={nav}
         />
