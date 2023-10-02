@@ -40,7 +40,7 @@ export const LocaleSwitcher = ({ switcherAria, lang }) => {
         <span className="text-[12px] leading-[12px] uppercase font-medium">
           {titleLocale(selectedLocale.locale)}
         </span>
-        <ArrowIcon width={12} height={8} />
+        <ArrowIcon width={12} height={8} className="shrink-0" />
       </Listbox.Button>
 
       <Listbox.Options as="div">
