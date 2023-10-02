@@ -22,7 +22,7 @@ export const Hero = ({ heroData, titleBtn, socials }) => {
             {titleMain}
           </h1>
 
-          <p className="w-[200px] md:w-[400px] text-center text-base md:text-xl font-normal mb-[25px] md:mb-4 xl:mb-6">
+          <p className="text-center text-base md:text-xl font-normal mb-[25px] md:mb-4 xl:mb-6">
             {tagline}
           </p>
           <MakeDonateBtn section="hero" title={titleBtn} />
