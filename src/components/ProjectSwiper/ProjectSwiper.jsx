@@ -15,8 +15,6 @@ export const ProjectSwiper = ({
   setIsModalOpen,
   setImageList,
 }) => {
-  console.log(projectList?.length > 3);
-
   return (
     <div className="xl:max-w-[1220px] xl:mx-auto">
       <Swiper
