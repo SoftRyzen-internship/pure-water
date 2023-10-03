@@ -1,5 +1,4 @@
 {
-  "logoAria": "Logo",
   "lang": ["UA", "EN"],
   "nav": [
     {
@@ -27,7 +26,12 @@
       "id": "write"
     }
   ],
-  "switcherAria": "Language switcher",
+  "aria": {
+    "logo": "Logo",
+    "switcher": "Language switcher",
+    "closeMenu": "Close mobile menu",
+    "openMenu": "Open mobile menu"
+  },
   "hero": {
     "titleFoundation": "Charity fund",
     "titleMain": "CLEAN WATER FOR EVERYONE",
@@ -73,15 +77,22 @@
   },
   "donate": {
     "title": "Donate",
+    "paymentIcons": {
+      "copyIcon": "Copy",
+      "checkIcon": "Copied"
+    },
     "tabs": [
       {
-        "label": "Privat 24",
+        "label": "Privat24",
         "info": {
           "card": {
             "label": "Card:",
             "description": "4246 0010 0188 5684"
           },
-          "link": "Link to online transfer",
+          "link": {
+            "title": "Link to online transfer",
+            "url": "https://www.privat24.ua/send/0q9dw"
+          },
           "accountTitle": "Account - UAH ₴",
           "paymentDetails": [
             {
@@ -105,7 +116,12 @@
       },
       {
         "label": "Mono",
-        "info": "Link to online transfer"
+        "info": {
+          "link": {
+            "title": "Link to online transfer",
+            "url": "#"
+          }
+        }
       },
       {
         "label": "Swift",

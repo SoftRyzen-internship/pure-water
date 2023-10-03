@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
@@ -36,12 +35,9 @@ module.exports = {
       },
 
       fontFamily: {
-        axiforma: ['var(--font-axiforma)', ...fontFamily.serif],
+        comfortaa: ['Comfortaa', 'sans-serif'],
       },
 
-      content: {
-        // crossIcon: 'url("/icons/error-cross.svg")',
-      },
       borderRadius: {
         10: ['10px'],
         20: ['20px'],
