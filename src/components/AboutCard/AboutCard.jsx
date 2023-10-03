@@ -12,7 +12,7 @@ export const AboutCard = ({ data, index }) => {
   const images = [aim, priorities, team, achievements];
 
   return (
-    <li
+    <div
       className={`${
         index === 3 ? 'xl:h-max' : 'xl:h-auto'
       } w-full h-full xl:w-[287px] px-5 md:px-6 py-6 xl:border-2 xl:border-tertiary rounded-10`}
@@ -37,7 +37,7 @@ export const AboutCard = ({ data, index }) => {
           {text}
         </p>
       ))}
-    </li>
+    </div>
   );
 };
 
