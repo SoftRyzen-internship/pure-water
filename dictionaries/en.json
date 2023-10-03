@@ -119,7 +119,7 @@
         "info": {
           "link": {
             "title": "Link to online transfer",
-            "url": "#"
+            "url": "https://www.monobank.ua/"
           }
         }
       },
@@ -156,7 +156,7 @@
               "accountTitle": "Account in the correspondent bank:",
               "accountDescription": "001-1-000080",
               "correspondentTitle": "Correspondent SWIFT:",
-              "correspondentDescription": "001-1-000080"
+              "correspondentDescription": "CHASUS33"
             },
             {
               "bankTitle": "Correspondent bank 2:",
