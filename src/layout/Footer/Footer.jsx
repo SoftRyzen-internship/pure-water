@@ -34,7 +34,7 @@ export const Footer = ({
   });
 
   return (
-    <footer className="footer w-full pt-[138px] md:pt-[280px] xl:pt-[454px] pb-10 xl:pb-12 text-white">
+    <footer className="footer w-full pt-[138px] md:pt-[200px] xl:pt-[454px] pb-10 xl:pb-12 text-white">
       <Container className="flex justify-between">
         <div className="hidden xl:block w-[130px]">
           <Logo logoAria={logo} lang={lang} />
@@ -68,7 +68,7 @@ export const Footer = ({
             menuToggle={menuToggle}
             isMenuOpen={isMenuOpen}
             closeMenuAria={closeMenu}
-            section="headerMenu"
+            section="footerMenu"
           />
         )}
       </Container>
