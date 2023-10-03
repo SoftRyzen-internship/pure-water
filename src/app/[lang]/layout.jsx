@@ -22,17 +22,12 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const { nav, switcherAria, logoAria } = await getDictionary(lang);
+  const { nav, aria } = await getDictionary(lang);
 
   return (
     <html lang={lang}>
       <body className={comfortaa.className}>
-        <Header
-          logoAria={logoAria}
-          navArray={nav}
-          switcherAria={switcherAria}
-          lang={lang}
-        />
+        <Header aria={aria} navArray={nav} lang={lang} />
         <main className="flex min-h-screen flex-col items-center justify-between">
           {children}
         </main>
