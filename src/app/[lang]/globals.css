@@ -47,7 +47,7 @@
     @apply donateOverlay bg-white opacity-90 hover:opacity-100 focus-within:opacity-100;
   }
   .donateBtnBlueOverlay {
-    @apply donateOverlay boxGradient opacity-75 hover:opacity-100 focus-within:opacity-100;
+    @apply donateOverlay boxGradient xl:opacity-75 hover:opacity-100 focus-within:opacity-100;
   }
 
   .stroke-linecap-round {
