@@ -14,7 +14,9 @@ export const About = ({ data }) => {
       <Container className="hidden xl:block">
         <ul className="flex gap-6">
           {benefits.map((benefit, index) => (
-            <AboutCard key={index} data={benefit} index={index} />
+            <li key={index}>
+              <AboutCard data={benefit} index={index} />
+            </li>
           ))}
         </ul>
       </Container>

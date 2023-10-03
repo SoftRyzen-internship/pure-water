@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 
+import { convertImage, toBase64 } from '@/utils/getImageBlur';
 import aim from 'public/images/about/aim.png';
 import priorities from 'public/images/about/priorities.png';
 import team from 'public/images/about/team.png';
@@ -11,7 +12,7 @@ export const AboutCard = ({ data, index }) => {
   const images = [aim, priorities, team, achievements];
 
   return (
-    <li
+    <div
       className={`${
         index === 3 ? 'xl:h-max' : 'xl:h-auto'
       } w-full h-full xl:w-[287px] px-5 md:px-6 py-6 xl:border-2 xl:border-tertiary rounded-10`}
@@ -23,6 +24,10 @@ export const AboutCard = ({ data, index }) => {
         width={123}
         height={123}
         quality={100}
+        placeholder="blur"
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(
+          convertImage(123, 123, '#eff3f4'),
+        )}`}
       />
       <h3 className="textGradient text-transparent bg-clip-text text-[24px] font-medium leading-normal mt-4 mb-2">
         {title}
@@ -32,7 +37,7 @@ export const AboutCard = ({ data, index }) => {
           {text}
         </p>
       ))}
-    </li>
+    </div>
   );
 };
 
