@@ -15,14 +15,24 @@ export const ProjectSwiper = ({
   setIsModalOpen,
   setImageList,
 }) => {
+  console.log(projectList?.length > 3);
+
   return (
     <div className="xl:max-w-[1220px] xl:mx-auto">
       <Swiper
         navigation={{
+          enabled: true,
           prevEl: '.prev',
           nextEl: '.next',
           disabledClass: 'opacity-30',
         }}
+        wrapperClass={
+          projectList?.length <= 3
+            ? `${
+                projectList?.length < 3 && 'xl:justify-center'
+              } xl:items-center`
+            : 'normal'
+        }
         grabCursor={true}
         spaceBetween={12}
         centeredSlides={false}
@@ -41,23 +51,29 @@ export const ProjectSwiper = ({
             spaceBetween: 24,
             slidesOffsetBefore: 0,
             slidesOffsetAfter: 0,
+            enabled: projectList?.length > 3,
+            navigation: {
+              enabled: projectList?.length > 3,
+            },
           },
         }}
       >
-        {projectList?.map(project => (
-          <SwiperSlide
-            key={project.id}
-            className="project-slide !flex flex-col !w-[280px] md:!w-[390px] !h-[606px] md:!h-[658px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
-          >
-            <ProjectListItem
-              project={project}
-              staticData={staticData}
-              setIsModalOpen={setIsModalOpen}
-              setImageList={setImageList}
-            />
-          </SwiperSlide>
-        ))}
-        <ProjectSwiperNav variant="cards" />
+        <div className="wrapper centered">
+          {projectList?.map(project => (
+            <SwiperSlide
+              key={project.id}
+              className="project-slide !flex flex-col !w-[280px] md:!w-[390px] !h-[606px] md:!h-[658px] px-3 md:px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
+            >
+              <ProjectListItem
+                project={project}
+                staticData={staticData}
+                setIsModalOpen={setIsModalOpen}
+                setImageList={setImageList}
+              />
+            </SwiperSlide>
+          ))}
+        </div>
+        {projectList?.length > 3 && <ProjectSwiperNav variant="cards" />}
       </Swiper>
     </div>
   );
