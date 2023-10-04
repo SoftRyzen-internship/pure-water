@@ -50,6 +50,56 @@
     @apply donateOverlay boxGradient xl:opacity-75 hover:opacity-100 focus-within:opacity-100;
   }
 
+  /* TABS */
+  .tabItem {
+    @apply w-full md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl rounded-10 border-transparent overflow-hidden flex justify-center items-center;
+
+    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+  }
+
+  .activeTabLink {
+    @apply cursor-pointer w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white bg-opacity-0 rounded-[8px] font-bold;
+  }
+  .activeTabLink:hover,
+  .activeTabLink:focus {
+    @apply bg-opacity-0 transition-all duration-300;
+  }
+
+  .defaultTabLink {
+    @apply cursor-pointer w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white opacity-100 rounded-[8px] font-bold;
+  }
+  .defaultTabLink:hover,
+  .defaultTabLink:focus {
+    @apply bg-opacity-0 transition-all duration-300;
+  }
+
+  .activeTabLinkText {
+    @apply text-white bg-clip-text;
+
+    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+  }
+  .defaultTabLinkText {
+    @apply text-transparent bg-clip-text;
+
+    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+  }
+
+  .defaultTabLink:hover .defaultTabLinkText,
+  .defaultTabLink:focus .defaultTabLinkText {
+    @apply text-white transition-colors duration-300;
+  }
+
+  .tabPanelItem {
+    @apply w-full md:w-[696px]  xl:w-[1220px] py-9 px-3 md:px-6 xl:py-12 xl:px-12 rounded-10 boxGradient text-white;
+  }
+  .tabPanelItemVisible {
+    @apply tabPanelItem block;
+  }
+  .tabPanelItemHidden {
+    @apply tabPanelItem hidden;
+  }
+
+  /* PROJECTS */
   .stroke-linecap-round {
     stroke-linecap: round;
   }
@@ -100,49 +150,6 @@
       url(/images/about/water-drops@1x.jpg) 1x,
       url(/images/about/water-drops@2x.jpg) 2x
     );
-  }
-
-  .tabLink {
-    @apply w-full h-full flex justify-center items-center rounded-10 cursor-pointer transition-all duration-300 relative z-10;
-    overflow: hidden;
-  }
-  .tabLink::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .tabLink:hover::before,
-  .tabLink:focus::before {
-    opacity: 1;
-  }
-
-  .defaultTabLink {
-    @apply tabLink border border-primary hover:border-transparent focus:border-transparent;
-  }
-  .activeTabLink {
-    @apply tabLink boxGradient;
-  }
-
-  .defaultTabLinkText {
-    @apply textGradient text-transparent bg-clip-text font-medium group-hover/tab:text-white group-focus-within/tab:text-white transition duration-300;
-  }
-  .activeTabLinkText {
-    @apply font-semibold text-white;
-  }
-  .tabItem {
-    @apply w-full md:w-[696px]  xl:w-[1220px] py-9 px-3 md:px-6 xl:py-12 xl:px-12 rounded-10 boxGradient text-white;
-  }
-  .tabItemVisible {
-    @apply tabItem block;
-  }
-  .tabItemHidden {
-    @apply tabItem hidden;
   }
 }
 
