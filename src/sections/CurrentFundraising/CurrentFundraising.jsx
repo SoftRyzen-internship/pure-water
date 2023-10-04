@@ -6,7 +6,7 @@ import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { MakeDonateBtn } from '@/components/MakeDonateBtn';
 import { convertImage, toBase64 } from '@/utils/getImageBlur';
-import FundraisingImg from 'public/images/fundraising/yellow-blue-heart.jpg';
+import FundraisingImg from 'public/images/fundraising/yellow-blue-heart.png';
 
 export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
   return (
