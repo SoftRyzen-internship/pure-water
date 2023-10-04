@@ -15,7 +15,7 @@ export const AboutCard = ({ data, index, Tag = 'div' }) => {
     <Tag
       className={`${
         index === 3 ? 'xl:h-[402px]' : 'xl:h-auto'
-      } w-full h-full xl:w-[287px] bg-mainGradient rounded-10 flex justify-center items-center`}
+      } w-full h-full xl:w-[287px] rounded-10 flex justify-center items-center iconGradient`}
     >
       <div
         className={`bg-white w-[calc(100%-4px)] h-[calc(100%-4px)] px-5 md:px-6 py-6 rounded-[8px] ${

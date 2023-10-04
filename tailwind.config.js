@@ -34,10 +34,6 @@ module.exports = {
         pink: '#FF7777',
       },
 
-      backgroundImage: {
-        mainGradient: 'linear-gradient(180deg, #1FB0E2 0%, #0F5598 100%)',
-      },
-
       fontFamily: {
         comfortaa: ['Comfortaa', 'sans-serif'],
       },
