@@ -22,7 +22,7 @@ export const ProjectListItem = ({
   };
 
   return (
-    <>
+    <div className="w-full h-full flex flex-col px-3 md:px-6 py-6 bg-white rounded-10">
       <div
         className="relative rounded-20 md:!w-[342px] overflow-hidden mb-3 md:mb-4"
         onClick={() => handleImgClick(imageList)}
@@ -55,7 +55,7 @@ export const ProjectListItem = ({
         <span className="font-light">{`${staticData.city}:`}</span>
         <span>{location}</span>
       </p>
-    </>
+    </div>
   );
 };
 
