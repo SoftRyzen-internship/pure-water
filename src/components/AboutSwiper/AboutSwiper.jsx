@@ -27,7 +27,7 @@ export const AboutSwiper = ({ benefits }) => {
       {benefits.map((benefit, index) => (
         <SwiperSlide
           key={index}
-          className="!w-[279px] !h-auto md:!w-[287px] border-2 border-tertiary rounded-10"
+          className="!w-[279px] !h-auto md:!w-[287px] rounded-10"
         >
           <AboutCard data={benefit} index={index} />
         </SwiperSlide>

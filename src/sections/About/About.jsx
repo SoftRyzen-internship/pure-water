@@ -12,7 +12,7 @@ export const About = ({ data }) => {
     <section className="section xl:aboutBg xl:pb-[189px]" id="about">
       <SectionTitle title={title} />
       <Container className="hidden xl:block">
-        <ul className="flex gap-6 xl:h-[624px]">
+        <ul className="flex gap-6">
           {benefits.map((benefit, index) => (
             <AboutCard key={index} data={benefit} index={index} Tag="li" />
           ))}
