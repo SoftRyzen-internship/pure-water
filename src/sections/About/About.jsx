@@ -14,7 +14,7 @@ export const About = ({ data }) => {
       <Container className="hidden xl:block">
         <ul className="flex gap-6 xl:h-[624px]">
           {benefits.map((benefit, index) => (
-            <AboutCard key={index} data={benefit} index={index} tag="li" />
+            <AboutCard key={index} data={benefit} index={index} Tag="li" />
           ))}
         </ul>
       </Container>

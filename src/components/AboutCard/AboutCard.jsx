@@ -7,10 +7,9 @@ import priorities from 'public/images/about/priorities.png';
 import team from 'public/images/about/team.png';
 import achievements from 'public/images/about/achievements.png';
 
-export const AboutCard = ({ data, index, tag = 'div' }) => {
+export const AboutCard = ({ data, index, Tag = 'div' }) => {
   const { title, paragraph } = data;
   const images = [aim, priorities, team, achievements];
-  const Tag = tag;
 
   return (
     <Tag
@@ -48,5 +47,5 @@ AboutCard.propTypes = {
     paragraph: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
-  tag: PropTypes.string,
+  Tag: PropTypes.oneOf(['li', 'div']),
 };
