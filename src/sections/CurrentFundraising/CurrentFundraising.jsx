@@ -5,7 +5,7 @@ import { FundraisingDesc } from '@/components/FundraisingDesc';
 import { Container } from '@/components/Container';
 import { SectionTitle } from '@/components/SectionTitle';
 import { MakeDonateBtn } from '@/components/MakeDonateBtn';
-
+import { convertImage, toBase64 } from '@/utils/getImageBlur';
 import FundraisingImg from 'public/images/fundraising/yellow-blue-heart.jpg';
 
 export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
@@ -22,6 +22,10 @@ export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
               height={221}
               quality={100}
               className="mx-auto md:mb-6 xl:mb-0 md:w-[317px] xl:w-[659px] md:h-[290px] xl:h-[603px] object-cover"
+              placeholder="blur"
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(
+                convertImage(280, 221),
+              )}`}
             />
             <MakeDonateBtn
               title={btnTitle}

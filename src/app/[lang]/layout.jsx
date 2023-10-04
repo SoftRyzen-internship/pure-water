@@ -23,7 +23,8 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { lang } }) {
-  const { nav, aria, contacts, createdBy, socials, menuLabel } = await getDictionary(lang);
+  const { nav, aria, contacts, createdBy, socials, menuLabel } =
+    await getDictionary(lang);
 
   return (
     <html lang={lang}>

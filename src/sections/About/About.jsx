@@ -12,9 +12,9 @@ export const About = ({ data }) => {
     <section className="section xl:aboutBg xl:pb-[189px]" id="about">
       <SectionTitle title={title} />
       <Container className="hidden xl:block">
-        <ul className="flex gap-6">
+        <ul className="flex gap-6 xl:h-[624px]">
           {benefits.map((benefit, index) => (
-            <AboutCard key={index} data={benefit} index={index} />
+            <AboutCard key={index} data={benefit} index={index} Tag="li" />
           ))}
         </ul>
       </Container>
