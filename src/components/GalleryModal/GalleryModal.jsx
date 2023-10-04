@@ -42,6 +42,12 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
     document.body.style.overflow = 'auto';
   };
 
+  const mobileWrapperClasses =
+    imageList.length < 4 ? 'flex justify-center items-center' : '';
+
+  const tabletWrapperClasses =
+    imageList.length < 6 ? 'md:flex md:justify-center md:items-center' : '';
+
   return (
     <div
       onClick={handleBackdropClick}
@@ -57,12 +63,15 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
         </button>
         <div className="relative max-w-[280px] md:max-w-[696px] xl:max-w-[842px] md:pb-9">
           <Swiper
-            loop={true}
             navigation={{ enabled: false }}
             grabCursor={true}
             spaceBetween={12}
             slidesPerView={1}
-            thumbs={{ swiper: thumbsSwiper.current || '.swiper-thumbs' }}
+            thumbs={{
+              swiper: thumbsSwiper.current || '.swiper-thumbs',
+              slideThumbActiveClass: '!opacity-100',
+              autoScrollOffset: 1,
+            }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="!mb-6"
             lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 1 }}
@@ -102,11 +111,11 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             watchSlidesProgress={true}
             slidesPerView={4}
             freeMode={true}
-            loop={true}
             spaceBetween={12}
-            wrapperClass="flex justify-center items-center"
+            wrapperClass={`${mobileWrapperClasses}${tabletWrapperClasses}`}
             className="swiper-thumbs"
             modules={[FreeMode, Navigation, Thumbs]}
+            initialSlide={1}
             lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 4 }}
             breakpoints={{
               768: {
@@ -118,7 +127,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             }}
           >
             {imageList.map(({ id, image, alt }) => (
-              <SwiperSlide key={id} className="cursor-pointer">
+              <SwiperSlide key={id} className="cursor-pointer opacity-30">
                 <Image
                   src={image.secure_url}
                   alt={alt}
