@@ -2,7 +2,7 @@
 
 [Live Page](https://clear-water.vercel.app/uk)
 
-[Administration Panel]()
+![PURE WATER FOR EVERYONE](./public/images/screenshots/adaptive-hero-en.jpg)
 
 ## Project description
 
@@ -16,6 +16,8 @@ systems.
 
 - Optimization: Website "Pure Water for Everyone" is optimized for fast loading,
   ensuring users can access information quickly.
+
+![Page Speed](./public/images/screenshots/page-speed.jpg)
 
 - Modularity and Reusability: This website is developed using a component-based
   approach, making the code modular and enabling the reuse of components across
@@ -53,8 +55,11 @@ systems.
 - React responsive
 - Headless UI
 - Swiper
+- Yup
+- Copy-to-clipboard
 - EsLint
 - PropTypes
+- DatoCMS (administration panel)
 
 ## 🌐 Supported Languages
 
@@ -69,6 +74,12 @@ systems.
 4. Start the project: `npm run dev` or ` yarn dev`
 5. Use the project on: `http://localhost:3000`
 
-## Documentation
+## Administration Panel
 
-[Instructions for the site administration panel DatoCMS]()
+[Administration Panel](https://pure-water.admin.datocms.com/editor)
+
+[📝 Instructions for the site administration panel DatoCMS](./README.admin.md)
+
+The administration panel allows you to quickly change (edit, add, delete) the
+content of the Current fundraising and Projects sections on the site without
+making changes to the code.
