@@ -5,10 +5,7 @@ export const TabLinks = ({ tabs, activeIndex, setIndex }) => {
     <ul className="flex flex-col md:flex-row md:flex-wrap xl:flex-nowrap gap-2 md:gap-6">
       {tabs.map(({ label }, index) => {
         return (
-          <li
-            key={label}
-            className="w-full md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl group/tab"
-          >
+          <li key={label} className="tabItem">
             <button
               type="button"
               className={

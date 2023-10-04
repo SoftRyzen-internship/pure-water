@@ -7,12 +7,12 @@ import priorities from 'public/images/about/priorities.png';
 import team from 'public/images/about/team.png';
 import achievements from 'public/images/about/achievements.png';
 
-export const AboutCard = ({ data, index }) => {
+export const AboutCard = ({ data, index, Tag = 'div' }) => {
   const { title, paragraph } = data;
   const images = [aim, priorities, team, achievements];
 
   return (
-    <div
+    <Tag
       className={`${
         index === 3 ? 'xl:h-max' : 'xl:h-auto'
       } w-full h-full xl:w-[287px] px-5 md:px-6 py-6 xl:border-2 xl:border-tertiary rounded-10`}
@@ -29,7 +29,7 @@ export const AboutCard = ({ data, index }) => {
           convertImage(123, 123, '#eff3f4'),
         )}`}
       />
-      <h3 className="textGradient text-transparent bg-clip-text text-[24px] font-medium leading-normal mt-4 mb-2">
+      <h3 className="textGradient text-transparent bg-clip-text text-[24px] font-bold leading-[27px] mt-4 mb-2">
         {title}
       </h3>
       {paragraph.map((text, index) => (
@@ -37,7 +37,7 @@ export const AboutCard = ({ data, index }) => {
           {text}
         </p>
       ))}
-    </div>
+    </Tag>
   );
 };
 
@@ -47,4 +47,5 @@ AboutCard.propTypes = {
     paragraph: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
+  Tag: PropTypes.oneOf(['li', 'div']),
 };
