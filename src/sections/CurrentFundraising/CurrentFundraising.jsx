@@ -10,7 +10,7 @@ import FundraisingImg from 'public/images/fundraising/yellow-blue-heart.jpg';
 
 export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
   return (
-    <section className="section">
+    <section id="current" className="section">
       <Container>
         <SectionTitle title={fundraising?.title} />
         <div className="mb-6 xl:mb-0 xl:flex xl:gap-x-6 md:px-[79.5px] xl:px-0">
