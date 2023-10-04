@@ -119,7 +119,7 @@
         "info": {
           "link": {
             "title": "Посилання на онлайн-переказ",
-            "url": "#"
+            "url": "https://www.monobank.ua/"
           }
         }
       },
@@ -156,7 +156,7 @@
               "accountTitle": "Account in the correspondent bank:",
               "accountDescription": "001-1-000080",
               "correspondentTitle": "Correspondent SWIFT:",
-              "correspondentDescription": "001-1-000080"
+              "correspondentDescription": "CHASUS33"
             },
             {
               "bankTitle": "Correspondent bank 2:",
@@ -221,7 +221,7 @@
       "wrongMessage": "Введіть від 3 до 500 символів"
     }
   },
-  "contact": [
+  "contacts": [
     {
       "label": "E-mail",
       "contact": "charity_cleanwater@ukr.net"
