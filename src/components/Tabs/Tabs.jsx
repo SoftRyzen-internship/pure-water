@@ -30,7 +30,9 @@ export const Tabs = ({ tabs, paymentIcons }) => {
               key={label}
               id={label.toLowerCase()}
               className={
-                index === activeIndex ? 'tabItemVisible' : 'tabItemHidden'
+                index === activeIndex
+                  ? 'tabPanelItemVisible'
+                  : 'tabPanelItemHidden'
               }
             >
               {label === 'Privat24' && (
