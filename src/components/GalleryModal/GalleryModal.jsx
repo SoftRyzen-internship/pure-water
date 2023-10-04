@@ -65,7 +65,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             thumbs={{ swiper: thumbsSwiper.current || '.swiper-thumbs' }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="!mb-6"
-            lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 1 }}
+            lazyPreloadPrevNext={1}
             breakpoints={{
               768: {
                 spaceBetween: 24,
@@ -107,7 +107,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
             wrapperClass="flex justify-center items-center"
             className="swiper-thumbs"
             modules={[FreeMode, Navigation, Thumbs]}
-            lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 4 }}
+            lazyPreloadPrevNext={4}
             breakpoints={{
               768: {
                 slidesPerView: 6,
