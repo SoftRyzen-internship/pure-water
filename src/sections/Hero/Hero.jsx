@@ -10,7 +10,7 @@ export const Hero = ({ heroData, titleBtn, socials }) => {
   return (
     <section
       id="main"
-      className="hero section pt-[133px] pb-[121px] md:pt-[104px] md:pb-[78px] xl:pt-[126px] xl:pb-[140px] text-white"
+      className="hero section pt-[133px] pb-[121px] md:pt-[104px] md:pb-[78px] xl:pt-[126px] xl:pb-[153px] text-white"
     >
       <Container>
         <div className="flex flex-col justify-center items-center">
