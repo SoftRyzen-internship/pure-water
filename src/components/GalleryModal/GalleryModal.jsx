@@ -55,17 +55,18 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
         >
           <CloseIcon className="w-[26px] h-[26px] stroke-[currentColor] stroke-[3] stroke-linecap-round" />
         </button>
-        <div className="relative max-w-[280px] md:max-w-[696px] xl:max-w-[842px] md:pb-9">
+
+        <div className="relative max-w-[280px] md:max-w-[696px] xl:max-w-[842px] md:pb-9 xl:pb-0">
           <Swiper
-            loop={true}
+            loop={false}
             navigation={{ enabled: false }}
             grabCursor={true}
             spaceBetween={12}
             slidesPerView={1}
-            thumbs={{ swiper: thumbsSwiper.current || '.swiper-thumbs' }}
+            thumbs={{ swiper: '.swiper-thumbs' }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="!mb-6"
-            lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 1 }}
+            lazyPreloadPrevNext={1}
             breakpoints={{
               768: {
                 spaceBetween: 24,
@@ -97,17 +98,19 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
               </SwiperSlide>
             ))}
           </Swiper>
+
           <Swiper
             ref={thumbsSwiper}
             watchSlidesProgress={true}
             slidesPerView={4}
             freeMode={true}
-            loop={true}
+            loop={false}
+            centeredSlides={false}
             spaceBetween={12}
             wrapperClass="flex justify-center items-center"
             className="swiper-thumbs"
             modules={[FreeMode, Navigation, Thumbs]}
-            lazy={{ loadPrevNext: true, lazyPreloadPrevNext: 4 }}
+            lazyPreloadPrevNext={4}
             breakpoints={{
               768: {
                 slidesPerView: 6,
