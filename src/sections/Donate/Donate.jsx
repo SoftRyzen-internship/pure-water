@@ -8,7 +8,7 @@ export const Donate = ({ donate }) => {
   const { title, tabs, paymentIcons } = donate;
 
   return (
-    <section id="donate" className="section bg-white">
+    <section id="donate" className="section">
       <Container>
         <SectionTitle title={title} />
         <Tabs tabs={tabs} paymentIcons={paymentIcons} />
