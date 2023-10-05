@@ -6,7 +6,7 @@ import { Form } from '@/components/Form';
 
 export const WriteUsSection = ({ data }) => {
   return (
-    <section className="section writeUsSection" id="write">
+    <section className="section" id="write">
       <Container>
         <SectionTitle title={data.title} />
         <Form data={data} />
