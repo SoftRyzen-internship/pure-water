@@ -1,13 +1,15 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import PropTypes from 'prop-types';
 
 import { ProjectListItem } from '../ProjectListItem';
 import { ProjectSwiperNav } from '../ProjectSwiperNav';
 
 import 'swiper/css';
+import 'swiper/css/keyboard';
+
 import { ProjectStaticList } from '../ProjectStaticList';
 
 export const ProjectSwiper = ({
@@ -37,14 +39,27 @@ export const ProjectSwiper = ({
             nextEl: '.next',
             disabledClass: 'opacity-30',
           }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
           grabCursor={true}
           spaceBetween={12}
           centeredSlides={false}
-          modules={[Navigation]}
+          modules={[Navigation, Keyboard]}
           slidesPerView={'auto'}
           slidesOffsetBefore={20}
           slidesOffsetAfter={20}
           lazyPreloadPrevNext={1}
+          onKeyPress={(swiper, keyCode) => {
+            if (keyCode === 9) {
+              const activeSlide = swiper.slides[swiper.activeIndex + 1];
+              const focusedElement = document.activeElement;
+              if (focusedElement === activeSlide) {
+                swiper.slideNext();
+              }
+            }
+          }}
           breakpoints={{
             768: {
               spaceBetween: 24,
@@ -60,6 +75,7 @@ export const ProjectSwiper = ({
         >
           {projectList?.map(project => (
             <SwiperSlide
+              tabIndex={0}
               key={project.id}
               className="project-slide !flex flex-col !w-[280px] md:!w-[390px] !h-[606px] md:!h-[658px] rounded-10"
             >

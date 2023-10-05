@@ -21,12 +21,20 @@ export const ProjectListItem = ({
     document.body.style.overflow = 'hidden';
   };
 
+  const handleKeyDown = event => {
+    if (event.key === 'Enter') {
+      handleImgClick(imageList);
+    }
+  };
+
   return (
     <div className="w-full h-full rounded-10 flex justify-center items-center iconGradient">
-      <div className="bg-white w-[calc(100%-4px)] h-[calc(100%-4px)] px-3 md:px-6 py-6 rounded-[8px] flex flex-col">
+      <div className="project-card bg-white w-[calc(100%-4px)] h-[calc(100%-4px)] px-3 md:px-6 py-6 rounded-[8px] flex flex-col">
         <div
+          tabIndex={0}
           className="relative rounded-20 md:!w-full overflow-hidden mb-3 md:mb-4"
           onClick={() => handleImgClick(imageList)}
+          onKeyDown={handleKeyDown}
         >
           <Image
             src={imageList[0].image.secure_url}
