@@ -25,7 +25,7 @@ export const MakeDonateBtn = ({
           section === 'hero' ? 'makeDonateBtnWhite' : 'makeDonateBtnBlue'
         }
       >
-        <span className="leading-none">{title}</span>
+        <span className="leading-normal">{title}</span>
       </Link>
     </div>
   );

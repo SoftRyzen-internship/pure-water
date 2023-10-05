@@ -17,6 +17,9 @@
     @apply text-[20px] md:text-[24px] font-medium leading-6 md:leading-normal;
   }
 
+  .tabsGradient {
+    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+  }
   .boxGradient {
     background-image: linear-gradient(180deg, #1fb0e2 0%, #0e5497 100%);
   }
@@ -31,7 +34,7 @@
   }
 
   .makeDonateBtn {
-    @apply flex justify-center items-center gap-[14px] before:h-6 xl:before:h-[32px] md:before:h-[28px] rounded-10 text-xl md:text-2xl xl:text-[28px] font-medium w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] cursor-pointer;
+    @apply flex justify-end items-center gap-[14px] before:relative before:h-6 xl:before:h-[32px] md:before:h-[28px] rounded-10 text-xl md:text-2xl xl:text-[28px] font-medium w-[259px] md:w-[317px] xl:w-[381px] h-[64px] md:h-[78px] cursor-pointer px-[25px] py-4 md:px-[36px] md:py-5 xl:px-[48px] xl:py-6;
   }
   .makeDonateBtnWhite {
     @apply makeDonateBtn before:content-[url('/icons/default-blue-waterdrop.svg')] hover:before:content-[url('/icons/hover-blue-waterdrop.svg')] focus:before:content-[url('/icons/hover-blue-waterdrop.svg')] textGradient text-transparent bg-clip-text;
@@ -41,7 +44,7 @@
   }
 
   .donateOverlay {
-    @apply w-64 h-16 md:w-[315px] md:h-[78px] xl:w-[374px] xl:h-[93px] transition duration-300 rounded-10;
+    @apply w-64 h-16 md:w-[317px] md:h-[78px] xl:w-[381px] xl:h-[78px] transition duration-300 rounded-10;
   }
   .donateBtnWhiteOverlay {
     @apply donateOverlay bg-white opacity-90 hover:opacity-100 focus-within:opacity-100;
@@ -52,13 +55,11 @@
 
   /* TABS */
   .tabItem {
-    @apply w-full md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl rounded-10 border-transparent overflow-hidden flex justify-center items-center;
-
-    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+    @apply w-full md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl rounded-10 border-transparent overflow-hidden flex justify-center items-center tabsGradient;
   }
 
   .activeTabLink {
-    @apply cursor-pointer w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white bg-opacity-0 rounded-[8px] font-bold;
+    @apply cursor-pointer w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white bg-opacity-0 rounded-[8px] font-medium;
   }
   .activeTabLink:hover,
   .activeTabLink:focus {
@@ -66,7 +67,7 @@
   }
 
   .defaultTabLink {
-    @apply cursor-pointer w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white opacity-100 rounded-[8px] font-bold;
+    @apply cursor-pointer w-[calc(100%-4px)] h-[calc(100%-4px)] bg-white opacity-100 rounded-[8px] font-medium;
   }
   .defaultTabLink:hover,
   .defaultTabLink:focus {
@@ -74,14 +75,10 @@
   }
 
   .activeTabLinkText {
-    @apply text-white bg-clip-text;
-
-    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+    @apply text-white bg-clip-text tabsGradient;
   }
   .defaultTabLinkText {
-    @apply text-transparent bg-clip-text;
-
-    background-image: linear-gradient(180deg, #1fb0e2 0%, #0f5598 100%);
+    @apply text-transparent bg-clip-text tabsGradient;
   }
 
   .defaultTabLink:hover .defaultTabLinkText,

@@ -10,16 +10,16 @@ import FundraisingImg from 'public/images/fundraising/yellow-blue-heart.png';
 
 export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
   return (
-    <section className="section">
+    <section id="current" className="section">
       <Container>
         <SectionTitle title={fundraising?.title} />
         <div className="mb-6 xl:mb-0 xl:flex xl:gap-x-6 md:px-[79.5px] xl:px-0">
-          <div className="xl:flex xl:flex-col xl:gap-6 xl:items-center">
+          <div className="xl:flex xl:flex-col xl:items-center xl:justify-between">
             <Image
               src={FundraisingImg}
               alt={fundraising?.imageAlt}
-              width={280}
-              height={221}
+              width={659}
+              height={603}
               quality={100}
               className="mx-auto md:mb-6 xl:mb-0 md:w-[317px] xl:w-[659px] md:h-[290px] xl:h-[603px] object-cover"
               placeholder="blur"
@@ -35,6 +35,7 @@ export const CurrentFundraising = ({ lang, fundraising, btnTitle }) => {
           </div>
           <FundraisingDesc lang={lang} />
         </div>
+
         <MakeDonateBtn
           title={btnTitle}
           section="currentFundraising"
