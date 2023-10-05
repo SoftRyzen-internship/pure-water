@@ -14,10 +14,14 @@ export const AboutCard = ({ data, index, Tag = 'div' }) => {
   return (
     <Tag
       className={`${
-        index === 3 ? 'xl:h-max' : 'xl:h-auto'
-      } w-full h-full xl:w-[287px] iconGradient p-0.5 rounded-10`}
+        index === 3 ? 'xl:h-[402px]' : 'xl:h-auto'
+      } w-full h-full xl:w-[287px] rounded-10 flex justify-center items-center iconGradient`}
     >
-      <div className="w-full h-full px-5 md:px-6 py-6 bg-white rounded-10">
+      <div
+        className={`bg-white w-[calc(100%-4px)] h-[calc(100%-4px)] px-5 md:px-6 py-6 rounded-[8px] ${
+          index === 3 && 'xl:h-[398px]'
+        }`}
+      >
         <Image
           className="w-[64px] h-[64px] md:w-[88px] md:h-[88px] xl:w-[123px] xl:h-[123px] mx-auto"
           src={images[index]}
