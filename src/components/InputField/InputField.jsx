@@ -34,7 +34,6 @@ export const InputField = ({
             errors[name] ? 'border-b-pink' : 'border-b-white/25'
           } input-field border-b outline-white pb-1 text-[16px] md:text-[24px] font-light leading-normal bg-transparent placeholder-white/25 focus:pl-2 transition-all duration-300`}
           placeholder={placeholder}
-          autoComplete="true"
         />
       )}
 

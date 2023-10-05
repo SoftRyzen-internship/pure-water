@@ -8,7 +8,10 @@ export const Hero = ({ heroData, titleBtn, socials }) => {
   const { titleFoundation, titleMain, tagline } = heroData;
 
   return (
-    <section className="hero section pt-[133px] pb-[121px] md:pt-[104px] md:pb-[78px] xl:pt-[126px] xl:pb-[140px] text-white">
+    <section
+      id="main"
+      className="hero section pt-[133px] pb-[121px] md:pt-[104px] md:pb-[78px] xl:pt-[126px] xl:pb-[153px] text-white"
+    >
       <Container>
         <div className="flex flex-col justify-center items-center">
           <div className="flex flex-col items-center gap-1 md:flex-row-reverse md:gap-6 xl:h-[38px] mb-1 md:mb-[10px] xl:mb-2">
@@ -22,7 +25,7 @@ export const Hero = ({ heroData, titleBtn, socials }) => {
             {titleMain}
           </h1>
 
-          <p className="w-[200px] md:w-[400px] text-center text-base md:text-xl font-normal mb-[25px] md:mb-4 xl:mb-6">
+          <p className="max-md:w-[200px] text-center text-base md:text-xl font-normal mb-[25px] md:mb-4 xl:mb-6">
             {tagline}
           </p>
           <MakeDonateBtn section="hero" title={titleBtn} />
