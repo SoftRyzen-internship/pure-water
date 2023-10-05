@@ -31,17 +31,13 @@ export const NavBar = ({ navArray, section, menuToggle }) => {
     <nav>
       <ul className={`text-base ${sectionClasses[section]}`}>
         {sortedNavArray?.map(({ label, id }) => {
-          if (id === 'main') {
-            id = '/';
-          }
-
           return (
             <li key={id}>
               <Link
                 href={`#${id}`}
                 to={id}
                 spy={true}
-                hashSpy={true}
+                hashSpy={id === 'main' ? false : true}
                 offset={isDesktop ? -80 : -40}
                 onClick={menuToggle}
                 smooth={true}
