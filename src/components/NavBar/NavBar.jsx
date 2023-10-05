@@ -1,14 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
 export const NavBar = ({ navArray, section, menuToggle }) => {
   const [sortedNavArray, setSortedNavArray] = useState(null);
-  const router = useRouter();
 
   const isDesktop = useMediaQuery({
     query: '(min-width: 1280px)',
@@ -29,31 +27,23 @@ export const NavBar = ({ navArray, section, menuToggle }) => {
     }
   }, [navArray, section]);
 
-  const handleClick = id => {
-    if (id === 'main') {
-      router.push(`/`);
-    } else {
-      router.push(`#${id}`);
-    }
-
-    if (menuToggle) {
-      menuToggle();
-    }
-  };
-
   return (
     <nav>
       <ul className={`text-base ${sectionClasses[section]}`}>
         {sortedNavArray?.map(({ label, id }) => {
+          if (id === 'main') {
+            id = '/';
+          }
+
           return (
             <li key={id}>
               <Link
                 href={`#${id}`}
                 to={id}
+                spy={true}
+                hashSpy={true}
                 offset={isDesktop ? -80 : -40}
-                onClick={() => {
-                  handleClick(id);
-                }}
+                onClick={menuToggle}
                 smooth={true}
                 duration={500}
                 className={`${
