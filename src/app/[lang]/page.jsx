@@ -34,9 +34,11 @@ export default async function Home({ params: { lang } }) {
         fundraising={fundraising}
         btnTitle={makeDonate?.title}
       />
-      <Donate donate={donate} />
-      <Projects lang={lang} projects={projects} />
-      <WriteUsSection data={write} />
+      <div className="main">
+        <Donate donate={donate} />
+        <Projects lang={lang} projects={projects} />
+        <WriteUsSection data={write} />
+      </div>
     </>
   );
 }
