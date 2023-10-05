@@ -13,6 +13,7 @@ export const Projects = async ({ lang, projects }) => {
   return (
     <section id="projects" className="section mx-auto">
       <SectionTitle title={projects.title} />
+
       <ProjectsWrapper projectList={projectList} staticData={projects} />
     </section>
   );

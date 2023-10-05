@@ -53,6 +53,70 @@
     @apply donateOverlay boxGradient xl:opacity-75 hover:opacity-100 focus-within:opacity-100;
   }
 
+  .menu {
+    background-image: url('/images/hero/menu_tab@1x.jpg');
+    background-image: -webkit-image-set(
+      url('/images/menu/menu_tab@1x.webp') type('image/webp') 1x
+    );
+    background-image: image-set(
+      url('/images/menu/menu_tab@1x.webp') type('image/webp') 1x
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .switcherGradient {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 2%,
+      rgba(255, 255, 255, 0.05) 102%
+    );
+  }
+  .switcherGradientActive {
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 2%,
+      rgba(255, 255, 255, 0.08) 102%
+    );
+  }
+
+  .hero {
+    background-image: url('/images/hero/hero_tab@1x.jpg');
+    background-image: -webkit-image-set(
+      url('/images/hero/hero_tab@1x.webp') type('image/webp') 1x
+    );
+    background-image: image-set(
+      url('/images/hero/hero_tab@1x.webp') type('image/webp') 1x
+    );
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 85%;
+  }
+
+  .aboutBg {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: calc(50% + 450px) 136%;
+    background-image: url(/images/about/water-drops@1x.jpg);
+    background-image: -webkit-image-set(
+      url(/images/about/water-drops@1x.webp) type('image/webp') 1x,
+      url(/images/about/water-drops@2x.webp) type('image/webp') 2x,
+      url(/images/about/water-drops@1x.jpg) 1x,
+      url(/images/about/water-drops@2x.jpg) 2x
+    );
+    background-image: image-set(
+      url(/images/about/water-drops@1x.webp) type('image/webp') 1x,
+      url(/images/about/water-drops@2x.webp) type('image/webp') 2x,
+      url(/images/about/water-drops@1x.jpg) 1x,
+      url(/images/about/water-drops@2x.jpg) 2x
+    );
+  }
+
+  .aboutSwiper {
+    @apply xl:!hidden;
+  }
+
   /* TABS */
   .tabItem {
     @apply w-full md:w-[336px] xl:w-[287px] h-[50px] md:h-16 xl:h-[71px] text-base md:text-xl xl:text-2xl rounded-10 border-transparent overflow-hidden flex justify-center items-center tabsGradient;
@@ -96,7 +160,19 @@
     @apply tabPanelItem hidden;
   }
 
-  /* PROJECTS */
+  .paymentLink {
+    @apply px-11;
+  }
+
+  .paymentBox {
+    @apply w-[256px] max-md:mx-auto;
+  }
+
+  /* SWIPER PROJECTS */
+  .swiper-thumbs > .swiper-wrapper {
+    justify-content: flex-start !important;
+  }
+
   .stroke-linecap-round {
     stroke-linecap: round;
   }
@@ -115,195 +191,123 @@
     opacity: 1;
   }
 
-  .switcherGradient {
-    background-image: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.2) 2%,
-      rgba(255, 255, 255, 0.05) 102%
-    );
+  /* Form */
+  .input-field:-webkit-autofill,
+  .input-field:-webkit-autofill:hover,
+  .input-field:-webkit-autofill:focus {
+    transition:
+      background-color 0s 600000s,
+      color 0s 600000s;
   }
-  .switcherGradientActive {
-    background-image: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.3) 2%,
-      rgba(255, 255, 255, 0.08) 102%
-    );
+  .input-field:-moz-autofill,
+  .input-field:-moz-autofill:hover,
+  .input-field:-moz-autofill:focus {
+    transition:
+      background-color 0s 600000s,
+      color 0s 600000s;
   }
 
-  .aboutBg {
+  .footer {
+    background-image: url('/images/footer/footer_tab@1x.jpg');
+    background-image: -webkit-image-set(
+      url('/images/footer/footer_tab@1x.webp') type('image/webp') 1x
+    );
+    background-image: image-set(
+      url('/images/footer/footer_tab@1x.webp') type('image/webp') 1x
+    );
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: auto;
-    background-position: calc(50% + 450px) 136%;
-    background-image: url(/images/about/water-drops@1x.jpg);
-    background-image: -webkit-image-set(
-      url(/images/about/water-drops@1x.webp) type('image/webp') 1x,
-      url(/images/about/water-drops@2x.webp) type('image/webp') 2x,
-      url(/images/about/water-drops@1x.jpg) 1x,
-      url(/images/about/water-drops@2x.jpg) 2x
-    );
-    background-image: image-set(
-      url(/images/about/water-drops@1x.webp) type('image/webp') 1x,
-      url(/images/about/water-drops@2x.webp) type('image/webp') 2x,
-      url(/images/about/water-drops@1x.jpg) 1x,
-      url(/images/about/water-drops@2x.jpg) 2x
-    );
-  }
-}
-
-.paymentLink {
-  @apply px-11;
-}
-
-.paymentBox {
-  @apply w-[256px] max-md:mx-auto;
-}
-
-/* Form */
-.input-field:-webkit-autofill,
-.input-field:-webkit-autofill:hover,
-.input-field:-webkit-autofill:focus {
-  transition:
-    background-color 0s 600000s,
-    color 0s 600000s;
-}
-.input-field:-moz-autofill,
-.input-field:-moz-autofill:hover,
-.input-field:-moz-autofill:focus {
-  transition:
-    background-color 0s 600000s,
-    color 0s 600000s;
-}
-
-.aboutSwiper {
-  @apply xl:!hidden;
-}
-
-@media screen and (min-width: 455px) {
-  .paymentLink {
-    @apply px-11;
-  }
-
-  .paymentBox {
-    @apply w-full;
-  }
-}
-
-.hero {
-  background-image: url('/images/hero/hero_tab@1x.jpg');
-  background-image: -webkit-image-set(
-    url('/images/hero/hero_tab@1x.webp') type('image/webp') 1x
-  );
-  background-image: image-set(
-    url('/images/hero/hero_tab@1x.webp') type('image/webp') 1x
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 85%;
-}
-
-.menu {
-  background-image: url('/images/hero/menu_tab@1x.jpg');
-  background-image: -webkit-image-set(
-    url('/images/menu/menu_tab@1x.webp') type('image/webp') 1x
-  );
-  background-image: image-set(
-    url('/images/menu/menu_tab@1x.webp') type('image/webp') 1x
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.footer {
-  background-image: url('/images/footer/footer_tab@1x.jpg');
-  background-image: -webkit-image-set(
-    url('/images/footer/footer_tab@1x.webp') type('image/webp') 1x
-  );
-  background-image: image-set(
-    url('/images/footer/footer_tab@1x.webp') type('image/webp') 1x
-  );
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
-@media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .hero {
-    background-image: url('/images/hero/hero_tab@2x.jpg');
-    background-image: -webkit-image-set(
-      url('/images/hero/hero_tab@2x.webp') type('image/webp') 2x
-    );
-    background-image: image-set(
-      url('/images/hero/hero_tab@2x.webp') type('image/webp') 2x
-    );
-  }
-
-  .menu {
-    background-image: url('/images/menu/menu_tab@2x.jpg');
-    background-image: -webkit-image-set(
-      url('/images/menu/menu_tab@2x.webp') type('image/webp') 2x
-    );
-    background-image: image-set(
-      url('/images/menu/menu_tab@2x.webp') type('image/webp') 2x
-    );
-  }
-
-  .footer {
-    background-image: url('/images/footer/footer_tab@2x.jpg');
-    background-image: -webkit-image-set(
-      url('/images/footer/footer_tab@2x.webp') type('image/webp') 2x
-    );
-    background-image: image-set(
-      url('/images/footer/footer_tab@2x.webp') type('image/webp') 2x
-    );
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero {
-    background-image: url('/images/hero/hero_desk@1x.jpg');
-    background-image: -webkit-image-set(
-      url('/images/hero/hero_desk@1x.webp') type('image/webp') 1x
-    );
-    background-image: image-set(
-      url('/images/hero/hero_desk@1x.webp') type('image/webp') 1x
-    );
-  }
-
-  .footer {
-    background-image: url('/images/footer/footer_desk@1x.jpg');
-    background-image: -webkit-image-set(
-      url('/images/footer/footer_desk@1x.webp') type('image/webp') 1x
-    );
-    background-image: image-set(
-      url('/images/footer/footer_desk@1x.webp') type('image/webp') 1x
-    );
-    background-position: center top;
+    background-position: left top;
   }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .hero {
-      background-image: url('/images/hero/hero_desk@2x.jpg');
+      background-image: url('/images/hero/hero_tab@2x.jpg');
       background-image: -webkit-image-set(
-        url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
+        url('/images/hero/hero_tab@2x.webp') type('image/webp') 2x
       );
       background-image: image-set(
-        url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
+        url('/images/hero/hero_tab@2x.webp') type('image/webp') 2x
+      );
+    }
+
+    .menu {
+      background-image: url('/images/menu/menu_tab@2x.jpg');
+      background-image: -webkit-image-set(
+        url('/images/menu/menu_tab@2x.webp') type('image/webp') 2x
+      );
+      background-image: image-set(
+        url('/images/menu/menu_tab@2x.webp') type('image/webp') 2x
       );
     }
 
     .footer {
-      background-image: url('/images/footer/footer_desk@2x.jpg');
+      background-image: url('/images/footer/footer_tab@2x.jpg');
       background-image: -webkit-image-set(
-        url('/images/footer/footer_desk@2x.webp') type('image/webp') 2x
+        url('/images/footer/footer_tab@2x.webp') type('image/webp') 2x
       );
       background-image: image-set(
-        url('/images/footer/footer_desk@2x.webp') type('image/webp') 2x
+        url('/images/footer/footer_tab@2x.webp') type('image/webp') 2x
       );
+    }
+  }
+
+  @media screen and (min-width: 455px) {
+    .paymentLink {
+      @apply px-11;
+    }
+
+    .paymentBox {
+      @apply w-full;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .hero {
+      background-image: url('/images/hero/hero_desk@1x.jpg');
+      background-image: -webkit-image-set(
+        url('/images/hero/hero_desk@1x.webp') type('image/webp') 1x
+      );
+      background-image: image-set(
+        url('/images/hero/hero_desk@1x.webp') type('image/webp') 1x
+      );
+    }
+
+    .footer {
+      background-image: url('/images/footer/footer_desk@1x.jpg');
+      background-image: -webkit-image-set(
+        url('/images/footer/footer_desk@1x.webp') type('image/webp') 1x
+      );
+      background-image: image-set(
+        url('/images/footer/footer_desk@1x.webp') type('image/webp') 1x
+      );
+      background-position: center top;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .hero {
+        background-image: url('/images/hero/hero_desk@2x.jpg');
+        background-image: -webkit-image-set(
+          url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
+        );
+        background-image: image-set(
+          url('/images/hero/hero_desk@2x.webp') type('image/webp') 2x
+        );
+      }
+
+      .footer {
+        background-image: url('/images/footer/footer_desk@2x.jpg');
+        background-image: -webkit-image-set(
+          url('/images/footer/footer_desk@2x.webp') type('image/webp') 2x
+        );
+        background-image: image-set(
+          url('/images/footer/footer_desk@2x.webp') type('image/webp') 2x
+        );
+      }
     }
   }
 }
