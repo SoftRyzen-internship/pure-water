@@ -70,7 +70,11 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
             grabCursor={true}
             spaceBetween={12}
             slidesPerView={1}
-            thumbs={{ swiper: '.swiper-thumbs' }}
+            thumbs={{
+              swiper: '.swiper-thumbs',
+              slideThumbActiveClass: '!opacity-100',
+              autoScrollOffset: 3,
+            }}
             modules={[FreeMode, Navigation, Thumbs]}
             className="!mb-6"
             lazyPreloadPrevNext={1}
@@ -96,8 +100,8 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
                 <Image
                   src={image.secure_url}
                   alt={alt}
-                  width={280}
-                  height={210}
+                  width={842}
+                  height={630}
                   quality={100}
                   loading="lazy"
                   className="!static !w-[280px] !h-[210px] md:!w-[696px] md:!h-[520px] xl:!w-[842px] xl:!h-[630px] object-cover"
@@ -130,8 +134,8 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
                 <Image
                   src={image.secure_url}
                   alt={alt}
-                  width={61}
-                  height={48}
+                  width={130}
+                  height={88}
                   quality={100}
                   loading="lazy"
                   className="!static !w-[61px] h-[48px] md:!w-[106px] xl:!w-[130px] md:h-[80px] xl:h-[88px] object-cover"

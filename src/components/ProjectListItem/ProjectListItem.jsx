@@ -38,8 +38,8 @@ export const ProjectListItem = ({
           <Image
             src={imageList[0].image.secure_url}
             alt={imageList[0].alt}
-            width={256}
-            height={187}
+            width={342}
+            height={250}
             quality={100}
             loading="lazy"
             className="!static !w-[256px] md:!w-[342px] !h-[187px] md:!h-[250px] object-cover"
