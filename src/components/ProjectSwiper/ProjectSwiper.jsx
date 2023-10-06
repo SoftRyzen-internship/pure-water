@@ -75,7 +75,6 @@ export const ProjectSwiper = ({
         >
           {projectList?.map(project => (
             <SwiperSlide
-              tabIndex={0}
               key={project.id}
               className="project-slide !flex flex-col !w-[280px] md:!w-[390px] !h-[606px] md:!h-[658px] rounded-10"
             >
