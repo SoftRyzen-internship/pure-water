@@ -1,16 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 
 export const NavBar = ({ navArray, section, menuToggle }) => {
   const [sortedNavArray, setSortedNavArray] = useState(null);
-
-  const isDesktop = useMediaQuery({
-    query: '(min-width: 1280px)',
-  });
 
   const sectionClasses = {
     header: 'hidden xl:flex flex-row gap-6 items-center justify-center',
@@ -34,11 +29,11 @@ export const NavBar = ({ navArray, section, menuToggle }) => {
           return (
             <li key={id}>
               <Link
-                href={`#${id}`}
+                href="/"
                 to={id}
                 spy={true}
                 hashSpy={id === 'main' ? false : true}
-                offset={isDesktop ? -80 : -40}
+                offset={-40}
                 onClick={menuToggle}
                 smooth={true}
                 duration={500}
