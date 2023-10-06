@@ -13,8 +13,65 @@ export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
 
   return {
+    metadataBase: new URL('http://localhost:3000'),
     title: metaDictionary.title,
     description: metaDictionary.description,
+    icons: {
+      icon: [
+        {
+          url: '/favicon.ico',
+          sizes: 'any',
+        },
+        {
+          url: '/favicons/favicon-16x16.png',
+          sizes: '16x16',
+          type: 'image/png',
+        },
+        {
+          url: '/favicons/favicon-32x32.png',
+          sizes: '32x32',
+          type: 'image/png',
+        },
+      ],
+      apple: {
+        url: '/favicons/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    },
+    openGraph: {
+      title: metaDictionary.title,
+      description: metaDictionary.description,
+      type: 'website',
+      images: [
+        {
+          url: '/public/images/ogp/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          alt: metaDictionary.title,
+        },
+        {
+          url: '/public/images/ogp/twitter-image.png',
+          width: 1200,
+          height: 630,
+          alt: metaDictionary.title,
+        },
+      ],
+      locale: params.lang === 'uk' ? 'uk_UA' : 'en-US',
+      twitter: {
+        card: metaDictionary.title + 'hero image',
+        title: metaDictionary.title,
+        description: metaDictionary.description,
+        images: [
+          {
+            url: '/public/images/ogp/twitter-image.png',
+            width: 1200,
+            height: 630,
+            alt: metaDictionary.title,
+          },
+        ],
+      },
+    },
   };
 }
 
