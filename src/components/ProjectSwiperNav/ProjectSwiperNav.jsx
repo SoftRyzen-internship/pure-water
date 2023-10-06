@@ -14,7 +14,12 @@ export const ProjectSwiperNav = ({ variant }) => {
           : ''
       }`}
     >
-      <button type="button" className="prev" aria-label="previous button">
+      <button
+        tabIndex={0}
+        type="button"
+        className="prev"
+        aria-label="previous button"
+      >
         {variant === 'cards' && (
           <PrevIcon className="w-8 h-8 opacity-75 hover:opacity-100 focus:opacity-100 transition-opacity duration-300" />
         )}
@@ -22,7 +27,12 @@ export const ProjectSwiperNav = ({ variant }) => {
           <GalleryPrevIcon className="w-12 h-12 fill-[currentColor]" />
         )}
       </button>
-      <button type="button" className="next" aria-label="next button">
+      <button
+        tabIndex={0}
+        type="button"
+        className="next"
+        aria-label="next button"
+      >
         {variant === 'cards' && (
           <NextIcon className="w-8 h-8 opacity-75 hover:opacity-100 focus:opacity-100 transition-opacity duration-300" />
         )}
