@@ -86,7 +86,13 @@ export const ProjectSwiper = ({
               />
             </SwiperSlide>
           ))}
-          <ProjectSwiperNav variant="cards" />
+          <ProjectSwiperNav
+            variant="cards"
+            staticData={{
+              prevBtn: staticData?.prevBtn,
+              nextBtn: staticData?.nextBtn,
+            }}
+          />
         </Swiper>
       </div>
 
@@ -124,6 +130,9 @@ ProjectSwiper.propTypes = {
     title: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     overlay: PropTypes.string.isRequired,
+    prevBtn: PropTypes.string.isRequired,
+    nextBtn: PropTypes.string.isRequired,
+    closeBtn: PropTypes.string.isRequired,
   }).isRequired,
   setImageList: PropTypes.func.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,

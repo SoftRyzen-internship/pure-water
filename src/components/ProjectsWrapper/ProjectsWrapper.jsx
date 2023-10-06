@@ -20,7 +20,15 @@ export const ProjectsWrapper = ({ projectList, staticData }) => {
       />
 
       {isModalOpen && (
-        <GalleryModal imageList={imageList} setIsModalOpen={setIsModalOpen} />
+        <GalleryModal
+          imageList={imageList}
+          setIsModalOpen={setIsModalOpen}
+          staticData={{
+            prevBtn: staticData?.prevBtn,
+            nextBtn: staticData?.nextBtn,
+            closeBtn: staticData?.closeBtn,
+          }}
+        />
       )}
     </>
   );
@@ -48,5 +56,8 @@ ProjectsWrapper.propTypes = {
     title: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     overlay: PropTypes.string.isRequired,
-  }),
+    prevBtn: PropTypes.string.isRequired,
+    nextBtn: PropTypes.string.isRequired,
+    closeBtn: PropTypes.string.isRequired,
+  }).isRequired,
 };

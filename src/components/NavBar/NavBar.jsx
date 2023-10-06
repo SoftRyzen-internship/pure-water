@@ -31,6 +31,9 @@ export const NavBar = ({ navArray, section, menuToggle }) => {
               <Link
                 href="/"
                 to={id}
+                spy={true}
+                hashSpy={id === 'main' ? false : true}
+                offset={-40}
                 onClick={menuToggle}
                 smooth={true}
                 duration={500}
