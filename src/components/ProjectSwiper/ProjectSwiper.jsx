@@ -133,6 +133,7 @@ ProjectSwiper.propTypes = {
     overlay: PropTypes.string.isRequired,
     prevBtn: PropTypes.string.isRequired,
     nextBtn: PropTypes.string.isRequired,
+    closeBtn: PropTypes.string.isRequired,
   }).isRequired,
   setImageList: PropTypes.func.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,

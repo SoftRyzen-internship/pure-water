@@ -58,6 +58,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
           onClick={handleCloseBtnClick}
           type="button"
           className="xl:absolute xl:top-0 xl:right-[-10%] p-[11px] pr-0 self-end text-[#ffffffbf] hover:text-white transition-colors duration-300"
+          aria-label={staticData?.closeBtn}
         >
           <CloseIcon className="w-[26px] h-[26px] stroke-[currentColor] stroke-[3] stroke-linecap-round" />
         </button>
@@ -120,9 +121,7 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
             breakpoints={{
               768: {
                 slidesPerView: 6,
-                lazy: {
-                  lazyPreloadPrevNext: 6,
-                },
+                lazyPreloadPrevNext: 6,
               },
             }}
           >
@@ -167,5 +166,6 @@ GalleryModal.propTypes = {
   staticData: PropTypes.shape({
     prevBtn: PropTypes.string.isRequired,
     nextBtn: PropTypes.string.isRequired,
+    closeBtn: PropTypes.string.isRequired,
   }).isRequired,
 };

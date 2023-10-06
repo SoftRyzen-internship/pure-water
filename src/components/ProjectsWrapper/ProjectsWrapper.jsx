@@ -26,6 +26,7 @@ export const ProjectsWrapper = ({ projectList, staticData }) => {
           staticData={{
             prevBtn: staticData?.prevBtn,
             nextBtn: staticData?.nextBtn,
+            closeBtn: staticData?.closeBtn,
           }}
         />
       )}
@@ -57,5 +58,6 @@ ProjectsWrapper.propTypes = {
     overlay: PropTypes.string.isRequired,
     prevBtn: PropTypes.string.isRequired,
     nextBtn: PropTypes.string.isRequired,
+    closeBtn: PropTypes.string.isRequired,
   }).isRequired,
 };
