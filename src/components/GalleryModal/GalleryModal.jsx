@@ -13,7 +13,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/thumbs';
 
-export const GalleryModal = ({ imageList, setIsModalOpen }) => {
+export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
   const thumbsSwiper = useRef(null);
 
   useEffect(() => {
@@ -142,7 +142,13 @@ export const GalleryModal = ({ imageList, setIsModalOpen }) => {
           </Swiper>
         </div>
       </div>
-      <ProjectSwiperNav variant="gallery" />
+      <ProjectSwiperNav
+        variant="gallery"
+        staticData={{
+          prevBtn: staticData?.prevBtn,
+          nextBtn: staticData?.nextBtn,
+        }}
+      />
     </div>
   );
 };
@@ -158,4 +164,8 @@ GalleryModal.propTypes = {
     }),
   ).isRequired,
   setIsModalOpen: PropTypes.func.isRequired,
+  staticData: PropTypes.shape({
+    prevBtn: PropTypes.string.isRequired,
+    nextBtn: PropTypes.string.isRequired,
+  }).isRequired,
 };
