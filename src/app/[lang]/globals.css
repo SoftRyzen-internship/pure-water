@@ -382,7 +382,7 @@
         );
         background-size: 1633px;
         background-repeat: no-repeat;
-        background-position: 37% 664px;
+        background-position: 38% 664px;
       }
 
       .footer {
@@ -394,6 +394,18 @@
           url('/images/footer/footer_desk@2x.webp') type('image/webp') 2x
         );
       }
+    }
+  }
+
+  @media screen and (min-width: 1150px) {
+    .main {
+      background-position: 31% 664px;
+    }
+  }
+
+  @media screen and (min-width: 1240px) {
+    .main {
+      background-position: 29% 664px;
     }
   }
 
@@ -422,6 +434,32 @@
           url('/images/main/bg_ice@2x.webp') type('image/webp') 2x
         );
       }
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    .main {
+      background-size: 3650px;
+      background-position: 44% 44%;
+    }
+  }
+
+  @media screen and (min-width: 1920px) {
+    .main {
+      background-size: 3600px;
+      background-position: 42% 99%;
+    }
+  }
+
+  @media screen and (min-width: 2200px) {
+    .main {
+      background-position: 40% 99%;
+    }
+  }
+
+  @media screen and (min-width: 2560px) {
+    .main {
+      background-position: 37% 43%;
     }
   }
 }
