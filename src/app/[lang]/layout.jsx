@@ -7,13 +7,18 @@ import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 import './globals.css';
 
+export const BASE_URL = 'https://clear-water.vercel.app/';
+
 const comfortaa = Comfortaa({ subsets: ['cyrillic-ext'] });
 
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
 
   return {
-    metadataBase: new URL('http://localhost:3000'),
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: BASE_URL,
+    },
     title: metaDictionary.title,
     description: metaDictionary.description,
     icons: {
@@ -23,18 +28,18 @@ export async function generateMetadata({ params }) {
           sizes: 'any',
         },
         {
-          url: '/favicons/favicon-16x16.png',
+          url: '/favicon-16x16.png',
           sizes: '16x16',
           type: 'image/png',
         },
         {
-          url: '/favicons/favicon-32x32.png',
+          url: '/favicon-32x32.png',
           sizes: '32x32',
           type: 'image/png',
         },
       ],
       apple: {
-        url: '/favicons/apple-touch-icon.png',
+        url: '/apple-touch-icon.png',
         sizes: '180x180',
         type: 'image/png',
       },
@@ -57,9 +62,9 @@ export async function generateMetadata({ params }) {
           alt: metaDictionary.title,
         },
       ],
-      locale: params.lang === 'uk' ? 'uk_UA' : 'en-US',
+      locale: params.lang,
       twitter: {
-        card: metaDictionary.title + 'hero image',
+        card: 'summary_large_image',
         title: metaDictionary.title,
         description: metaDictionary.description,
         images: [
