@@ -7,14 +7,76 @@ import { getDictionary } from '@/utils/getDictionary';
 import { i18n } from 'i18n';
 import './globals.css';
 
+export const BASE_URL = 'https://clear-water.vercel.app/';
+
 const comfortaa = Comfortaa({ subsets: ['cyrillic-ext'] });
 
 export async function generateMetadata({ params }) {
   const metaDictionary = await getMetaByLang(params.lang);
 
   return {
+    metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: BASE_URL,
+    },
     title: metaDictionary.title,
     description: metaDictionary.description,
+    icons: {
+      icon: [
+        {
+          url: '/favicon.ico',
+          sizes: 'any',
+        },
+        {
+          url: '/favicon-16x16.png',
+          sizes: '16x16',
+          type: 'image/png',
+        },
+        {
+          url: '/favicon-32x32.png',
+          sizes: '32x32',
+          type: 'image/png',
+        },
+      ],
+      apple: {
+        url: '/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    },
+    openGraph: {
+      title: metaDictionary.title,
+      description: metaDictionary.description,
+      type: 'website',
+      images: [
+        {
+          url: '/public/images/ogp/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          alt: metaDictionary.title,
+        },
+        {
+          url: '/public/images/ogp/twitter-image.png',
+          width: 1200,
+          height: 630,
+          alt: metaDictionary.title,
+        },
+      ],
+      locale: params.lang,
+      twitter: {
+        card: 'summary_large_image',
+        title: metaDictionary.title,
+        description: metaDictionary.description,
+        images: [
+          {
+            url: '/public/images/ogp/twitter-image.png',
+            width: 1200,
+            height: 630,
+            alt: metaDictionary.title,
+          },
+        ],
+      },
+    },
   };
 }
 
