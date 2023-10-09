@@ -86,6 +86,7 @@ export const ProjectSwiper = ({
               />
             </SwiperSlide>
           ))}
+
           <ProjectSwiperNav
             variant="cards"
             staticData={{
