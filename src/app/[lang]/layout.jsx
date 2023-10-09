@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL(BASE_URL),
     alternates: {
-      canonical: BASE_URL,
+      canonical: `${BASE_URL}${params.lang}`,
     },
     title: metaDictionary.title,
     description: metaDictionary.description,

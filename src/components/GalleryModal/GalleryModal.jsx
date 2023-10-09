@@ -103,7 +103,6 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
                   width={842}
                   height={630}
                   quality={100}
-                  loading="lazy"
                   className="!static !w-[280px] !h-[210px] md:!w-[696px] md:!h-[520px] xl:!w-[842px] xl:!h-[630px] object-cover"
                 />
               </SwiperSlide>
@@ -136,8 +135,6 @@ export const GalleryModal = ({ imageList, setIsModalOpen, staticData }) => {
                   alt={alt}
                   width={130}
                   height={88}
-                  quality={100}
-                  loading="lazy"
                   className="!static !w-[61px] h-[48px] md:!w-[106px] xl:!w-[130px] md:h-[80px] xl:h-[88px] object-cover"
                 />
               </SwiperSlide>

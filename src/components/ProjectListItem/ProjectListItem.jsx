@@ -41,7 +41,6 @@ export const ProjectListItem = ({
             width={342}
             height={250}
             quality={100}
-            loading="lazy"
             className="!static !w-[256px] md:!w-[342px] !h-[187px] md:!h-[250px] object-cover"
             placeholder="blur"
             blurDataURL={`data:image/svg+xml;base64,${toBase64(
