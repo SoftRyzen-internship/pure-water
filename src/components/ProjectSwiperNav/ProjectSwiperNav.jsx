@@ -10,14 +10,18 @@ export const ProjectSwiperNav = ({ variant, staticData }) => {
     <div
       className={`hidden xl:flex gap-x-12 justify-center items-center mt-8 ${
         variant === 'gallery'
-          ? 'absolute top-[37%] left-2/4 translate-x-[-50%] gap-x-[906px] z-10 text-[#ffffffbf] hover:text-white focus:text-white transition-colors duration-300'
+          ? 'absolute top-[37%] left-2/4 translate-x-[-50%] gap-x-[906px] z-10 text-[#ffffffbf]'
           : ''
       }`}
     >
       <button
         tabIndex={0}
         type="button"
-        className="prev"
+        className={
+          variant === 'gallery'
+            ? 'prevBtn hover:text-white focus:text-white transition-colors duration-300'
+            : 'prev'
+        }
         aria-label={staticData?.prevBtn}
       >
         {variant === 'cards' && (
@@ -30,7 +34,11 @@ export const ProjectSwiperNav = ({ variant, staticData }) => {
       <button
         tabIndex={0}
         type="button"
-        className="next"
+        className={
+          variant === 'gallery'
+            ? 'nextBtn hover:text-white focus:text-white transition-colors duration-300'
+            : 'next'
+        }
         aria-label={staticData?.nextBtn}
       >
         {variant === 'cards' && (

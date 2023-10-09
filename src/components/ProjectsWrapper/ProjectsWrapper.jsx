@@ -23,6 +23,7 @@ export const ProjectsWrapper = ({ projectList, staticData }) => {
         <GalleryModal
           imageList={imageList}
           setIsModalOpen={setIsModalOpen}
+          isModalOpen={isModalOpen}
           staticData={{
             prevBtn: staticData?.prevBtn,
             nextBtn: staticData?.nextBtn,

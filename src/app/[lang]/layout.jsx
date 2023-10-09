@@ -50,13 +50,13 @@ export async function generateMetadata({ params }) {
       type: 'website',
       images: [
         {
-          url: '/public/images/ogp/opengraph-image.png',
+          url: '/images/ogp/opengraph-image.png',
           width: 1200,
           height: 630,
           alt: metaDictionary.title,
         },
         {
-          url: '/public/images/ogp/twitter-image.png',
+          url: '/images/ogp/twitter-image.png',
           width: 1200,
           height: 630,
           alt: metaDictionary.title,
