@@ -11,17 +11,20 @@ export const ProjectStaticList = ({
 }) => {
   const isStaticOnly = projectList?.length === 1;
 
+  const ParentElementTag = isStaticOnly ? 'div' : 'ul';
+  const ChildElementTag = isStaticOnly ? 'div' : 'li';
+
   return (
     <Container>
-      <ul
+      <ParentElementTag
         className={`${
           isStaticOnly ? 'flex' : 'hidden'
         } xl:flex gap-6 justify-center items-center`}
       >
         {projectList.map(project => (
-          <li
+          <ChildElementTag
             key={project.id}
-            className="project-slide flex flex-col w-[280px] md:w-[390px] h-[606px] md:h-[658px] px-6 py-6 rounded-10 border-2 border-solid border-tertiary"
+            className="project-slide flex flex-col w-[280px] md:w-[390px] h-[606px] md:h-[658px] rounded-10"
           >
             <ProjectListItem
               project={project}
@@ -29,9 +32,9 @@ export const ProjectStaticList = ({
               setIsModalOpen={setIsModalOpen}
               setImageList={setImageList}
             />
-          </li>
+          </ChildElementTag>
         ))}
-      </ul>
+      </ParentElementTag>
     </Container>
   );
 };

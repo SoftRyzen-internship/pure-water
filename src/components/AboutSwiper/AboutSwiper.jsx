@@ -15,6 +15,7 @@ export const AboutSwiper = ({ benefits }) => {
       slidesPerView={'auto'}
       slidesOffsetBefore={20}
       slidesOffsetAfter={20}
+      lazyPreloadPrevNext={1}
       className="aboutSwiper"
       breakpoints={{
         768: {

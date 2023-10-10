@@ -1,13 +1,15 @@
 'use client';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 import PropTypes from 'prop-types';
 
 import { ProjectListItem } from '../ProjectListItem';
 import { ProjectSwiperNav } from '../ProjectSwiperNav';
 
 import 'swiper/css';
+import 'swiper/css/keyboard';
+
 import { ProjectStaticList } from '../ProjectStaticList';
 
 export const ProjectSwiper = ({
@@ -37,14 +39,32 @@ export const ProjectSwiper = ({
             nextEl: '.next',
             disabledClass: 'opacity-30',
           }}
+          keyboard={{
+            enabled: true,
+            onlyInViewport: true,
+          }}
           grabCursor={true}
           spaceBetween={12}
           centeredSlides={false}
-          modules={[Navigation]}
+          modules={[Navigation, Keyboard]}
           slidesPerView={'auto'}
           slidesOffsetBefore={20}
           slidesOffsetAfter={20}
           lazyPreloadPrevNext={1}
+          onKeyPress={(swiper, keyCode) => {
+            if (keyCode === 9) {
+              const activeSlide = swiper.slides[swiper.activeIndex];
+
+              if (document.activeElement === document.body) return;
+              const focusedElement =
+                document.activeElement.parentElement.parentElement
+                  .parentElement;
+
+              if (focusedElement === activeSlide) {
+                swiper.slideNext();
+              }
+            }
+          }}
           breakpoints={{
             768: {
               spaceBetween: 24,
@@ -71,7 +91,14 @@ export const ProjectSwiper = ({
               />
             </SwiperSlide>
           ))}
-          <ProjectSwiperNav variant="cards" />
+
+          <ProjectSwiperNav
+            variant="cards"
+            staticData={{
+              prevBtn: staticData?.prevBtn,
+              nextBtn: staticData?.nextBtn,
+            }}
+          />
         </Swiper>
       </div>
 
@@ -109,6 +136,9 @@ ProjectSwiper.propTypes = {
     title: PropTypes.string.isRequired,
     city: PropTypes.string.isRequired,
     overlay: PropTypes.string.isRequired,
+    prevBtn: PropTypes.string.isRequired,
+    nextBtn: PropTypes.string.isRequired,
+    closeBtn: PropTypes.string.isRequired,
   }).isRequired,
   setImageList: PropTypes.func.isRequired,
   setIsModalOpen: PropTypes.func.isRequired,

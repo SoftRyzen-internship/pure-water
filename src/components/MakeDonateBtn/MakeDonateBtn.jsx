@@ -21,6 +21,7 @@ export const MakeDonateBtn = ({
         href="/"
         smooth={true}
         duration={500}
+        offset={-40}
         className={
           section === 'hero' ? 'makeDonateBtnWhite' : 'makeDonateBtnBlue'
         }
