@@ -160,6 +160,10 @@
     justify-content: flex-start !important;
   }
 
+  .swiper-thumbs .swiper-slide.swiper-slide-thumb-active {
+    @apply !opacity-100;
+  }
+
   .stroke-linecap-round {
     stroke-linecap: round;
   }

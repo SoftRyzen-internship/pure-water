@@ -37,20 +37,20 @@ export const GalleryModal = ({
       <Dialog as="div" className="relative z-50" onClose={handleModalClose}>
         <Transition.Child
           as={Fragment}
-          enter="ease-out duration-1000"
+          enter="ease-out duration-300"
           enterFrom="opacity-0"
           enterTo="opacity-100"
-          leave="ease-in duration-1000"
+          leave="ease-in duration-300"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
           <div className="fixed top-0 left-0 flex justify-center xl:items-center w-[100vw] h-screen pt-9 px-5 md:pt-4 md:px-9 xl:py-10 bg-[#020f14bf] backdrop-blur-[25px] overflow-auto">
             <Transition.Child
               as={Fragment}
-              enter="ease-out duration-1000"
+              enter="ease-out duration-300"
               enterFrom="opacity-0 scale-95"
               enterTo="opacity-100 scale-100"
-              leave="ease-in duration-1000"
+              leave="ease-in duration-300"
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
@@ -73,8 +73,7 @@ export const GalleryModal = ({
                     slidesPerView={1}
                     thumbs={{
                       swiper: '.swiper-thumbs',
-                      slideThumbActiveClass: '!opacity-100',
-                      autoScrollOffset: 3,
+                      slideThumbActiveClass: 'swiper-slide-thumb-active',
                     }}
                     modules={[FreeMode, Navigation, Thumbs]}
                     className="!mb-6"
