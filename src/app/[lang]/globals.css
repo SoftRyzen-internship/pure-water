@@ -188,7 +188,7 @@
   .project-btn:focus {
     @apply outline-none;
   }
-  .project-slide:focus-within {
+  .project-slide:focus-within .project-card {
     outline: 2px solid black;
   }
 

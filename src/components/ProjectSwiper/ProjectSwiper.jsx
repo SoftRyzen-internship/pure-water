@@ -53,8 +53,13 @@ export const ProjectSwiper = ({
           lazyPreloadPrevNext={1}
           onKeyPress={(swiper, keyCode) => {
             if (keyCode === 9) {
-              const activeSlide = swiper.slides[swiper.activeIndex + 1];
-              const focusedElement = document.activeElement;
+              const activeSlide = swiper.slides[swiper.activeIndex];
+
+              if (document.activeElement === document.body) return;
+              const focusedElement =
+                document.activeElement.parentElement.parentElement
+                  .parentElement;
+
               if (focusedElement === activeSlide) {
                 swiper.slideNext();
               }
