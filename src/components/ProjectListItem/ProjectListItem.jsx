@@ -18,6 +18,7 @@ export const ProjectListItem = ({
   const handleImgClick = images => {
     setIsModalOpen(true);
     setImageList(images);
+    document.body.style.overflow = 'hidden';
   };
 
   return (
