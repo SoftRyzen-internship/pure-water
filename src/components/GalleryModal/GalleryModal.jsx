@@ -144,14 +144,14 @@ export const GalleryModal = ({
                       </SwiperSlide>
                     ))}
                   </Swiper>
-                  <ProjectSwiperNav
-                    variant="gallery"
-                    staticData={{
-                      prevBtn: staticData?.prevBtn,
-                      nextBtn: staticData?.nextBtn,
-                    }}
-                  />
                 </div>
+                <ProjectSwiperNav
+                  variant="gallery"
+                  staticData={{
+                    prevBtn: staticData?.prevBtn,
+                    nextBtn: staticData?.nextBtn,
+                  }}
+                />
               </Dialog.Panel>
             </Transition.Child>
           </div>
