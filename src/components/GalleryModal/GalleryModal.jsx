@@ -7,8 +7,11 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Dialog, Transition } from '@headlessui/react';
 import PropTypes from 'prop-types';
 
-import { ProjectSwiperNav } from '../ProjectSwiperNav';
+// import { ProjectSwiperNav } from '../ProjectSwiperNav';
 import CloseIcon from 'public/icons/close.svg';
+
+import GalleryPrevIcon from 'public/icons/line-left.svg';
+import GalleryNextIcon from 'public/icons/line-right.svg';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
@@ -144,14 +147,30 @@ export const GalleryModal = ({
                       </SwiperSlide>
                     ))}
                   </Swiper>
+                  {/* <ProjectSwiperNav
+                    variant="gallery"
+                    staticData={{
+                      prevBtn: staticData?.prevBtn,
+                      nextBtn: staticData?.nextBtn,
+                    }}
+                  /> */}
+                  <button
+                    tabIndex={0}
+                    type="button"
+                    className="prevBtn absolute top-[37%] left-[-12%] text-[#ffffffbf] hover:text-white focus:text-white transition-colors duration-300"
+                    aria-label={staticData?.prevBtn}
+                  >
+                    <GalleryPrevIcon className="w-12 h-12 fill-[currentColor]" />
+                  </button>
+                  <button
+                    tabIndex={0}
+                    type="button"
+                    className="nextBtn absolute top-[37%] right-[-12%] text-[#ffffffbf] hover:text-white focus:text-white transition-colors duration-300"
+                    aria-label={staticData?.nextBtn}
+                  >
+                    <GalleryNextIcon className="w-12 h-12 fill-[currentColor]" />
+                  </button>
                 </div>
-                <ProjectSwiperNav
-                  variant="gallery"
-                  staticData={{
-                    prevBtn: staticData?.prevBtn,
-                    nextBtn: staticData?.nextBtn,
-                  }}
-                />
               </Dialog.Panel>
             </Transition.Child>
           </div>
