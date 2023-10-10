@@ -16,9 +16,12 @@ export const PaymentDetail = ({
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
+    if (!copied) return;
+
     const timer = setTimeout(() => {
       setCopied(false);
     }, 3000);
+
     return () => clearTimeout(timer);
   }, [copied]);
 

@@ -189,7 +189,10 @@
   "projects": {
     "title": "PROJECTS",
     "city": "City",
-    "overlay": "More photos"
+    "overlay": "More photos",
+    "prevBtn": "Previous slide",
+    "nextBtn": "Next slide",
+    "closeBtn": "Close gallery"
   },
   "write": {
     "title": "WRITE TO US",
