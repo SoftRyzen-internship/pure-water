@@ -73,7 +73,7 @@ export const GalleryModal = ({
                     slidesPerView={1}
                     thumbs={{
                       swiper: '.swiper-thumbs',
-                      slideThumbActiveClass: 'swiper-slide-active !opacity-100',
+                      slideThumbActiveClass: '!opacity-100',
                       autoScrollOffset: 3,
                     }}
                     modules={[FreeMode, Navigation, Thumbs]}
