@@ -104,6 +104,7 @@ export default async function RootLayout({ children, params: { lang } }) {
           menuLabel={menuLabel}
           navArray={nav}
         />
+        <div id="portal"></div>
       </body>
     </html>
   );
